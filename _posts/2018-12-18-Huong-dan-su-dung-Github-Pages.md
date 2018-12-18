@@ -3,7 +3,7 @@ image: http://www.recursosweb.es/wp-content/uploads/2014/04/github-pages.jpg
 instantfeedback: true
 description: Hướng dẫn cấu hình và sử dụng Github Pages 
 layout: post
-title: Hướng dẫn cấu hình và sử dụng Github Pages 
+title: Cấu hình và sử dụng Github Pages 
 category: Website 
 tags: website
 keywords: github, github pages, website, blog 
