@@ -20,7 +20,7 @@ Cài GPU driver, cài cuda, cudnn
 
 ## Các phần mềm cần thiết:
 
-- Biên dịch markdown, nhẹ mà tiện: Vào [Remarkable](remarkableapp.github.io), download file ``remarkable_1.87_all.deb`` về, rồi cài: 
+- Biên dịch markdown, nhẹ mà tiện: Vào [Remarkable](remarkableapp.github.io), download file ``remarkable_1.87_all.deb`` về (đổi tên nếu version khác), rồi cài: 
 ```
   sudo apt install python3-markdown
   sudo apt --fix-broken install
