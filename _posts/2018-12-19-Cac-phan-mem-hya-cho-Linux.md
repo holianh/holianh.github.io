@@ -3,7 +3,7 @@ image: https://www.fossmint.com/wp-content/uploads/2017/03/Best-Ubuntu-Desktop-A
 instantfeedback: true
 description: Các phần mềm cần thiết cho Linux 
 layout: post
-title: Linux: Các phần mềm cần thiết
+title: Linux, Các phần mềm cần thiết
 category: System 
 tags: System 
 keywords: Linux,  app,  software  
