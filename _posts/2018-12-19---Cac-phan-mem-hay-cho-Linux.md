@@ -17,20 +17,21 @@ keywords: System, Linux  app,  software
 ## Cài Ubuntu xong, cần:
 Cài GPU driver, cài cuda, cudnn
 
-
+---
 ## Các phần mềm cần thiết:
-
-- Trình biên dịch Markdown mình thấy hay nhất là Atom. cái này tuy nặng tý (86.22MB) nhưng bù lại các chức năng rất OK.
-
+### Editor:
+#### Atom
+Trình biên dịch Markdown mình thấy hay nhất là Atom. cái này tuy nặng tý (86.22MB) nhưng bù lại các chức năng rất OK.
 Download file .deb tại đây: [atom-amd64.deb](https://atom.io/download/deb)
 
 cách cài: `sudo dpkg -i atom-amd64.deb`
 
-- Biên dịch markdown, nhẹ mà tiện: Vào [Remarkable](remarkableapp.github.io), download file `remarkable_1.87_all.deb` về (đổi tên nếu version khác), rồi cài:
+#### Remarkable
+Biên dịch markdown, nhẹ mà tiện: Vào [Remarkable](remarkableapp.github.io), download file `remarkable_1.87_all.deb` về (đổi tên nếu version khác), rồi cài:
 ```bash
   sudo apt install python3-markdown
   sudo apt --fix-broken install
-  sudo dpkg -i remarkable_1.87_all.deb 
+  sudo dpkg -i remarkable_1.87_all.deb
 ```
 Chạy: ``remarkable``
 
