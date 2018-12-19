@@ -11,7 +11,7 @@ keywords: Deep-Learning, ASR, WER
 
 # Liệt kê các phương pháp đo lường kết quả trong các bài báo quốc tế về ASR (Automatic Speech Recognition).
 
-<div style="text-align:center"><img src ="http://llcao.net/blog/img/end-to-end-performance.png" height="300"/></div>
+<div style="text-align:center"><img src ="http://llcao.net/blog/img/end-to-end-performance.png" max-height="200" max-width=200/></div>
 
 ---
 
