@@ -5,7 +5,7 @@ description: Các phần mềm cần thiết cho Linux
 layout: post
 title:Linux, các phần mềm cần thiết
 category: System 
-tags: >System, Linux,  app,  software   
+tags: \>System, Linux,  app,  software   
 keywords: System, Linux,  app,  software  
 ---
 
