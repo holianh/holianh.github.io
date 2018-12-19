@@ -7,8 +7,7 @@ title:Linux, các phần mềm cần thiết
 category: System 
 tags: System, Linux,  app,  software   
 keywords: System, Linux,  app,  software  
---- 
-  
+---
 # Các phần mềm cần thiết khi cài Linux.
 
 <div style="text-align:center"><img src ="https://www.fossmint.com/wp-content/uploads/2017/03/Best-Ubuntu-Desktop-Apps.png" /></div>
