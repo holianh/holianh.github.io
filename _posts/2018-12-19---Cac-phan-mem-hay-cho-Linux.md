@@ -37,7 +37,7 @@ Chạy: ``remarkable``
 
 
 
-
+ext install bierner.github-markdown-preview
 
 
 
