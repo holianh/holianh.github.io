@@ -11,9 +11,9 @@ Dạo này mình đang nghiên cứu nên các post sẽ được cập nhật t
 Cái này rất quan trọng mà trước đây mình không biết, không để ý.
 
 1. [sciencedirect.com](https://www.sciencedirect.com) rất hay, tìm báo rất chuẩn
-- [webofknowledge.com](http://webofknowledge.com): Trang web rất chuẩn cho các nhà nghiên cứu. Nhưng không biết sao không đăng ký nó lại không cho search nhỉ?
-- [sci-hub.tw](https://sci-hub.tw), trang web thần thánh của Students (search trên ScienceDirect rồi download từ trang này, paste DOI, link nguồn vào đây). Phiên bản: [sci-hub.se](https://sci-hub.se), trang mẹ: [sci-hub.top](https://sci-hub.top)
-- [arXiv.org](https://arXiv.org). Ví dụ search: [KWS](http://search.arxiv.org:8081/?query=Speech+KWS+keyword+spotting&in=cs&qid=1544862812168multi_nCnN_1240597155&byDate=1)
+1. [webofknowledge.com](http://webofknowledge.com): Trang web rất chuẩn cho các nhà nghiên cứu. Nhưng không biết sao không đăng ký nó lại không cho search nhỉ?
+1. [sci-hub.tw](https://sci-hub.tw), trang web thần thánh của Students (search trên ScienceDirect rồi download từ trang này, paste DOI, link nguồn vào đây). Phiên bản: [sci-hub.se](https://sci-hub.se), trang mẹ: [sci-hub.top](https://sci-hub.top)
+4. [arXiv.org](https://arXiv.org). Ví dụ search: [KWS](http://search.arxiv.org:8081/?query=Speech+KWS+keyword+spotting&in=cs&qid=1544862812168multi_nCnN_1240597155&byDate=1)
 - [springer.com](https://www.springer.com)
 - [Google Scholar](http://scholar.google.com/)
 - [IEEE Xplore](http://ieeexplore.ieee.org/Xplore/guesthome.jsp): Electronics, Electrical engineering, Computer science
@@ -23,8 +23,8 @@ Cái này rất quan trọng mà trước đây mình không biết, không đ�
 - [b-ok.org](http://b-ok.org), Part of Z-Library project. The world's largest ebook library.
 - Thư viện của SCUT, các trang báo đã mua [lib.scut.edu.cn](http://www.lib.scut.edu.cn/main.htm). Cái này của trường, cần IP trường mới vào được.
 - [xueshu.baidu.com](http://xueshu.baidu.com), giống google scholar, nhưng của Trung Quốc, trong này có link đến một số trang báo nổi tiếng như cnki, springer, ScienceDirect, Web of Science,...
-- [cnki.net](http://cnki.net), báo Tiếng Trung
-- [openaccessbutton.org](https://openaccessbutton.org): Free, legal research articles delivered instantly or automatically requested from authors.
+5. [cnki.net](http://cnki.net), báo Tiếng Trung
+1. [openaccessbutton.org](https://openaccessbutton.org): Free, legal research articles delivered instantly or automatically requested from authors.
 
 - Download Research Papers and Scientific Articles for free (Sci-Hub links updated on Dec 13, 2018):
   - [unpaywall.org](http://unpaywall.org/)
@@ -62,7 +62,7 @@ Cái này rất quan trọng mà trước đây mình không biết, không đ�
 - Với Book, có các thông tin như: Title, author, ISBN, md5
 
 ## References:
- 1. https://www.sciencebuddies.org/science-fair-projects/competitions/finding-and-accessing-scientific-papers
+ - [Finding and accessing scientific papers](https://www.sciencebuddies.org/science-fair-projects/competitions/finding-and-accessing-scientific-papers)
  - [Download Research Papers and Scientific Articles for free (Sci-Hub links updated on Dec 13, 2018)](https://citationsy.com/blog/download-research-papers-scientific-articles-free-scihub/)
 
 
