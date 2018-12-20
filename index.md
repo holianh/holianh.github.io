@@ -14,7 +14,7 @@ Cái này rất quan trọng mà trước đây mình không biết, không đ�
 - [webofknowledge.com](http://webofknowledge.com): Trang web rất chuẩn cho các nhà nghiên cứu. Nhưng không biết sao không đăng ký nó lại không cho search nhỉ?
 - [sci-hub.tw](https://sci-hub.tw), trang web thần thánh của Students (search trên ScienceDirect rồi download từ trang này, paste DOI, link nguồn vào đây). Phiên bản: [sci-hub.se](https://sci-hub.se), trang mẹ: [sci-hub.top](https://sci-hub.top)
 - [arXiv.org](https://arXiv.org). Ví dụ search: [KWS](http://search.arxiv.org:8081/?query=Speech+KWS+keyword+spotting&in=cs&qid=1544862812168multi_nCnN_1240597155&byDate=1)
-- https://www.springer.com
+- [springer.com](https://www.springer.com)
 - [Google Scholar](http://scholar.google.com/)
 - [IEEE Xplore](http://ieeexplore.ieee.org/Xplore/guesthome.jsp): Electronics, Electrical engineering, Computer science
 - [CiteSeerX](http://citeseerx.ist.psu.edu/): Computer science
@@ -32,7 +32,7 @@ Cái này rất quan trọng mà trước đây mình không biết, không đ�
   - [Citationsy Archives](https://citationsy.com/blog/new-feature-citationsy-archives/): After entering a query it searches through all published papers in the world and shows you the matches.
   - Sci-Hub:
 
-<center>
+
 
 | Links ||
 |------------------------------------|----------------------------------------------------------------------|
@@ -47,7 +47,7 @@ Cái này rất quan trọng mà trước đây mình không biết, không đ�
 | - [sci.hub.gq](https://sci.hub.gq) | - [80.82.77.83](https://80.82.77.83)                                 |
 | - [sci-hub.ga](https://sci-hub.ga) |                                                                      |
 
-</center>
+
 
 
 
