@@ -42,10 +42,7 @@ Cái này rất quan trọng mà trước đây mình không biết, không đ�
  [sci.hub.gq](https://sci.hub.gq) , [80.82.77.83](https://80.82.77.83),
  [sci-hub.ga](https://sci-hub.ga)
 
-
-
-
-15. Các Extensions cho trình duyệt tải papers for free:
+- Các Extensions cho trình duyệt tải papers for free:
   - [Kopernio - powered by Web of Science](https://chrome.google.com/webstore/detail/kopernio-powered-by-web-o/fjgncogppolhfdpijihbpfmeohpaadpc): Add vào Chrome, Vivaldi, Chromium, Cốc cốc,... bấm vào logo của extention>get start, đăng ký tài khoản free rồi vào trang web mà hưởng thụ thôi.
   - [Open Access Button](https://chrome.google.com/webstore/detail/open-access-button/gknkbkaapnhpmkcgkmdekdffgcddoiel)
 
@@ -61,19 +58,8 @@ Cái này rất quan trọng mà trước đây mình không biết, không đ�
 - [Onion](https://osge7iuzcrtmcsny.onion)
 
 ##### Các thông tin quan trọng để lấy một bài báo:
-Muốn lấy một full-pdf paper nào đó, ta cần có (càng nhiều càng tốt) các thông tin sau:
-- URL
-- DOI
-- PMID
-- PMC ID
-- Title
-- Citation
-
-Với Book, có các thông tin như:
-- Title
-- author
-- ISBN
-- md5
+Muốn lấy một full-pdf paper nào đó, ta cần có (càng nhiều càng tốt) các thông tin sau: URL, DOI, PMID, PMC ID, Title, Citation
+Với Book, có các thông tin như: Title, author, ISBN, md5
 
 ## References:
  1. https://www.sciencebuddies.org/science-fair-projects/competitions/finding-and-accessing-scientific-papers
