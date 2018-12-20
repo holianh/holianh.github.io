@@ -46,7 +46,7 @@ Cái này rất quan trọng mà trước đây mình không biết, không đ�
 17. Các Extensions cho trình duyệt tải papers for free:
   - [Kopernio - powered by Web of Science](https://chrome.google.com/webstore/detail/kopernio-powered-by-web-o/fjgncogppolhfdpijihbpfmeohpaadpc): Add vào Chrome, Vivaldi, Chromium, Cốc cốc,... bấm vào logo của extention>get start, đăng ký tài khoản free rồi vào trang web mà hưởng thụ thôi.
   - [Open Access Button](https://chrome.google.com/webstore/detail/open-access-button/gknkbkaapnhpmkcgkmdekdffgcddoiel)
-
+18. [paperswithcode.com](https://paperswithcode.com/search?q=speech): cái này rất hay vì nó có cả paper, code cho mình sẵn rồi.
 
 
 
