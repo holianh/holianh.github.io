@@ -16,8 +16,9 @@ keywords: Deep-Learning, ASR, WER
 ---
 
 ## Danh sách:
-1. [Structured Deep Neural Networks for Speech Recognition, pdf](http://mi.eng.cam.ac.uk/~mjfg/thesis_cw564.pdf)
--
+  [ ] [Structured Deep Neural Networks for Speech Recognition, pdf](http://mi.eng.cam.ac.uk/~mjfg/thesis_cw564.pdf)
+  [x]
+
 
 
 

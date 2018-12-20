@@ -1,8 +1,10 @@
 ---
-title: Hi!
+title: Hi! Deep Learning
 layout: post
 ---
-# Deep Learning
+
+<div style="text-align:center"><img src ="https://images.readitquik.com/images/uploads/content_images/analyticsdeeplearning_599e7808cf05c.jpg" style="max-height: 300px;max-width: 500px;"/></div>
+
 Dạo này mình đang nghiên cứu nên các post sẽ được cập nhật theo chủ đề này và các thông tin liên quan nhé.
 
 ## List các trang web vào tìm papers:
