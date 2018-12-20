@@ -30,23 +30,17 @@ Cái này rất quan trọng mà trước đây mình không biết, không đ�
   - [unpaywall.org](http://unpaywall.org/)
   - [kopernio.com](https://kopernio.com/) :  browser extension, one-click legal access to journal articles
   - [Citationsy Archives](https://citationsy.com/blog/new-feature-citationsy-archives/): After entering a query it searches through all published papers in the world and shows you the matches.
-  - Sci-Hub:
-
-
-
-| Links ||
-|------------------------------------|----------------------------------------------------------------------|
-| - [gen.lib.rus.ec](http://gen.lib.rus.ec/)| - [scı hub.is](https://scı hub.is)                            |
-| - [sci.libgen.pw](https://sci.libgen.pw)| - [sci.hub.la](https://sci.hub.la)                              |
-| - [booksc.xyz](http://booksc.xyz/) | - [tree.sci-hub.la](https://tree.sci-hub.la)                         |
-| - [sci-hub.se](https://sci-hub.se) | - [scihub22266oqcxt.onion.link](https://scihub22266oqcxt.onion.link) |
-| - [scihub.mu](https://scihub.mu)   | - [scihub.tv](https://scihub.tv)                                     |
-| - [sci-hub.nu](https://sci-hub.nu) | - [http://sci-hub.mn](https://sci-hub.mn)                            |
-| - [sci-hub.tw](https://sci-hub.tw) | - [scı hub.name](https://scı hub.name)                               |
-| - [scihub.hk](https://scihub.hk)   | - [scihub.biz](https://scihub.biz)                                   |
-| - [sci.hub.gq](https://sci.hub.gq) | - [80.82.77.83](https://80.82.77.83)                                 |
-| - [sci-hub.ga](https://sci-hub.ga) |                                                                      |
-
+  - Sci-Hub: 
+ [gen.lib.rus.ec](http://gen.lib.rus.ec/), [scı hub.is](https://scı hub.is)                            
+, [sci.libgen.pw](https://sci.libgen.pw), [sci.hub.la](https://sci.hub.la)                              
+, [booksc.xyz](http://booksc.xyz/) , [tree.sci-hub.la](https://tree.sci-hub.la)                         
+, [sci-hub.se](https://sci-hub.se) , [scihub22266oqcxt.onion.link](https://scihub22266oqcxt.onion.link)
+, [scihub.mu](https://scihub.mu)   , [scihub.tv](https://scihub.tv)                                     
+, [sci-hub.nu](https://sci-hub.nu) , [http://sci-hub.mn](https://sci-hub.mn)                            
+, [sci-hub.tw](https://sci-hub.tw) , [scı hub.name](https://scı hub.name)                               
+, [scihub.hk](https://scihub.hk)   , [scihub.biz](https://scihub.biz)                                   
+, [sci.hub.gq](https://sci.hub.gq) , [80.82.77.83](https://80.82.77.83)                                 
+, [sci-hub.ga](https://sci-hub.ga)
 
 
 
