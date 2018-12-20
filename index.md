@@ -58,8 +58,8 @@ Cái này rất quan trọng mà trước đây mình không biết, không đ�
 - [Onion](https://osge7iuzcrtmcsny.onion)
 
 ##### Các thông tin quan trọng để lấy một bài báo:
-Muốn lấy một full-pdf paper nào đó, ta cần có (càng nhiều càng tốt) các thông tin sau: URL, DOI, PMID, PMC ID, Title, Citation
-Với Book, có các thông tin như: Title, author, ISBN, md5
+- Muốn lấy một full-pdf paper nào đó, ta cần có (càng nhiều càng tốt) các thông tin sau: URL, DOI, PMID, PMC ID, Title, Citation.
+- Với Book, có các thông tin như: Title, author, ISBN, md5
 
 ## References:
  1. https://www.sciencebuddies.org/science-fair-projects/competitions/finding-and-accessing-scientific-papers
