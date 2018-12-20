@@ -71,4 +71,4 @@ Cái này rất quan trọng mà trước đây mình không biết, không đ�
 Tới đây rồi thì ở lại đọc vài bài chơi, dạo này đi làm nên ít chăm chút cho blog. Những bài trên đây đều viết theo kinh nghiệm và ý kiến cá nhân, nên sẽ có nhiều sai sót, mong mọi người góp ý thêm.
 
 Bạn có thể tương tác với mình qua Facebook nhé: [Tuấn Anh Smart-Things](https://www.facebook.com/anh211)
-Trao đổi, bình luận, comment, gạch đá,... tất cả tại đây nhé, vào nhóm: [Facebook Comments]()
+Trao đổi, bình luận, comment, gạch đá,... tất cả tại đây nhé, vào nhóm: [Facebook Comments](https://www.facebook.com/hethongnhung.pro/posts/1242450645910318?__xts__[0]=68.ARDf2IPYjEtTdWPKVxVy6mPOsrnRhiyA9XqOB-whQ6GFL1qwajeO0Tqf6qTY_yYrYuRg9VX_XMPuQwUm5ETbMHKusFJ1XFQYBJE-NU3lAqmGLVLGDZQ5i5aiMFp5Rw5IwhAexsRgzvnjEpmB58Tq8siDgzVQafKnD-6VrMGCjvSDWdEl4dGzC9bne9sy_HAMI8M8I3FhPtmEPLp1jWw28om__qmRagx39pWyGjvSLzp7eZk7mLreUJNJ1XGkIhoYoOSNt9YL2mXd0guBQeqk1577cNjSVeq4jOOHgyLZPCMVVCm8RZyXrCMz9HvEnrRutLGUXw1qKTWi_KJmtNKg1WjQPw&__tn__=-R)
