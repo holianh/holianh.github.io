@@ -37,7 +37,7 @@ Cái này rất quan trọng mà trước đây mình không biết, không đ�
  [sci-hub.se](https://sci-hub.se) , [scihub22266oqcxt.onion.link](https://scihub22266oqcxt.onion.link),
  [scihub.mu](https://scihub.mu)   , [scihub.tv](https://scihub.tv),
  [sci-hub.nu](https://sci-hub.nu) , [http://sci-hub.mn](https://sci-hub.mn),
- [sci-hub.tw](https://sci-hub.tw) , [scı hub.name](https://scı hub.name),
+ [sci-hub.tw](https://sci-hub.tw) , [sci hub.name](https://sci.hub.name),
  [scihub.hk](https://scihub.hk)   , [scihub.biz](https://scihub.biz),
  [sci.hub.gq](https://sci.hub.gq) , [80.82.77.83](https://80.82.77.83),
  [sci-hub.ga](https://sci-hub.ga)
