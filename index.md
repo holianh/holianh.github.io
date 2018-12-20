@@ -1,6 +1,7 @@
 ---
 title: Hi! Deep Learning
 layout: post
+description: Thông tin rất quan trọng khi nghiên cứu Deep Learning
 ---
 
 <div style="text-align:center"><img src ="https://images.readitquik.com/images/uploads/content_images/analyticsdeeplearning_599e7808cf05c.jpg" style="max-height: 300px;max-width: 500px;"/></div>
@@ -36,7 +37,7 @@ Cái này rất quan trọng mà trước đây mình không biết, không đ�
  [booksc.xyz](http://booksc.xyz/) , [tree.sci-hub.la](https://tree.sci-hub.la),
  [sci-hub.se](https://sci-hub.se) , [scihub22266oqcxt.onion.link](https://scihub22266oqcxt.onion.link),
  [scihub.mu](https://scihub.mu)   , [scihub.tv](https://scihub.tv),
- [sci-hub.nu](https://sci-hub.nu) , [http://sci-hub.mn](https://sci-hub.mn),
+ [sci-hub.nu](https://sci-hub.nu) , [sci-hub.mn](https://sci-hub.mn),
  [sci-hub.tw](https://sci-hub.tw) , [sci hub.name](https://sci.hub.name),
  [scihub.hk](https://scihub.hk)   , [scihub.biz](https://scihub.biz),
  [sci.hub.gq](https://sci.hub.gq) , [80.82.77.83](https://80.82.77.83),
@@ -70,4 +71,4 @@ Cái này rất quan trọng mà trước đây mình không biết, không đ�
 Tới đây rồi thì ở lại đọc vài bài chơi, dạo này đi làm nên ít chăm chút cho blog. Những bài trên đây đều viết theo kinh nghiệm và ý kiến cá nhân, nên sẽ có nhiều sai sót, mong mọi người góp ý thêm.
 
 Bạn có thể tương tác với mình qua Facebook nhé: [Tuấn Anh Smart-Things](https://www.facebook.com/anh211)
-<div style="text-align:left"></div>
+Trao đổi, bình luận, comment, gạch đá,... tất cả tại đây nhé, vào nhóm: [Facebook Comments]()
