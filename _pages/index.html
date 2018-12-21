@@ -1,5 +1,5 @@
 ---
-title: Deepak Kumar Sood
+title: Nguyễn Tuấn Anh
 permalink: /
 layout: splash
 header:
@@ -9,7 +9,7 @@ header:
 excerpt: "Coder / Researcher / Tech-Evangelist"
 
 thought:
-  - title: "Thought of the day"
+  - title: "Câu nói hay"
   - excerpt: '"I have the power to do and to be whatever I wish to do and be."<br />**---<cite>The Power of Concentration</cite>**'
   - url: "/thoughts/2017_thoughts/"
     btn_label: "More"
@@ -26,7 +26,7 @@ all_projects:
       btn_class: "btn btn--small btn--inverse"
 
 til:
-  - title: "Today I Learned"
+  - title: "Hôm nay tôi đã học được điều thú vị:"
   - excerpt: "[Android Architecture Components](https://developer.android.com/topic/libraries/architecture/index.html)<br />**---<cite>Android</cite>**"
   - url: "/til/2017_til/"
     btn_label: "More"
@@ -35,7 +35,7 @@ til:
 
 {% include feature_row id="thought" type="center" %}
 
-<h1><center>My recent blog posts</center></h1>
+<h1><center>Tin mới</center></h1>
 <br />
 <div class="grid_wrapper">
   {% for post in site.posts limit:4 %}
@@ -44,7 +44,7 @@ til:
 </div>
 {% include feature_row id="all_posts" type="center" %}
 
-<h1><center>My recent projects</center></h1>
+<h1><center>Các dự án mới</center></h1>
 <br />
 <div class="grid_wrapper">
   {% assign items = site.portfolio | sort: 'date' | reverse %}
