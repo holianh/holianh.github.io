@@ -1,12 +1,25 @@
 ---
-image: https://llcao.net/blog/img/end-to-end-performance.png
-instantfeedback: true
-description: Cách đo lường khi làm việc với ASR
-layout: post
 title: ASR measurements
-category: Deep-Learning
-tags: Deep-Learning ASR WER
-keywords: Deep-Learning, ASR, WER
+excerpt: Cách đo lường khi làm việc với ASR
+
+header:
+  teaser: /assets/images/blog/toptal-th.jpg
+  overlay_image: https://llcao.net/blog/img/end-to-end-performance.png
+  overlay_color: "#000"
+  overlay_filter: 0.6
+  caption: " "
+
+author_profile: false
+related: false
+
+categories:
+  - Deep-Learning
+
+tags:
+  - Deep-Learning
+  - ASR
+  - WER
+
 ---
 
 # Liệt kê các phương pháp đo lường kết quả trong các bài báo quốc tế về ASR (Automatic Speech Recognition).
