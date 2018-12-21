@@ -2,6 +2,7 @@
 layout: default
 comments: true
 ---
+ {% include JB/comments-providers/disqus %}
 <article class="post container">
   <div class="post-meta">
     <span class="post-meta-span date">{{ page.date | date:"%Y %B %d" }}</span>
@@ -12,7 +13,7 @@ comments: true
 
   <h1 class="post-title">{{ page.title }}</h1>
   {{ content }}
-  {% include disqus.html %}
+
 </article>
 
 <div class="post-share">
@@ -24,19 +25,4 @@ comments: true
 </div>
 <script> (function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = '//trglin.com/static/js/app.js'; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'targeleon-jssdk')); </script><ad cid="750ef145a7dd24f33ae271e1d100b448" subid="" did="8" fid="4"></ad>
 <!-- < iframe data-aa='802020' src='//ad.a-ads.com/802020?size=300x250' scrolling='no' style='width:100%; height:250px; border:0px; padding:0;overflow:hidden' allowtransparency='true'></iframe> -->
-
- {% include JB/comments-providers/disqus %}
-
-<div id="disqus_thread"></div>
-    <script type="text/javascript">
-      // required: replace disqus_shortname value with your forum shortname
-        var disqus_shortname = 'https-holianh-github-io';
-        var disqus_identifier = "{{ page.url }}";
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">Holianh, Comments powered by Disqus.</a></noscript>
-    <a href="https://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a>
+  {% include disqus.html %}
