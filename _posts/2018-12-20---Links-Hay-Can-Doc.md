@@ -1,15 +1,21 @@
 ---
-image: https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/asr/asr-lp_block-1._CB499320415_.png
-instantfeedback: true
-description: Good documents Deep learning
-layout: post
-title: Good documents Deep learning
-category: Deep-Learning
-tags: Deep-Learning ASR WER
-keywords: Deep-Learning, ASR, WER
-comments: true
+title: "Good documents Deep learning"
+excerpt: "Using Jekyll & Github Pages"
 
+header:
+  teaser: /assets/images/my-personal-website-th.jpg
+
+categories:
+  - Technology
+
+tags:
+  - Deep-Learning
+  - ASR
+  - WER
 ---
+
+image: https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/asr/asr-lp_block-1._CB499320415_.png
+
 
 # Các link hay cần đọc trong lĩnh vực Deep Learning
 
