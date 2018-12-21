@@ -4,7 +4,7 @@ excerpt: Cách đo lường khi làm việc với ASR
 
 header:
   teaser: /assets/images/blog/toptal-th.jpg
-  overlay_image: https://llcao.net/blog/img/end-to-end-performance.png
+  overlay_image: assets\images\blog\end-to-end-performance.png
   overlay_color: "#000"
   overlay_filter: 0.6
   caption: " "
