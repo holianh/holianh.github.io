@@ -1,12 +1,12 @@
 # Site settings
-title: Blog của Tuấn Anh - Smart-Things 
-email: tuananhktmt@gmail.com 
+title: Blog của Tuấn Anh - Smart-Things
+email: tuananhktmt@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Blog của Tuấn Anh 
+  Blog của Tuấn Anh
 baseurl: "/" # the subpath of your site, e.g. /blog/
 #url: http://holianh.com # the base hostname & protocol for your site
 rss_url: /pages/feed.xml
-author: Tuấn Anh 
+author: Tuấn Anh
 
 # Sidebar filter
 # Choose 'tag' or 'category' as filter in sidebar.
@@ -15,17 +15,19 @@ recent_num: 20
 
 # Social account
 #twitter: robowonder
-facebook: anh211 
-github: holianh 
+facebook: anh211
+github: holianh
 #instagram: robowonder
 #linkedin: robowonder
 
+disqus:
+    shortname: https-holianh-github-io
 ga:
   id: UA-18216623-2
   url: holianh.github.io
 
 owner:
-  name:           Nguyễn Tuấn Anh 
+  name:           Nguyễn Tuấn Anh
   avatar:         https://scontent-nrt1-1.xx.fbcdn.net/v/t1.0-9/35972125_2118674564813588_7155762368104890368_n.jpg?_nc_cat=103&_nc_ht=scontent-nrt1-1.xx&oh=0b0335a3889e528ea71c7a618dde08a8&oe=5C979F4E
 
 # avatar and Favicon
@@ -47,4 +49,4 @@ gems:
   - jekyll-feed
   - jekyll-figure
 
-future: true 
+future: true
