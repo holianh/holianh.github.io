@@ -58,7 +58,7 @@ Component đã được khai báo Input là model, còn Output là sự kiên co
 
 Chỉ có Input mới được cập nhật dữ liệu bằng cách bind data,
 
-Angular 2 sử dụng RxJs để giải quyết các event. EventEmitter là để hoàn thành observable và observer interfaces - nếu bạn vẫn chưa hiểu thì đọc lại bài [các thư viện liên quan](http://robowonder.com/2016/11/angular-2-va-cac-thu-vien-lien-quan.html) và định nghĩa trên github [tại đây](https://github.com/jhusain/observable-spec)
+Angular 2 sử dụng RxJs để giải quyết các event. EventEmitter là để hoàn thành observable và observer interfaces - nếu bạn vẫn chưa hiểu thì đọc lại bài [các thư viện liên quan](https://robowonder.com/2016/11/angular-2-va-cac-thu-vien-lien-quan.html) và định nghĩa trên github [tại đây](https://github.com/jhusain/observable-spec)
 
 ## Two-Way Bindings
 

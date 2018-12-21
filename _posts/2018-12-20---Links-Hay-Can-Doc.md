@@ -21,8 +21,8 @@ comments: true
   - Bài viết rất có tâm: [Làm thế nào để luôn cập nhật kiến thức trong lĩnh vực Machine Learning?](https://viblo.asia/p/question-lam-the-nao-de-luon-cap-nhat-kien-thuc-trong-linh-vuc-machine-learning-maGK7mBxlj2?fbclid=IwAR0di_xjtpLKKCNZu5Gl3PkWRmGmeLczifkJpFi4BsHIOEIpKLgMN7ZtePw)
 
 ## Danh sách các bài báo, sách, đồ án hay:
-  - [Structured Deep Neural Networks for Speech Recognition, pdf](http://mi.eng.cam.ac.uk/~mjfg/thesis_cw564.pdf)
-  - [Language modeling with recurrent neural net works](http://alpopkes.com/files/thesis_APopkes.pdf)
+  - [Structured Deep Neural Networks for Speech Recognition, pdf](https://mi.eng.cam.ac.uk/~mjfg/thesis_cw564.pdf)
+  - [Language modeling with recurrent neural net works](https://alpopkes.com/files/thesis_APopkes.pdf)
 
 
 

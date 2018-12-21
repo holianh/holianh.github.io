@@ -41,7 +41,7 @@ Yo sẽ tự động chạy npm install cho bạn chứ bạn không cần chạ
 
 ## Chạy thử
 
-Gõ lệnh sau rồi vào trình duyệt truy cập http://localhost:8000.
+Gõ lệnh sau rồi vào trình duyệt truy cập https://localhost:8000.
 
 ```
 $ npm start

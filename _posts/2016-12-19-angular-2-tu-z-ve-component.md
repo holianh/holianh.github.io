@@ -53,7 +53,7 @@ class MyConfirmation {
 
 Ok, giải thích thêm tí về ví dụ. Phần tử HTML có tên là *my-confirmation*. Và tên của component là *MyConfirmation*. Nó ở dòng số 14, *class MyConfirmation* chính là tên component. Như vậy là bạn đã hiểu câu "**một phần tử HTML tùy chỉnh phù hợp với tên của một component được code ở một nơi khác**" rồi chứ. Trong MyComfirmation, chữ "C" sau chữ "My" được viết hoa, khi đó Angular sẽ hiểu bên phía HTML trước chữ C sẽ có dấu "-".
 
-Trong phần tử HTML trên có hai thuộc tính là [message] và (ok) tương ứng với inputs và outputs trong component. Như vậy trên HTML dấu [] có nghĩa là inputs và dấu () có nghĩa là outputs. Vấn đề này đã được nói rõ trong bài [Cú pháp template trong Angular 2 - Phần 1](http://www.robowonder.com/2016/12/cu-phap-template-trong-angular-2-phan-1.html), đọc lại nếu bạn không nhớ.
+Trong phần tử HTML trên có hai thuộc tính là [message] và (ok) tương ứng với inputs và outputs trong component. Như vậy trên HTML dấu [] có nghĩa là inputs và dấu () có nghĩa là outputs. Vấn đề này đã được nói rõ trong bài [Cú pháp template trong Angular 2 - Phần 1](https://www.robowonder.com/2016/12/cu-phap-template-trong-angular-2-phan-1.html), đọc lại nếu bạn không nhớ.
 
 ## Component trong component
 

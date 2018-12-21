@@ -72,7 +72,7 @@ email: robowonder@outlook.com
 description: > # this means to ignore newlines until "baseurl:"
   Blog của Robo Wonder
 baseurl: "/" # the subpath of your site, e.g. /blog/
-url: http://robowonder.com # the base hostname & protocol for your site
+url: https://robowonder.com # the base hostname & protocol for your site
 rss_url: /pages/feed.xml
 author: Robo Wonder
 
@@ -95,7 +95,7 @@ ga:
 
 
 # avatar and Favicon
-avatar: http://graph.facebook.com/100004792424249/picture?width=100&height=100
+avatar: https://graph.facebook.com/100004792424249/picture?width=100&height=100
 
 # Build settings
 permalink: /:year/:month/:title.html

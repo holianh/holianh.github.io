@@ -1,5 +1,5 @@
 ---
-image: http://www.recursosweb.es/wp-content/uploads/2014/04/github-pages.jpg
+image: https://www.recursosweb.es/wp-content/uploads/2014/04/github-pages.jpg
 instantfeedback: true
 description: Hướng dẫn cấu hình và sử dụng Github Pages 
 layout: post
@@ -11,7 +11,7 @@ keywords: github, github pages, website, blog
 
 Dùng github pages làm trang blog cá nhân. Cách cài đặt và cấu hình khá đơn giản.
 
-<figure><img src="http://www.recursosweb.es/wp-content/uploads/2014/04/github-pages.jpg" alt="Hướng dẫn sử dụng github pages" title="Hướng dẫn sử dụng github pages"></figure>
+<figure><img src="https://www.recursosweb.es/wp-content/uploads/2014/04/github-pages.jpg" alt="Hướng dẫn sử dụng github pages" title="Hướng dẫn sử dụng github pages"></figure>
 
 <h3>Cài đặt Github pages </h3>
 

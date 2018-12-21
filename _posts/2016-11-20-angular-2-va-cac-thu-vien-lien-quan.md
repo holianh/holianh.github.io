@@ -13,7 +13,7 @@ keywords: Angular, Angular2, 2016
 
 Angular 2 ra đời và chính thức lấy tên là Angular chứ không còn là AngularJs nữa. Và như tôi nhận thấy thì rất rất nhiều người đã phải bối rối ngay từ khi Angular vẫn đang beta.
 
-Thử nhìn vào source của ví dụ "Hello Word" từ chính trang [angular.io](http://angular.io). Bạn có thể xem trên Plunker [tại đây](http://plnkr.co/edit/w2FVfKlWP72pzXIsfsCU?p=previews).
+Thử nhìn vào source của ví dụ "Hello Word" từ chính trang [angular.io](https://angular.io). Bạn có thể xem trên Plunker [tại đây](https://plnkr.co/edit/w2FVfKlWP72pzXIsfsCU?p=previews).
 
 Mở source file index.html ra và... Ôi mẹ ơi, một mớ lằng nhằng chẳng hiểu để làm cái gì nữa. Có đến 5 file được import chứ không phải chỉ 1 file như Angular1 nữa.
 

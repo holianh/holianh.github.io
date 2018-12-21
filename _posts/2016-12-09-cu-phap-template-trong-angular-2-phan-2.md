@@ -12,7 +12,7 @@ keywords: Angular, Angular2, template syntax, 2016
 
 <figure><img src="https://4.bp.blogspot.com/-zRXAUpuJt78/WD6-e4drdYI/AAAAAAAABgY/BSGV_4U1VJgdLGqyik-ORAlBaE9DS3p1wCLcB/s320/angular2%2Bva%2Bes6.png" alt="alt text" title="Angular và ES6: Tạo bộ khung ứng dụng"></figure>
 
-Nối tiếp [phần 1 về cú pháp template trong Angular 2](http://www.robowonder.com/2016/12/cu-phap-template-trong-angular-2-phan-1.html). Nếu các bạn chưa đọc thì nên đọc lại trước khi đọc bài này.
+Nối tiếp [phần 1 về cú pháp template trong Angular 2](https://www.robowonder.com/2016/12/cu-phap-template-trong-angular-2-phan-1.html). Nếu các bạn chưa đọc thì nên đọc lại trước khi đọc bài này.
 
 ## Nội suy (Interpolation)
 

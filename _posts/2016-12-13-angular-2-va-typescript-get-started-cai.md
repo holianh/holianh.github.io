@@ -49,7 +49,7 @@ npm install
 npm start
 ```
 
-Sau khi chạy xong lệnh cuối cùng là *npm start*,  trình duyệt sẽ tự động mở lên và chạy web. Nếu trình duyệt không tự mở bạn có thể mở bằng tay và chạy địa chỉ http://localhost:3000/
+Sau khi chạy xong lệnh cuối cùng là *npm start*,  trình duyệt sẽ tự động mở lên và chạy web. Nếu trình duyệt không tự mở bạn có thể mở bằng tay và chạy địa chỉ https://localhost:3000/
 
 Chừng nào muốn ngừng máy chủ Nodejs thì ấn Ctrl+C. 
 

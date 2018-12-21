@@ -56,7 +56,7 @@ Docker hiện nay đã hỗ trợ rất nhiều nền tảng, nên muốn xem c�
 Chạy lần lượt các lệnh sau để tải Docker về và cài đặt:
 
 ```
-$ sudo yum install http://mirrors.yun-idc.com/epel/6/i386/epel-release-6-8.noarch.rpm
+$ sudo yum install https://mirrors.yun-idc.com/epel/6/i386/epel-release-6-8.noarch.rpm
 $ sudo yum install docker-io
 ```
 
