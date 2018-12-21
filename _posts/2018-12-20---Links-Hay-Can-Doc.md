@@ -7,6 +7,8 @@ title: Good documents Deep learning
 category: Deep-Learning
 tags: Deep-Learning ASR WER
 keywords: Deep-Learning, ASR, WER
+comments: true
+
 ---
 
 # Các link hay cần đọc trong lĩnh vực Deep Learning
