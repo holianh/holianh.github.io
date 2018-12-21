@@ -19,9 +19,7 @@ facebook: anh211
 github: holianh
 #instagram: robowonder
 #linkedin: robowonder
-url: "https://holianh.github.io"
-disqus:
-    shortname: https-holianh-github-io
+
 ga:
   id: UA-18216623-2
   url: holianh.github.io
@@ -50,3 +48,22 @@ gems:
   - jekyll-figure
 
 future: true
+
+comments:
+ provider: "staticman"
+   staticman:
+ allowedFields          : ['name', 'email', 'url', 'message']
+ branch                 : # "master", "gh-pages"
+ commitMessage          : "New comment."
+ filename               : comment-{@timestamp}
+ format                 : "yml"
+ moderation             : false
+ path                   : "_data/comments/{options.slug}"
+ requiredFields         : ['name', 'email', 'message']
+ transforms:
+   email                : "md5"
+ generatedFields:
+   date:
+type               : "date"
+options:
+  format           : "iso8601"
