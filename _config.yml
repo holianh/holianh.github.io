@@ -27,7 +27,7 @@ teaser                   : "/assets/images/default-th.jpg"
 #breadcrumbs              : true # , false (default)
 words_per_minute         : 200
 comments:
-  provider               :  "disqus" #"facebook" # "staticman", 
+  provider               :  "facebook" #"disqus" #"facebook" # "staticman", 
   disqus:
     shortname            : "https-holianh-github-io"
   discourse:
