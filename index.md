@@ -13,29 +13,29 @@ Dạo này mình đang nghiên cứu nên các post sẽ được cập nhật t
 Cái này rất quan trọng mà trước đây mình không biết, không để ý.
 
 1. [sciencedirect.com](https://www.sciencedirect.com) rất hay, tìm báo rất chuẩn
-2. [webofknowledge.com](http://webofknowledge.com): Trang web rất chuẩn cho các nhà nghiên cứu. Nhưng không biết sao không đăng ký nó lại không cho search nhỉ?
+2. [webofknowledge.com](https://webofknowledge.com): Trang web rất chuẩn cho các nhà nghiên cứu. Nhưng không biết sao không đăng ký nó lại không cho search nhỉ?
 3. [sci-hub.tw](https://sci-hub.tw), trang web thần thánh của Students (search trên ScienceDirect rồi download từ trang này, paste DOI, link nguồn vào đây). Phiên bản: [sci-hub.se](https://sci-hub.se), trang mẹ: [sci-hub.top](https://sci-hub.top)
-4. [arXiv.org](https://arXiv.org). Ví dụ search: [KWS](http://search.arxiv.org:8081/?query=Speech+KWS+keyword+spotting&in=cs&qid=1544862812168multi_nCnN_1240597155&byDate=1)
+4. [arXiv.org](https://arXiv.org). Ví dụ search: [KWS](https://search.arxiv.org:8081/?query=Speech+KWS+keyword+spotting&in=cs&qid=1544862812168multi_nCnN_1240597155&byDate=1)
 5. [springer.com](https://www.springer.com)
-6. [Google Scholar](http://scholar.google.com/)
-7. [IEEE Xplore](http://ieeexplore.ieee.org/Xplore/guesthome.jsp): Electronics, Electrical engineering, Computer science
-8. [CiteSeerX](http://citeseerx.ist.psu.edu/): Computer science
-9. [libgen.io](http://libgen.io), [gen.lib.rus.e](http://gen.lib.rus.ec), [libgen.pw](http://libgen.pw/) Tìm trong trang này, nó sẽ ra link tải của các trang khác, có thể tải free. Ví dụ: [speech](http://gen.lib.rus.ec/scimag/index.php?s=speech+recognition&journalid=&v=&i=&p=&redirect=1)
-10. [freefullpdf.com](http://www.freefullpdf.com/#gsc.tab=0&gsc.q=speech%20recognition&gsc.sort=date), Vo tình thấy trang này, khá hay, download trực tiếp PDF luôn.
-11. [b-ok.org](http://b-ok.org), Part of Z-Library project. The world's largest ebook library.
-12. Thư viện của SCUT, các trang báo đã mua [lib.scut.edu.cn](http://www.lib.scut.edu.cn/main.htm). Cái này của trường, cần IP trường mới vào được.
-13. [xueshu.baidu.com](http://xueshu.baidu.com), giống google scholar, nhưng của Trung Quốc, trong này có link đến một số trang báo nổi tiếng như cnki, springer, ScienceDirect, Web of Science,...
-14. [cnki.net](http://cnki.net), báo Tiếng Trung
+6. [Google Scholar](https://scholar.google.com/)
+7. [IEEE Xplore](https://ieeexplore.ieee.org/Xplore/guesthome.jsp): Electronics, Electrical engineering, Computer science
+8. [CiteSeerX](https://citeseerx.ist.psu.edu/): Computer science
+9. [libgen.io](https://libgen.io), [gen.lib.rus.e](https://gen.lib.rus.ec), [libgen.pw](https://libgen.pw/) Tìm trong trang này, nó sẽ ra link tải của các trang khác, có thể tải free. Ví dụ: [speech](https://gen.lib.rus.ec/scimag/index.php?s=speech+recognition&journalid=&v=&i=&p=&redirect=1)
+10. [freefullpdf.com](https://www.freefullpdf.com/#gsc.tab=0&gsc.q=speech%20recognition&gsc.sort=date), Vo tình thấy trang này, khá hay, download trực tiếp PDF luôn.
+11. [b-ok.org](https://b-ok.org), Part of Z-Library project. The world's largest ebook library.
+12. Thư viện của SCUT, các trang báo đã mua [lib.scut.edu.cn](https://www.lib.scut.edu.cn/main.htm). Cái này của trường, cần IP trường mới vào được.
+13. [xueshu.baidu.com](https://xueshu.baidu.com), giống google scholar, nhưng của Trung Quốc, trong này có link đến một số trang báo nổi tiếng như cnki, springer, ScienceDirect, Web of Science,...
+14. [cnki.net](https://cnki.net), báo Tiếng Trung
 15. [openaccessbutton.org](https://openaccessbutton.org): Free, legal research articles delivered instantly or automatically requested from authors.
 
 16. Download Research Papers and Scientific Articles for free (Sci-Hub links updated on Dec 13, 2018):
-  - [unpaywall.org](http://unpaywall.org/)
+  - [unpaywall.org](https://unpaywall.org/)
   - [kopernio.com](https://kopernio.com/) :  browser extension, one-click legal access to journal articles
   - [Citationsy Archives](https://citationsy.com/blog/new-feature-citationsy-archives/): After entering a query it searches through all published papers in the world and shows you the matches.
   - Sci-Hub:
- [gen.lib.rus.ec](http://gen.lib.rus.ec/), [scı hub.is](https://sci.hub.is),
+ [gen.lib.rus.ec](https://gen.lib.rus.ec/), [scı hub.is](https://sci.hub.is),
  [sci.libgen.pw](https://sci.libgen.pw), [sci.hub.la](https://sci.hub.la),
- [booksc.xyz](http://booksc.xyz/) , [tree.sci-hub.la](https://tree.sci-hub.la),
+ [booksc.xyz](https://booksc.xyz/) , [tree.sci-hub.la](https://tree.sci-hub.la),
  [sci-hub.se](https://sci-hub.se) , [scihub22266oqcxt.onion.link](https://scihub22266oqcxt.onion.link),
  [scihub.mu](https://scihub.mu)   , [scihub.tv](https://scihub.tv),
  [sci-hub.nu](https://sci-hub.nu) , [sci-hub.mn](https://sci-hub.mn),
