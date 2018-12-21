@@ -4,7 +4,7 @@ excerpt: Cách đo lường khi làm việc với ASR
 
 header:
   teaser: /assets/images/blog/toptal-th.jpg
-  overlay_image: assets\images\blog\end-to-end-performance.png
+  overlay_image: /assets/images/blog/end-to-end-performance.png
   overlay_color: "#000"
   overlay_filter: 0.6
   caption: " "
@@ -24,7 +24,7 @@ tags:
 
 # Liệt kê các phương pháp đo lường kết quả trong các bài báo quốc tế về ASR (Automatic Speech Recognition).
 
-<div style="text-align:center"><img src ="https://llcao.net/blog/img/end-to-end-performance.png" style="max-height: 300px;max-width: 500px;"/></div>
+<div style="text-align:center"><img src ="/assets/images/blog/end-to-end-performance.png" style="max-height: 300px;max-width: 500px;"/></div>
 
 ---
 
