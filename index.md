@@ -1,6 +1,7 @@
 ---
 title: Hi! Deep Learning
 layout: post
+comments: true
 description: Thông tin rất quan trọng khi nghiên cứu Deep Learning
 ---
 
