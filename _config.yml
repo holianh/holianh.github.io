@@ -27,7 +27,7 @@ teaser                   : "/assets/images/default-th.jpg"
 #breadcrumbs              : true # , false (default)
 words_per_minute         : 200
 comments:
-  provider               :  "facebook" #"disqus" #"facebook" # "staticman", 
+  provider               :  "facebook" #"disqus" #"facebook" # "staticman",
   disqus:
     shortname            : "https-holianh-github-io"
   discourse:
@@ -101,6 +101,7 @@ analytics:
 author:
   name             : "Tuấn Anh"
   avatar           : "/assets/images/bio-photo.jpg"
+  home             : "https://holianh.github.io"
   bio              : "Smart-Things"
   location         : "Thái Nguyên, Việt Nam"
   email            : "tuananhktmt@gmail.com"
