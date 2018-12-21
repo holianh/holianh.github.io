@@ -50,7 +50,7 @@ tags:
 ||||||
 ||||||
 
-|Tên bài | Phương pháp|Model liên quan| năm & link| Ảnh       |
+
 
 
 
@@ -62,5 +62,3 @@ tags:
 .
 .
 .
-Trao đổi, bình luận, comment, gạch đá,... tất cả tại đây nhé:
-Vào nhóm: [facebook comment]()
