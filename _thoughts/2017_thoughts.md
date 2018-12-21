@@ -1,5 +1,5 @@
 ---
-title: "Thought of the day"
+title: "Câu nói hay..."
 
 layout: single
 
