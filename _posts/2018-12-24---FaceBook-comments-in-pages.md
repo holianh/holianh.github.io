@@ -29,7 +29,8 @@ tags:
 đổi thành:
 { % include comments.html % }
 ```
-
+nhớ bỏ dấu cách giữa { và % (ở đây code vào nó lỗi nên đêt thêm dấu cách)
+  
 ## Tham khảo thêm:
 
 Facebook comment code
