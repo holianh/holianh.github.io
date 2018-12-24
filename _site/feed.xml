@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-12-24T15:39:39+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tuấn Anh</title><subtitle>My Personal Website</subtitle><author><name>Tuấn Anh</name><email>tuananhktmt@gmail.com</email></author><entry><title type="html">WER in ASR</title><link href="http://localhost:4000/asr/WER/" rel="alternate" type="text/html" title="WER in ASR" /><published>2018-12-23T00:00:00+08:00</published><updated>2018-12-23T00:00:00+08:00</updated><id>http://localhost:4000/asr/--WER</id><content type="html" xml:base="http://localhost:4000/asr/WER/">&lt;h1 id=&quot;các-bài-liên-quan-đến-wer&quot;&gt;Các bài liên quan đến WER&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-12-24T16:31:20+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tuấn Anh</title><subtitle>My Personal Website</subtitle><author><name>Tuấn Anh</name><email>tuananhktmt@gmail.com</email></author><entry><title type="html">Thêm Facebook comments vào trang web</title><link href="http://localhost:4000/web/FaceBook-comments-in-pages/" rel="alternate" type="text/html" title="Thêm Facebook comments vào trang web" /><published>2018-12-24T00:00:00+08:00</published><updated>2018-12-24T00:00:00+08:00</updated><id>http://localhost:4000/web/--FaceBook-comments-in-pages</id><content type="html" xml:base="http://localhost:4000/web/FaceBook-comments-in-pages/">&lt;h1 id=&quot;thêm-facebook-comments-vào-trang-web&quot;&gt;Thêm Facebook comments vào trang web&lt;/h1&gt;</content><author><name>Tuấn Anh</name><email>tuananhktmt@gmail.com</email></author><category term="jekyll" /><category term="github pages" /><category term="facebook" /><summary type="html">Cách thêm FB comments, nhiều chỗ chỉ cách quá, không nhớ nổi!</summary></entry><entry><title type="html">WER in ASR</title><link href="http://localhost:4000/asr/WER/" rel="alternate" type="text/html" title="WER in ASR" /><published>2018-12-23T00:00:00+08:00</published><updated>2018-12-23T00:00:00+08:00</updated><id>http://localhost:4000/asr/--WER</id><content type="html" xml:base="http://localhost:4000/asr/WER/">&lt;h1 id=&quot;các-bài-liên-quan-đến-wer&quot;&gt;Các bài liên quan đến WER&lt;/h1&gt;
 &lt;p&gt;Lưu lại các link hay và các mục quan trọng ở đây để  sau này tiện tìm lại.&lt;/p&gt;
 
 &lt;ul&gt;
@@ -544,41 +544,4 @@ Vào nhóm: &lt;a href=&quot;https://www.facebook.com/hethongnhung.pro/posts/124
 
 &lt;p&gt;Feel free to contact me, if you are stuck anywhere, Will be happy to help. BTW everything is available online. If you don’t get online then probably I would also be not able to help.&lt;/p&gt;
 
-&lt;p&gt;Look at github issues in Minimal Mistakes respository for some tricky parts.&lt;/p&gt;</content><author><name>Tuấn Anh</name><email>tuananhktmt@gmail.com</email></author><category term="Jekyll" /><category term="Github Pages" /><category term="Tutorial" /><summary type="html">Using Jekyll &amp; Github Pages</summary></entry><entry><title type="html">Why I chose to build website using Jekyll &amp;amp; Github Pages</title><link href="http://localhost:4000/technology/website-using-jekyll-github-pages/" rel="alternate" type="text/html" title="Why I chose to build website using Jekyll &amp; Github Pages" /><published>2017-08-12T00:00:00+08:00</published><updated>2017-08-12T00:00:00+08:00</updated><id>http://localhost:4000/technology/website-using-jekyll-github-pages</id><content type="html" xml:base="http://localhost:4000/technology/website-using-jekyll-github-pages/">&lt;p&gt;What’s the best CMS out there? &lt;strong&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/WordPress&quot;&gt;Wordpress&lt;/a&gt;&lt;/strong&gt; no doubt on that.&lt;/p&gt;
-
-&lt;p&gt;If you got money to spare, go with Wordpress, now you have two option -&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://wordpress.org/&quot;&gt;Wordpress.org&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://wordpress.com/&quot;&gt;Wordpress.com&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;What’s the difference, you ask?&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Wordpress.org is free, you download the whole wordpress cms, host it in your own hosting site or on cloud by ofcourse paying.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Wordpress.com does everything for you, no downloading and hosting, everything will be done on their end. But you get limited funtionalities in free version and then you have to pay for more functionalities and plugins.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;But Wordpress has got a lot of plugins and powerful too. So if you have to deploy a highly dynamic website with lot of data, Wordpress is great.&lt;/p&gt;
-
-&lt;p&gt;I know that there are some free hosting sites and honestly I tried but they are really slow. If you got a great website but it takes more than 5 sec to load, nobody gonna open that website. (Actually google says, if in 2 sec your website not loads then most probably user is not gonna come back). So you want a website to be fast also. So for that you have to pay some more money to get a good CDN like &lt;a href=&quot;https://www.cloudflare.com/&quot;&gt;Cloudflare&lt;/a&gt; or something else. On top of that you have too many calls, for downloading extras like jquery, fontawesome icons and huge images.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;My goal was that it should be free and open-source on top of that fast and highly customizable.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;I got everything I wanted using Jekyll and Github Pages.&lt;/p&gt;
-
-&lt;p&gt;Key Features -&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Free&lt;/li&gt;
-  &lt;li&gt;Open-Source&lt;/li&gt;
-  &lt;li&gt;Static Pages are generated, so its fast&lt;/li&gt;
-  &lt;li&gt;And because of github fast CDN, its fast on loading too as its also cached by intermediate caching servers&lt;/li&gt;
-  &lt;li&gt;Highly Customizable, and you can contribute to that too in their github repos.&lt;/li&gt;
-  &lt;li&gt;Get to learn a lot more than wordpress.&lt;/li&gt;
-  &lt;li&gt;Highly vibrant community&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Therefore i used &lt;a href=&quot;https://pages.github.com/&quot;&gt;Github Pages&lt;/a&gt; as my hosting provider and &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; as my CMS.&lt;/p&gt;</content><author><name>Tuấn Anh</name><email>tuananhktmt@gmail.com</email></author><category term="Jekyll" /><category term="Github Pages" /><category term="Tutorial" /><summary type="html">Just Works!</summary></entry></feed>
+&lt;p&gt;Look at github issues in Minimal Mistakes respository for some tricky parts.&lt;/p&gt;</content><author><name>Tuấn Anh</name><email>tuananhktmt@gmail.com</email></author><category term="Jekyll" /><category term="Github Pages" /><category term="Tutorial" /><summary type="html">Using Jekyll &amp; Github Pages</summary></entry></feed>

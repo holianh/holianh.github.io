@@ -149,6 +149,11 @@ var store = [{
         "tags": ["Deep-Learning","ASR","WER"],
         "url": "http://localhost:4000/asr/WER/",
         "teaser":"http://localhost:4000/assets/images/my-personal-website-th.jpg"},{
+        "title": "Thêm Facebook comments vào trang web",
+        "excerpt":"Thêm Facebook comments vào trang web ","categories": ["WEB"],
+        "tags": ["jekyll","github pages","facebook"],
+        "url": "http://localhost:4000/web/FaceBook-comments-in-pages/",
+        "teaser":"http://localhost:4000/assets/images/default-th.jpg"},{
         "title": "Câu nói hay...",
         "excerpt":"“99 little bugs in the code. 99 little bugs. Take one down, patch it around,…127 little bugs in the code.”—Anonymous22 Sep, 2017 “I have the power to do and to be whatever I wish to do and be.”—The Power of Concentration16 Sep, 2017 “Always code as if the guy who...","categories": [],
         "tags": [],
