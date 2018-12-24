@@ -38,12 +38,13 @@ til:
 <h1><center>Tin mới</center></h1>
 <br />
 <div class="grid_wrapper">
-  {% for post in site.posts limit:4 %}
+  {% for post in site.posts limit:8 %}
     {% include archive-single.html type="grid" %}
   {% endfor %}
 </div>
 {% include feature_row id="all_posts" type="center" %}
 
+<!--
 <h1><center>Các dự án mới</center></h1>
 <br />
 <div class="grid_wrapper">
@@ -53,5 +54,5 @@ til:
   {% endfor %}
 </div>
 {% include feature_row id="all_projects" type="center" %}
-
+-->
 {% include feature_row id="til" type="center" %}
