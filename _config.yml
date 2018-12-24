@@ -101,9 +101,9 @@ analytics:
 author:
   name             : "Tuấn Anh"
   avatar           : "/assets/images/bio-photo.jpg"
-  home             : "https://holianh.github.io"
+  home             : "https://holianh.github.io" 
   bio              : "Smart-Things"
-  location         : "Thái Nguyên, Việt Nam"
+  location         : "Thái Nguyên,VN"
   email            : "tuananhktmt@gmail.com"
   links:
     - label: "Email"
