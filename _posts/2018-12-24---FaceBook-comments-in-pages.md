@@ -32,7 +32,7 @@ tags:
 
 ## Tham khảo thêm:
 
-Facebook comment code
+Facebook comment code 
 
 Step 1: Include the facebook comment plugin code on your page once, ideally right after the opening <body> tag.
 
