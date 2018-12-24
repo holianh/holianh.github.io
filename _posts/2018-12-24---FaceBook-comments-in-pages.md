@@ -23,20 +23,20 @@ tags:
 - Thêm comments vào pages, `{% include comments.html %}` thay vào chỗ  \_layouts\\single.html:
 
 ```
-{% if jekyll.environment == 'production' and site.comments.provider and page.comments %}
-  {% include comments.html %}
-{% endif %}
+\{% if jekyll.environment == 'production' and site.comments.provider and page.comments %\}
+  \{% include comments.html %\}
+\{% endif %\}
 đổi thành:
-{% include comments.html %}
+\{% include comments.html %\}
 ```
 
 ## Tham khảo thêm:
 
-Facebook comment code 
+Facebook comment code
 
 Step 1: Include the facebook comment plugin code on your page once, ideally right after the opening <body> tag.
 
-```
+```javascript
 <div id="fb-root"></div>
 
 <script>
