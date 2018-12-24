@@ -1,29 +1,4 @@
 var store = [{
-        "title": "Online Voting System",
-        "excerpt":"","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/portfolio/online-voting-system/",
-        "teaser":"http://localhost:4000/assets/images/portfolio-placeholder-th.jpg"},{
-        "title": "Automatic License Plate Detection",
-        "excerpt":"","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/portfolio/automatic-license-plate-detection/",
-        "teaser":"http://localhost:4000/assets/images/portfolio-placeholder-th.jpg"},{
-        "title": "Basic C Compiler",
-        "excerpt":"","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/portfolio/basic-c-compiler/",
-        "teaser":"http://localhost:4000/assets/images/portfolio-placeholder-th.jpg"},{
-        "title": "Family Tracking Mobile Application",
-        "excerpt":"","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/portfolio/family-tracking/",
-        "teaser":"http://localhost:4000/assets/images/portfolio-placeholder-th.jpg"},{
-        "title": "TA Allocation Portal",
-        "excerpt":"","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/portfolio/ta-allocation-portal/",
-        "teaser":"http://localhost:4000/assets/images/portfolio-placeholder-th.jpg"},{
         "title": "PopMov - Popular Movies",
         "excerpt":"Source Code PopMov Source Code ","categories": [],
         "tags": [],
@@ -34,11 +9,6 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/portfolio/muster/",
         "teaser":"http://localhost:4000/assets/images/muster-th.jpg"},{
-        "title": "Rudimentary File System of Unix Environment",
-        "excerpt":"","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/portfolio/rudimentary-file-system-unix/",
-        "teaser":"http://localhost:4000/assets/images/portfolio-placeholder-th.jpg"},{
         "title": "BookXchange",
         "excerpt":"Source Code BookXchange Source Code ","categories": [],
         "tags": [],
@@ -69,36 +39,21 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/portfolio/video-cut-n-trim/",
         "teaser":"http://localhost:4000/assets/images/video-cut-n-trim-th.jpg"},{
-        "title": "Competitive Programming",
-        "excerpt":"","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/portfolio/competitive-programming/",
-        "teaser":"http://localhost:4000/assets/images/cp-th.jpg"},{
         "title": "Sangoshthi: Phase - 2",
         "excerpt":"Source Code Sangoshthi Phase-2 Source Code ","categories": [],
         "tags": [],
         "url": "http://localhost:4000/portfolio/sangoshthi-phase-2/",
         "teaser":"http://localhost:4000/assets/images/sangoshthi-phase-2-th.jpg"},{
-        "title": "Python Challenge",
-        "excerpt":"","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/portfolio/python-challenge/",
-        "teaser":"http://localhost:4000/assets/images/python-challenge-th.jpg"},{
         "title": "My Personal Website",
         "excerpt":"This is my personal website built using latest technologies -   Jekyll  Github Pages  Markdown  SEO like Google Analytics  Contact Forms - FormSpree.io  Theme - Minimal MistakesLanguages Used -   Markdown  Liquid Templating Language  HTML5  SCSS / CSS3Source Code Personal Website using Jekyll ","categories": [],
         "tags": [],
         "url": "http://localhost:4000/portfolio/my-personal-website/",
         "teaser":"http://localhost:4000/assets/images/my-personal-website-th.jpg"},{
-        "title": "JavaScript Tic-Tac-Toe",
-        "excerpt":"","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/portfolio/tic-tac-toe/",
-        "teaser":"http://localhost:4000/assets/images/tic-tac-toe-th.jpeg"},{
-        "title": "Regular Expressions",
-        "excerpt":"","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/portfolio/regex-crossword/",
-        "teaser":"http://localhost:4000/assets/images/regex-th.jpg"},{
+        "title": "List các trang web vào tìm papers",
+        "excerpt":"Dạo này mình đang nghiên cứu nên các post sẽ được cập nhật theo chủ đề này và các thông tin liên quan nhé. List các trang web vào tìm papers: Cái này rất quan trọng mà trước đây mình không biết, không để ý. sciencedirect.com rất hay, tìm báo...","categories": ["Papers"],
+        "tags": ["Deep-Learning","ASR","WER","Papers"],
+        "url": "http://localhost:4000/portfolio/cach-tra-cuu-bai-bao-khoa-hoc/",
+        "teaser":"http://localhost:4000/assets/images/DL1.jpg"},{
         "title": "How I Created this Awesome Website",
         "excerpt":"Prerequisites Passion Time Focus and ya github account too.Why I chose Jekyll &amp; Github pages. Its a preety long awesome story. Find it here - Why I chose jekyll &amp; Github pages Read more about Jekyll &amp; Github pages I am going to give you all resources that I used...","categories": ["Technology"],
         "tags": ["Jekyll","Github Pages","Tutorial"],
