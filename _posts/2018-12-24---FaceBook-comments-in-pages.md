@@ -22,12 +22,12 @@ tags:
 - Hãy bắt đầu [từ đây](https://developers.facebook.com/apps), và [từ đây](https://developers.facebook.com/docs/javascript/quickstart)
 - Thêm comments vào pages, `{% include comments.html %}` thay vào chỗ  \_layouts\\single.html:
 
-```
-{\% if jekyll.environment == 'production' and site.comments.provider and page.comments % }
-  {\% include comments.html %\}
-{\% endif %\}
+```markdown
+{% if jekyll.environment == 'production' and site.comments.provider and page.comments %}
+  {% include comments.html %}
+{% endif %}
 đổi thành:
-{\% include comments.html %\}
+{% include comments.html %}
 ```
 
 ## Tham khảo thêm:
@@ -52,7 +52,7 @@ Step 1: Include the facebook comment plugin code on your page once, ideally righ
 
 Step 2: Place the facebook comment plugin html code inside data-sub-html attribute of each lightgallery item.
 
-```
+```html
 <!-- data-href should be the unique image url -->
 <div class="fb-comments" data-href="{{ page.url | absolute_url }}" data-width="400" data-numposts="5"></div>
 ```
