@@ -173,9 +173,9 @@
             </li><li class="masthead__menu-item">
               <a href="/blog/" >BLOG</a>
             </li><li class="masthead__menu-item">
-              <a href="/about/" >ABOUT</a>
+              <a href="/categories/" >Categories</a>
             </li><li class="masthead__menu-item">
-              <a href="/resume/" >RESUME</a>
+              <a href="/tags/" >Tags</a>
             </li><li class="masthead__menu-item">
               <a href="/contact/" >CONTACT</a>
             </li></ul>
@@ -405,29 +405,16 @@
 
 <ul>
   <li>Hãy bắt đầu <a href="https://developers.facebook.com/apps">từ đây</a>, và <a href="https://developers.facebook.com/docs/javascript/quickstart">từ đây</a></li>
-  <li>
-    <p>Thêm comments vào pages, `&lt;div class="page__comments"&gt;</p>
-
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h4 class="page__comments-title"&gt;Leave a comment&lt;/h4&gt;
-&lt;section class="fb-comments" data-href="http://localhost:4000/web/FaceBook-comments-in-pages/" data-mobile="true" data-num-posts="10" data-width="100%" data-colorscheme="light"&gt;&lt;/section&gt;
-</code></pre></div>    </div>
-  </li>
+  <li>Thêm comments vào pages, <code class="highlighter-rouge">% include comments.html %</code> thay vào chỗ  <code class="highlighter-rouge">\_layouts\\single.html</code>, như sau:</li>
 </ul>
 
-<p>&lt;/div&gt;
-` thay vào chỗ  _layouts\single.html:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{ % if jekyll.environment == 'production' and site.comments.provider and page.comments % }
+  { % include comments.html % }
+{ % endif % }
 đổi thành:
-&lt;div class="page__comments"&gt;
-  
-  
-      &lt;h4 class="page__comments-title"&gt;Leave a comment&lt;/h4&gt;
-      &lt;section class="fb-comments" data-href="http://localhost:4000/web/FaceBook-comments-in-pages/" data-mobile="true" data-num-posts="10" data-width="100%" data-colorscheme="light"&gt;&lt;/section&gt;
-    
-&lt;/div&gt;
-
+{ % include comments.html % }
 </code></pre></div></div>
+<p>nhớ bỏ dấu cách giữa { và % (ở đây code vào nó lỗi nên đêt thêm dấu cách)</p>
 
 <h2 id="tham-khảo-thêm">Tham khảo thêm:</h2>
 
@@ -435,23 +422,23 @@
 
 <p>Step 1: Include the facebook comment plugin code on your page once, ideally right after the opening &lt;body&gt; tag.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div id="fb-root"&gt;&lt;/div&gt;
-
-&lt;script&gt;
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.4";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-&lt;/script&gt;
-</code></pre></div></div>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="s2">"fb-root"</span><span class="o">&gt;&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+  <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">d</span><span class="p">,</span> <span class="nx">s</span><span class="p">,</span> <span class="nx">id</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">js</span><span class="p">,</span> <span class="nx">fjs</span> <span class="o">=</span> <span class="nx">d</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="nx">s</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">d</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">id</span><span class="p">))</span> <span class="k">return</span><span class="p">;</span>
+    <span class="nx">js</span> <span class="o">=</span> <span class="nx">d</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span> <span class="nx">js</span><span class="p">.</span><span class="nx">id</span> <span class="o">=</span> <span class="nx">id</span><span class="p">;</span>
+    <span class="nx">js</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s2">"//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.4"</span><span class="p">;</span>
+    <span class="nx">fjs</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">insertBefore</span><span class="p">(</span><span class="nx">js</span><span class="p">,</span> <span class="nx">fjs</span><span class="p">);</span>
+  <span class="p">}(</span><span class="nb">document</span><span class="p">,</span> <span class="s1">'script'</span><span class="p">,</span> <span class="s1">'facebook-jssdk'</span><span class="p">));</span>
+<span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span></code></pre></div></div>
 
 <p>Step 2: Place the facebook comment plugin html code inside data-sub-html attribute of each lightgallery item.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- data-href should be the unique image url --&gt;
-&lt;div class="fb-comments" data-href="http://localhost:4000/web/FaceBook-comments-in-pages/" data-width="400" data-numposts="5"&gt;&lt;/div&gt;
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- data-href should be the unique image url --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fb-comments"</span> <span class="na">data-href=</span><span class="s">"http://localhost:4000/web/FaceBook-comments-in-pages/"</span> <span class="na">data-width=</span><span class="s">"400"</span> <span class="na">data-numposts=</span><span class="s">"5"</span><span class="nt">&gt;&lt;/div&gt;</span>
 </code></pre></div></div>
 
 <!-- <div class="fb-comments" data-href="http://localhost:4000/web/FaceBook-comments-in-pages/" data-width="400" data-numposts="5"></div> -->
@@ -512,27 +499,17 @@
 
 
 
-
-  
-  
-  
-
-  <p class="page__taxonomy">
-    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
-    <span itemprop="keywords">
-    
-      
-      
-      <a href="/categories/#web" class="page__taxonomy-item" rel="tag">WEB</a>
-    
-    </span>
-  </p>
-
-
         
           <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-12-24T00:00:00+08:00">December 24, 2018</time></p>
         
       </footer>
+      <div class="page__comments">
+  
+  
+      <h4 class="page__comments-title">Leave a comment</h4>
+      <section class="fb-comments" data-href="http://localhost:4000/web/FaceBook-comments-in-pages/" data-mobile="true" data-num-posts="10" data-width="100%" data-colorscheme="light"></section>
+    
+</div>
 
       <!-- <section class="page__share">
 <h3> Bình luận chung cho cả trang web =>> thêm link vào bình luận nhé.</h3>
@@ -564,17 +541,10 @@
       <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
- 
+
     </div>
 
     <!--  -->
-    <div class="page__comments">
-  
-  
-      <h4 class="page__comments-title">Leave a comment</h4>
-      <section class="fb-comments" data-href="http://localhost:4000/web/FaceBook-comments-in-pages/" data-mobile="true" data-num-posts="10" data-width="100%" data-colorscheme="light"></section>
-    
-</div>
 
   </article>
 
@@ -594,7 +564,7 @@
       <div class="archive__item-teaser">
         <img src=
           
-            "/assets/images/my-personal-website-th.jpg"
+            "/assets/images/default-th.jpg"
           
           alt="">
       </div>
@@ -630,7 +600,7 @@
       <div class="archive__item-teaser">
         <img src=
           
-            "/assets/images/my-personal-website-th.jpg"
+            "/assets/images/default-th.jpg"
           
           alt="">
       </div>

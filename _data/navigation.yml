@@ -6,10 +6,10 @@ main:
     url: /portfolio/
   - title: "BLOG"
     url: /blog/
-  - title: "ABOUT"
-    url: /about/
-  - title: "RESUME"
-    url: /resume/
+  - title: "Categories"
+    url: /categories/
+  - title: "Tags"
+    url: /tags/
   - title: "CONTACT"
     url: /contact/
   # - title: "Sample Posts"

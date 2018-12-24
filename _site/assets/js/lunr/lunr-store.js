@@ -136,21 +136,21 @@ var store = [{
         "teaser":"http://localhost:4000/assets/images/blog/toptal-th.jpg"},{
         "title": "Linux, các phần mềm cần thiết",
         "excerpt":"Các phần mềm cần thiết khi cài Linux. Cài Ubuntu xong, cần: Cài GPU driver, cài cuda, cudnn Các phần mềm cần thiết: Editor: Atom Trình biên dịch Markdown mình thấy hay nhất là Atom. cái này tuy nặng tý (86.22MB) nhưng bù lại các chức năng rất OK.Download file...","categories": ["System"],
-        "tags": ["System,","Linux,","app,","software"],
+        "tags": ["System","Linux","app","software"],
         "url": "http://localhost:4000/system/Cac-phan-mem-hay-cho-Linux/",
         "teaser":"http://localhost:4000/assets/images/default-th.jpg"},{
         "title": "Good documents Deep learning",
-        "excerpt":"image: https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/asr/asr-lp_block-1.CB499320415.png Các link hay cần đọc trong lĩnh vực Deep Learning Danh sách: Bài viết rất có tâm: Làm thế nào để luôn cập nhật kiến thức trong lĩnh vực Machine Learning?Danh sách các bài báo, sách, đồ án hay: Structured Deep Neural Networks for Speech Recognition, pdf Language...","categories": ["Technology"],
+        "excerpt":"Các link hay cần đọc trong lĩnh vực Deep Learning Danh sách: Bài viết rất có tâm: Làm thế nào để luôn cập nhật kiến thức trong lĩnh vực Machine Learning?Danh sách các bài báo, sách, đồ án hay: Structured Deep Neural Networks for Speech Recognition, pdf Language modeling with...","categories": ["Technology"],
         "tags": ["Deep-Learning","ASR","WER"],
         "url": "http://localhost:4000/technology/Links-Hay-Can-Doc/",
-        "teaser":"http://localhost:4000/assets/images/my-personal-website-th.jpg"},{
+        "teaser":"http://localhost:4000/assets/images/default-th.jpg"},{
         "title": "WER in ASR",
         "excerpt":"Các bài liên quan đến WER Lưu lại các link hay và các mục quan trọng ở đây để sau này tiện tìm lại. Why Word Error Rate Is Not A Good Metric for Speech Recognizer Training for the Speech Translation Task? Word Error Rate Calculation Python Code. The Word...","categories": ["ASR"],
         "tags": ["Deep-Learning","ASR","WER"],
         "url": "http://localhost:4000/asr/WER/",
-        "teaser":"http://localhost:4000/assets/images/my-personal-website-th.jpg"},{
+        "teaser":"http://localhost:4000/assets/images/default-th.jpg"},{
         "title": "Thêm Facebook comments vào trang web",
-        "excerpt":"Thêm Facebook comments vào trang web Hãy bắt đầu từ đây, và từ đây Thêm comments vào pages, `&lt;div class=\"page__comments\"&gt; &lt;h4 class=\"page__comments-title\"&gt;Leave a comment&lt;/h4&gt;&lt;section class=\"fb-comments\" data-href=\"http://localhost:4000/web/FaceBook-comments-in-pages/\" data-mobile=\"true\" data-num-posts=\"10\" data-width=\"100%\" data-colorscheme=\"light\"&gt;&lt;/section&gt; &lt;/div&gt;` thay vào chỗ _layouts\\single.html: đổi thành:&lt;div class=\"page__comments\"&gt; &lt;h4 class=\"page__comments-title\"&gt;Leave a comment&lt;/h4&gt; &lt;section class=\"fb-comments\" data-href=\"http://localhost:4000/web/FaceBook-comments-in-pages/\" data-mobile=\"true\" data-num-posts=\"10\" data-width=\"100%\" data-colorscheme=\"light\"&gt;&lt;/section&gt; &lt;/div&gt;Tham...","categories": ["WEB"],
+        "excerpt":"Thêm Facebook comments vào trang web Hãy bắt đầu từ đây, và từ đây Thêm comments vào pages, % include comments.html % thay vào chỗ \\_layouts\\\\single.html, như sau:{ % if jekyll.environment == 'production' and site.comments.provider and page.comments % } { % include comments.html % }{ % endif % }đổi thành:{...","categories": ["WEB"],
         "tags": ["jekyll","github pages","facebook"],
         "url": "http://localhost:4000/web/FaceBook-comments-in-pages/",
         "teaser":"http://localhost:4000/assets/images/default-th.jpg"},{
