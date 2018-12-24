@@ -150,7 +150,7 @@ var store = [{
         "url": "http://localhost:4000/asr/WER/",
         "teaser":"http://localhost:4000/assets/images/my-personal-website-th.jpg"},{
         "title": "Thêm Facebook comments vào trang web",
-        "excerpt":"Thêm Facebook comments vào trang web ","categories": ["WEB"],
+        "excerpt":"Thêm Facebook comments vào trang web Hãy bắt đầu từ đây, và từ đây Thêm comments vào pages, `&lt;div class=\"page__comments\"&gt; &lt;h4 class=\"page__comments-title\"&gt;Leave a comment&lt;/h4&gt;&lt;section class=\"fb-comments\" data-href=\"http://localhost:4000/web/FaceBook-comments-in-pages/\" data-mobile=\"true\" data-num-posts=\"10\" data-width=\"100%\" data-colorscheme=\"light\"&gt;&lt;/section&gt; &lt;/div&gt;` thay vào chỗ _layouts\\single.html: đổi thành:&lt;div class=\"page__comments\"&gt; &lt;h4 class=\"page__comments-title\"&gt;Leave a comment&lt;/h4&gt; &lt;section class=\"fb-comments\" data-href=\"http://localhost:4000/web/FaceBook-comments-in-pages/\" data-mobile=\"true\" data-num-posts=\"10\" data-width=\"100%\" data-colorscheme=\"light\"&gt;&lt;/section&gt; &lt;/div&gt;Tham...","categories": ["WEB"],
         "tags": ["jekyll","github pages","facebook"],
         "url": "http://localhost:4000/web/FaceBook-comments-in-pages/",
         "teaser":"http://localhost:4000/assets/images/default-th.jpg"},{

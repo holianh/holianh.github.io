@@ -157,8 +157,6 @@
     }(document, 'script', 'facebook-jssdk'));</script>
 
 
-
-
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
 <![endif]-->
@@ -286,6 +284,10 @@
       
         
           
+            <li><a href="mailto:tuananhktmt@gmail.com"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+          
+        
+          
             <li><a href="https://holianh.github.io"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
           
         
@@ -310,7 +312,7 @@
           
         
           
-            <li><a href="tuananhktmt"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> youtube</a></li>
+            <li><a href="http://youtube.com/tuananhktmt"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> youtube</a></li>
           
         
       
@@ -401,6 +403,59 @@
         
         <h1 id="thêm-facebook-comments-vào-trang-web">Thêm Facebook comments vào trang web</h1>
 
+<ul>
+  <li>Hãy bắt đầu <a href="https://developers.facebook.com/apps">từ đây</a>, và <a href="https://developers.facebook.com/docs/javascript/quickstart">từ đây</a></li>
+  <li>
+    <p>Thêm comments vào pages, `&lt;div class="page__comments"&gt;</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h4 class="page__comments-title"&gt;Leave a comment&lt;/h4&gt;
+&lt;section class="fb-comments" data-href="http://localhost:4000/web/FaceBook-comments-in-pages/" data-mobile="true" data-num-posts="10" data-width="100%" data-colorscheme="light"&gt;&lt;/section&gt;
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>&lt;/div&gt;
+` thay vào chỗ  _layouts\single.html:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+đổi thành:
+&lt;div class="page__comments"&gt;
+  
+  
+      &lt;h4 class="page__comments-title"&gt;Leave a comment&lt;/h4&gt;
+      &lt;section class="fb-comments" data-href="http://localhost:4000/web/FaceBook-comments-in-pages/" data-mobile="true" data-num-posts="10" data-width="100%" data-colorscheme="light"&gt;&lt;/section&gt;
+    
+&lt;/div&gt;
+
+</code></pre></div></div>
+
+<h2 id="tham-khảo-thêm">Tham khảo thêm:</h2>
+
+<p>Facebook comment code</p>
+
+<p>Step 1: Include the facebook comment plugin code on your page once, ideally right after the opening &lt;body&gt; tag.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div id="fb-root"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.4";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+&lt;/script&gt;
+</code></pre></div></div>
+
+<p>Step 2: Place the facebook comment plugin html code inside data-sub-html attribute of each lightgallery item.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- data-href should be the unique image url --&gt;
+&lt;div class="fb-comments" data-href="http://localhost:4000/web/FaceBook-comments-in-pages/" data-width="400" data-numposts="5"&gt;&lt;/div&gt;
+</code></pre></div></div>
+
+<!-- <div class="fb-comments" data-href="http://localhost:4000/web/FaceBook-comments-in-pages/" data-width="400" data-numposts="5"></div> -->
+
         
       </section>
 
@@ -479,10 +534,10 @@
         
       </footer>
 
-      <section class="page__share">
+      <!-- <section class="page__share">
 <h3> Bình luận chung cho cả trang web =>> thêm link vào bình luận nhé.</h3>
 <div class="fb-comments" data-href="https://holianh.github.io/" data-numposts="10"></div>
-</section> 
+</section>  -->
 
 <section class="page__share">
   
@@ -512,7 +567,15 @@
 
     </div>
 
+    <!--  -->
+    <div class="page__comments">
+  
+  
+      <h4 class="page__comments-title">Leave a comment</h4>
+      <section class="fb-comments" data-href="http://localhost:4000/web/FaceBook-comments-in-pages/" data-mobile="true" data-num-posts="10" data-width="100%" data-colorscheme="light"></section>
     
+</div>
+
   </article>
 
   
@@ -671,9 +734,12 @@
   
   
 </div>
+
     </div>
 
     
+
+
 
     <div class="page__footer">
       <footer>
@@ -752,7 +818,7 @@
 
 
 
-    
+
 
   </body>
 </html>

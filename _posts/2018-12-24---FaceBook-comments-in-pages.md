@@ -10,7 +10,7 @@ header:
 
 categories:
   - WEB
-
+comments: True
 tags:
   - jekyll
   - github pages
@@ -18,3 +18,43 @@ tags:
 ---
 
 # Thêm Facebook comments vào trang web
+
+- Hãy bắt đầu [từ đây](https://developers.facebook.com/apps), và [từ đây](https://developers.facebook.com/docs/javascript/quickstart)
+- Thêm comments vào pages, `{% include comments.html %}` thay vào chỗ  \_layouts\\single.html:
+
+```
+{% if jekyll.environment == 'production' and site.comments.provider and page.comments %}
+  {% include comments.html %}
+{% endif %}
+đổi thành:
+{% include comments.html %}
+```
+
+## Tham khảo thêm:
+
+Facebook comment code
+
+Step 1: Include the facebook comment plugin code on your page once, ideally right after the opening <body> tag.
+
+```
+<div id="fb-root"></div>
+
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+```
+
+Step 2: Place the facebook comment plugin html code inside data-sub-html attribute of each lightgallery item.
+
+```
+<!-- data-href should be the unique image url -->
+<div class="fb-comments" data-href="{{ page.url | absolute_url }}" data-width="400" data-numposts="5"></div>
+```
+
+<!-- <div class="fb-comments" data-href="{{ page.url | absolute_url }}" data-width="400" data-numposts="5"></div> -->
