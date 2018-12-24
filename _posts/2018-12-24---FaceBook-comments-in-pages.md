@@ -20,7 +20,7 @@ tags:
 # Thêm Facebook comments vào trang web
 
 - Hãy bắt đầu [từ đây](https://developers.facebook.com/apps), và [từ đây](https://developers.facebook.com/docs/javascript/quickstart)
-- Thêm comments vào pages, `{ % include comments.html % }` thay vào chỗ  `\_layouts\\single.html`:
+- Thêm comments vào pages, `% include comments.html %` thay vào chỗ  `\_layouts\\single.html`, như sau:
 
 ```markdown
 { % if jekyll.environment == 'production' and site.comments.provider and page.comments % }
