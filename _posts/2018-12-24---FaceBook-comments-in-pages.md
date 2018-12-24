@@ -23,11 +23,11 @@ tags:
 - Thêm comments vào pages, `{% include comments.html %}` thay vào chỗ  \_layouts\\single.html:
 
 ```
-\{% if jekyll.environment == 'production' and site.comments.provider and page.comments %\}
-  \{% include comments.html %\}
-\{% endif %\}
+{\% if jekyll.environment == 'production' and site.comments.provider and page.comments % }
+  {\% include comments.html %\}
+{\% endif %\}
 đổi thành:
-\{% include comments.html %\}
+{\% include comments.html %\}
 ```
 
 ## Tham khảo thêm:
