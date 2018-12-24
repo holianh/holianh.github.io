@@ -7,7 +7,8 @@ header:
   overlay_image: /assets/images/about.jpg
   overlay_filter: 0.6
 excerpt: "Get to know me better"
-
+---
+<!--
 gallery:
   - url: /assets/images/gallery-image-1.jpg
     image_path: /assets/images/gallery-image-1-th.jpg
@@ -94,4 +95,4 @@ And I am fun to be with :D
     * Elevate
     * Improve English: Word Games
     * Lumosity
-    * Math Workout
+    * Math Workout -->

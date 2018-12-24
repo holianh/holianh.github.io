@@ -1,55 +1,19 @@
 ---
-layout: compress
-comments: true
----
-<!DOCTYPE html>
-<html>
-  {% include head.html %}
-  <body>
-    {% include sidebar.html %}
-
-    <main id="main" class="open">
-      <!--{{ content }}-->
-      {% include archive-single.html %}
-      <div class="footer">
-        <div class="container">
-          <p class="footer-entry">Tạo bởi <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> và <a href="https://github.com/P233/3-Jekyll" target="_blank">3-Jekyll theme</a> • Lưu trữ trên <a href="https://pages.github.com/" target="_blank">Github</a></p>
-        </div>
-      </div>
-    </main>
-
-    <button id="menu" class="open">
-      <span id="menu-icons"></span>
-    </button>
-
-    <button id="post-toc-menu">
-      <span id="post-toc-menu-icons"></span>
-    </button>
-    <div id="post-toc">
-      <span id="post-toc-title">Table of Contents</span>
-      <ul id="post-toc-ul"></ul>
-    </div>
-
-    {% include scripts.html %}
-
-  </body>
-</html>
-
-<!--
-
----
-layout: home
+layout: categories #home
 author_profile: true
+header:
+ overlay_color: "#000"
+ overlay_image: /assets/images/home.jpg
+ overlay_filter: 0.2
 ---
 
 {% include base_path %}
-{% capture written_year %}{% capture written_year %}'None'{% endcapture %}
+{% capture written_year %}{% capture written_year %}{% endcapture %}'None'{% endcapture %}
 {% for post in site.posts %}
-  {% capture year %}{{ post.date | date: '%Y-%M' }}{% endcapture %}
+  {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
   {% if year != written_year %}
     <h2 id="{{ year | slugify }}" class="archive__subtitle">{{ year }}</h2>
     {% capture written_year %}{{ year }}{% endcapture %}
   {% endif %}
   {% include archive-single.html %}
 {% endfor %}
--->

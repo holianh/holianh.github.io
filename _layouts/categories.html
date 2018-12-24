@@ -1,8 +1,9 @@
 ---
 layout: archive
+comment: True
 ---
 
-{{ content }}
+
 
 {% assign categories_max = 0 %}
 {% for category in site.categories %}
@@ -40,3 +41,23 @@ layout: archive
     {% endif %}
   {% endfor %}
 {% endfor %}
+
+<hr/>
+
+<h1>Các bài viết gần đây</h1>
+<hr/>
+
+{{ content }}
+
+<div class="page__footer">
+  <footer>
+    {% include footer/custom.html %}
+    {% include comments.html %}
+    {% include footer.html %}
+  </footer>
+</div>
+
+{% include scripts.html %}
+
+
+{% include paginator.html %}

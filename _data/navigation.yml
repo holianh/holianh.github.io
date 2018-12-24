@@ -4,12 +4,12 @@ main:
     url: /
   - title: "PORTFOLIO"
     url: /portfolio/
+  - title: "BLOG"
+    url: /blog/
   - title: "ABOUT"
     url: /about/
   - title: "RESUME"
     url: /resume/
-  - title: "BLOG"
-    url: /blog/
   - title: "CONTACT"
     url: /contact/
   # - title: "Sample Posts"

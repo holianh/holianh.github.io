@@ -106,9 +106,9 @@ author:
   location         : "Thái Nguyên, Việt Nam"
   email            : "tuananhktmt@gmail.com"
   links:
-    # - label: "Email"
-    #   icon: "fas fa-fw fa-envelope-square"
-    #   url: mailto:tuananhktmt@gmail.com
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: mailto:tuananhktmt@gmail.com
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://holianh.github.io"
@@ -135,7 +135,7 @@ author:
       url:
     - label: "youtube"
       icon: "fab fa-fw fa-instagram"
-      url: "tuananhktmt"
+      url: "http://youtube.com/tuananhktmt"
 
 # Site Footer
 footer:
@@ -299,7 +299,8 @@ collections:
     output: true
     permalink: /:collection/:path/
 
-
+sidebar:
+  nav: True
 # Defaults
 defaults:
   # _posts

@@ -4,8 +4,21 @@ My Personal Website
 [Blog Post on how I built this website](https://holianh.github.io/technology/how-i-created-this-website/)
 
 ### How to build and run
-1. sudo gem install bundler
-2. bundle install
-3. bundle exec jekyll serve
+
+1. follow [this instruction](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/)
+
+```b
+cd
+cd www/holianh.github.io
+sudo gem install bundler
+bundle update
+sudo apt-get install ruby`ruby -e 'puts RUBY_VERSION[/\d+\.\d+/]'`-dev
+bundle install
+bundle exec jekyll serve
+```
 
 Go to http://localhost:4000/
+
+
+Ref:
+- [Install Ruby](https://stackoverflow.com/questions/20559255/error-while-installing-json-gem-mkmf-rb-cant-find-header-files-for-ruby)

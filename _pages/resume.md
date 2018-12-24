@@ -6,11 +6,12 @@ header:
   overlay_color: "#000"
   overlay_image: /assets/images/resume.jpg
   overlay_filter: 0.6
-  cta_label: "Download Resume"
-  cta_url: "/assets/deepak-sood-resume.pdf"
+
 excerpt: "Find out what I've accomplished over the years"
 ---
-
+<!--
+cta_label: "Download Resume"
+cta_url: "/assets/deepak-sood-resume.pdf"
 ## Publications
 
 Deepika Yadav, Pushpendra Singh, Kyle Montague, Vijay Kumar, Tuấn Anh, Madeline Balaam, Drishti Sharma, Mona Duggal, Tom Bartindale, Delvin Varghese, and Patrick Olivier. 2017. **Sangoshthi: Empowering Community Health Workers through Peer Learning in Rural India.** In Proceedings of the 26th International Conference on World Wide Web (WWW '17).
@@ -67,7 +68,7 @@ High School - ICSE - Prakash Vidyalaya, Kirandul
   * BashScript
 
 ### Markup Languages
-   
+
   * HTML5
   * CSS3
   * Sass
@@ -141,4 +142,4 @@ High School - ICSE - Prakash Vidyalaya, Kirandul
   * Learning new things and technologies
   * Competitive Programming
   * Reading
-  * Touch Typing
+  * Touch Typing -->

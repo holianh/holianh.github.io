@@ -2,7 +2,7 @@
 image: https://www.fossmint.com/wp-content/uploads/2017/03/Best-Ubuntu-Desktop-Apps.png
 instantfeedback: true
 description: Khi cài hệ thống để chạy Deep Learning, chúng ta cần rất nhiều thứ lỉnh kỉnh
-layout: post
+#layout: post
 title: Linux, các phần mềm cần thiết
 category: System
 tags: System, Linux,  app,  software   
