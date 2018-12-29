@@ -1,7 +1,7 @@
 ---
 title: "Why I chose to build website using Jekyll & Github Pages"
 excerpt: "Just Works!"
-
+toc: true
 header:
   teaser: /assets/images/website-using-jekyll-github-pages-th.jpg
   overlay_image: /assets/images/website-using-jekyll-github-pages.jpg

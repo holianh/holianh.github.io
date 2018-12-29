@@ -1,6 +1,7 @@
 ---
 title: ASR measurements
 excerpt: Cách đo lường khi làm việc với ASR
+toc: true
 
 header:
   teaser: /assets/images/blog/toptal-th.jpg

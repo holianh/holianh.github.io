@@ -1,6 +1,7 @@
 ---
 title: "Distributed System for Collecting Health Data using Mobile Devices"
 excerpt: "Used Open Data Kit (ODK) platform for creating, deployment, collection and analysis of large scale data from geographically and culturally distributed people."
+toc: true
 
 date: 01-12-2016
 

@@ -1,6 +1,7 @@
 ---
 title: "Adding Google Analytics to Jekyll and Github Pages sites"
 excerpt: "Getting your tracking id and adding it to Jekyll for google analytics"
+toc: true
 
 header:
   teaser: /assets/images/website-using-jekyll-github-pages-th.jpg

@@ -1,6 +1,7 @@
 ---
 title: "Word Error Rate (WER) and Word Recognition Rate (WRR) with Python"
 excerpt: " "
+toc: true
 
 date: 25-12-2018
 

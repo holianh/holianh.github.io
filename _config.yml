@@ -101,7 +101,7 @@ analytics:
 author:
   name             : "Tuấn Anh"
   avatar           : "/assets/images/bio-photo.jpg"
-  home             : "https://holianh.github.io" 
+  home             : "https://holianh.github.io"
   bio              : "Smart-Things"
   location         : "Thái Nguyên,VN"
   email            : "tuananhktmt@gmail.com"
@@ -218,6 +218,13 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
+ 
+
+
+
+
+
+
 
 
 # Sass/SCSS

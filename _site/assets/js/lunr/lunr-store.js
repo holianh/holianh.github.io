@@ -54,11 +54,16 @@ var store = [{
         "tags": ["Deep-Learning","ASR","WER","Papers"],
         "url": "http://localhost:4000/portfolio/cach-tra-cuu-bai-bao-khoa-hoc/",
         "teaser":"http://localhost:4000/assets/images/DL1.jpg"},{
-        "title": "How I Created this Awesome Website",
-        "excerpt":"Prerequisites Passion Time Focus and ya github account too.Why I chose Jekyll &amp; Github pages. Its a preety long awesome story. Find it here - Why I chose jekyll &amp; Github pages Read more about Jekyll &amp; Github pages I am going to give you all resources that I used...","categories": ["Technology"],
-        "tags": ["Jekyll","Github Pages","Tutorial"],
-        "url": "http://localhost:4000/technology/how-i-created-this-website/",
-        "teaser":"http://localhost:4000/assets/images/my-personal-website-th.jpg"},{
+        "title": "Word Error Rate (WER) and Word Recognition Rate (WRR) with Python",
+        "excerpt":"Word Error Rate (WER) and Word Recognition Rate (WRR) with Python “WAcc(WRR) and WER as defined above are, the de facto standard most often used in speech recognition.” WER has been developed and is used to check a speech recognition’s engine accuracy. It works by calculating the distance between the...","categories": ["WER"],
+        "tags": ["Deep-Learning","ASR","WER","Papers"],
+        "url": "http://localhost:4000/portfolio/Cach-tinh-WER/",
+        "teaser":"http://localhost:4000/assets/images/DL1.jpg"},{
+        "title": "ROC curves Confution matrix – what are they and how are they used?",
+        "excerpt":"What is Confusion Matrix and why you need it? Well, it is a performance measurement for machine learning classification problem where output can be two or more classes. It is a table with 4 different combinations of predicted and actual values. It is extremely useful for measuring Recall, Precision, Specificity,...","categories": ["WER"],
+        "tags": ["Deep-Learning","ASR","WER","Papers"],
+        "url": "http://localhost:4000/portfolio/Cach-tinh-ROC-curve/",
+        "teaser":"http://localhost:4000/assets/images/postimg/cm1.png"},{
         "title": "Why I chose to build website using Jekyll & Github Pages",
         "excerpt":"What’s the best CMS out there? Wordpress no doubt on that. If you got money to spare, go with Wordpress, now you have two option - Wordpress.org Wordpress.comWhat’s the difference, you ask? Wordpress.org is free, you download the whole wordpress cms, host it in your own hosting site or on...","categories": ["Technology"],
         "tags": ["Jekyll","Github Pages","Tutorial"],
@@ -109,6 +114,31 @@ var store = [{
         "tags": ["jekyll","github pages","facebook"],
         "url": "http://localhost:4000/web/FaceBook-comments-in-pages/",
         "teaser":"http://localhost:4000/assets/images/default-th.jpg"},{
+        "title": "Cài Ubuntu cho Deep Learning",
+        "excerpt":"Tại đây trình bày theo thứ tự ngược: dùng trước, cài sau, vì cài chỉ 1 lần, dùng mãi Run on server from local Anaconda Jupyter Notebook: Run Remote Notebook on server from local: connect Xshell/ ssh to server. Run On server: (example: 1080ti server) conda info --envs source activate...","categories": ["Ubuntu","Driver","Run"],
+        "tags": ["Ubuntu","Driver","gcc g++"],
+        "url": "http://localhost:4000/ubuntu/driver/run/Install-Ubuntu-systems-package/",
+        "teaser":"http://localhost:4000/assets/images/default-th.jpg"},{
+        "title": "Measurements in ASR",
+        "excerpt":"Các bài liên quan đến cách đo lường ASR: Phương pháp WER: eesen: end-to-end speech recognition using deep rnn models and wfst-based decoding: Bài này diễn tả về RNN và WFST, phương pháp cũ, dùng GMM-HMM chuyển sang CTC. Code tại đây: github, code kết hợp python-C++, cũng là low-lever....","categories": ["ASR","Deep_Learning"],
+        "tags": ["Deep-Learning","ASR","WER","graph","Measurements"],
+        "url": "http://localhost:4000/asr/deep_learning/asr_Papers_measurements/",
+        "teaser":"http://localhost:4000/assets/images/default-th.jpg"},{
+        "title": "Các ví dụ mẫu hay về RNN-LSTM",
+        "excerpt":"Code mẫu của RNN-LSTMs Keras Interface for Kaldi ASR tensorflow_CTC_example: A short example of training a bidirectional LSTM model with connectionist temporal classification bdlstm_train.py trains a model on the TIMIT training data set; assumes appropriately formatted inputs bdlstm_train_sample.py trains a model on the 8-sample toy data set in the “sample_data”...","categories": ["Deep-Learning","RNN-LSTM"],
+        "tags": ["Deep-Learning","RNN-LSTM"],
+        "url": "http://localhost:4000/deep-learning/rnn-lstm/RNN-LSTMs/",
+        "teaser":"http://localhost:4000/assets/images/default-th.jpg"},{
+        "title": "How I Created this Awesome Website",
+        "excerpt":"Kinh nghiệm cấu hình Github pages với Markdown Tùy chỉnh page của mình: Trang layout chứa code trong blog là single.html. Code trong Github pages hiển thị ScrollBar (Tham khảo) Trong file: _sass\\minimal-mistakes\\_syntax.scss tìm đến thẻ highlight dòng 55 và thêm 1 dòng: .highlight pre { width: 100%; } Thay...","categories": ["Technology","Markdown","Github Pages"],
+        "tags": ["Jekyll","Github Pages","Tutorial","Markdown"],
+        "url": "http://localhost:4000/technology/markdown/github%20pages/how-i-created-this-website/",
+        "teaser":"http://localhost:4000/assets/images/my-personal-website-th.jpg"},{
+        "title": "Keras with Python",
+        "excerpt":"Save - Load model Đã thử nghiệm thành công. Save model, load_model: model.save('zzz.h5')....................m1=load_model('zzz.h5',compile=False)m1.summary()m1.layers.pop() # Remove last layersm1.layers.pop()m1.layers.pop()m1.layers.pop()m1.summary()m1.load_weights('/home/u/path/to/chkPoint.pkl') Và đây là cách thứ 2: # Suppose we have a modelfrom keras.applications import resnet50model = resnet50.ResNet50(include_top=True, weights='imagenet')model.load_weights('resnet50_weights_tf_dim_ordering_tf_kernels.h5')model.compile(optimizer='rmsprop', loss='categorical_crossentropy') # Import dependenciesimport jsonfrom keras.models import model_from_json, load_model # Option 1: Save Weights +...","categories": ["WER"],
+        "tags": ["Deep-Learning","Keras","Save/Load"],
+        "url": "http://localhost:4000/wer/Keras/",
+        "teaser":"http://localhost:4000/assets/images/DL1.jpg"},{
         "title": "Câu nói hay...",
         "excerpt":"“99 little bugs in the code. 99 little bugs. Take one down, patch it around,…127 little bugs in the code.”—Anonymous22 Sep, 2017 “I have the power to do and to be whatever I wish to do and be.”—The Power of Concentration16 Sep, 2017 “Always code as if the guy who...","categories": [],
         "tags": [],
@@ -120,7 +150,7 @@ var store = [{
         "url": "http://localhost:4000/til/2017_til/",
         "teaser":"http://localhost:4000/assets/images/default-th.jpg"},{
         "title": "Hôm nay tôi đã đọc...",
-        "excerpt":"Xây dựng hệ thống tìm kiếm nhạc bằng âm thanh với Python và Approximate Nearest NeighborsChỉ cần ngân nga, là bạn có thể tìm được âm nhạc rồi, mà còn có thể tìm riêng trong máy mình nữa. Ngon không? — Machine Learning2018-12-24 ","categories": [],
+        "excerpt":"Cần đọc… Danh sách các bài viết hay cần phải đọc hiểu: INSTALL NVIDIA DRIVER 390.77 ON UBUNTU / LINUXMINT Xây dựng hệ thống tìm kiếm nhạc bằng âm thanh với Python và Approximate Nearest NeighborsChỉ cần ngân nga, là bạn có thể tìm được âm nhạc rồi, mà còn...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/til/2018_til/",
         "teaser":"http://localhost:4000/assets/images/default-th.jpg"}]

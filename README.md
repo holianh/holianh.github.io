@@ -7,9 +7,15 @@ My Personal Website
 
 1. follow [this instruction](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/)
 
-```b
+```bash
 cd
 cd www/holianh.github.io
+
+Make new `Gemfile` with this content:
+source 'https://rubygems.org'
+gem 'github-pages', group: :jekyll_plugins
+
+
 sudo gem install bundler
 bundle update
 sudo apt-get install ruby`ruby -e 'puts RUBY_VERSION[/\d+\.\d+/]'`-dev

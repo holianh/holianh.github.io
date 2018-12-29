@@ -1,0 +1,918 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.12.2 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Cài Ubuntu cho Deep Learning - Tuấn Anh</title>
+<meta name="description" content="Cài Ubuntu, gcc, g++,… vân vân và mây mây">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Tuấn Anh">
+<meta property="og:title" content="Cài Ubuntu cho Deep Learning">
+<meta property="og:url" content="http://localhost:4000/ubuntu/driver/run/Install-Ubuntu-systems-package/">
+
+
+  <meta property="og:description" content="Cài Ubuntu, gcc, g++,… vân vân và mây mây">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/my-personal-website-th.jpg">
+
+
+
+  <meta name="twitter:site" content="@tuananhktmt">
+  <meta name="twitter:title" content="Cài Ubuntu cho Deep Learning">
+  <meta name="twitter:description" content="Cài Ubuntu, gcc, g++,… vân vân và mây mây">
+  <meta name="twitter:url" content="http://localhost:4000/ubuntu/driver/run/Install-Ubuntu-systems-package/">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="http://localhost:4000/assets/images/my-personal-website-th.jpg">
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2018-12-25T00:00:00+08:00">
+
+
+
+
+
+  
+    <meta property="article:publisher" content="https://www.facebook.com/">
+  
+
+  
+    <meta property="fb:app_id" content="2341188262621006">
+  
+
+
+<link rel="canonical" href="http://localhost:4000/ubuntu/driver/run/Install-Ubuntu-systems-package/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": "http://localhost:4000",
+      "logo": "http://localhost:4000/assets/images/default.jpg"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Tuấn Anh",
+      "url": "http://localhost:4000",
+      "sameAs": ["https://twitter.com/tuananhktmt","https://www.facebook.com/"]
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Tuấn Anh Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      inlineMath: [['$','$']]
+    }
+  });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<!-- https://stackoverflow.com/questions/26275645/how-to-support-latex-in-github-pages-->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+  </head>
+
+  <body class="layout--single">
+
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=2341188262621006&autoLogAppEvents=1';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Tuấn Anh</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/" >HOME</a>
+            </li><li class="masthead__menu-item">
+              <a href="/portfolio/" >PORTFOLIO</a>
+            </li><li class="masthead__menu-item">
+              <a href="/blog/" >BLOG</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/" >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >Tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/contact/" >CONTACT</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style="background-color: #000; background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/images/my-personal-website-th.jpg');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Cài Ubuntu cho Deep Learning
+
+        
+      </h1>
+      
+        <p class="page__lead">Cài Ubuntu, gcc, g++,… vân vân và mây mây
+</p>
+      
+      
+        <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+      
+      
+      
+    </div>
+  
+  
+    <span class="page__hero-caption">
+</span>
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        
+        <a href="https://holianh.github.io">
+          <img src="/assets/images/bio-photo.jpg" alt="Tuấn Anh" itemprop="image">
+        </a>
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <a href="https://holianh.github.io"><h3 class="author__name" itemprop="name">Tuấn Anh</h3></a>
+    
+    
+      <p class="author__bio" itemprop="description">
+        Smart-Things
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Thái Nguyên,VN</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:tuananhktmt@gmail.com"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+          
+        
+          
+            <li><a href="https://holianh.github.io"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+          
+        
+          
+            <li><a href="https://twitter.com/tuananhktmt"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+          
+        
+          
+            <li><a href="https://facebook.com/anh211"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+          
+        
+          
+            <li><a href="https://github.com/holianh"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="http://youtube.com/tuananhktmt"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> youtube</a></li>
+          
+        
+      
+
+      
+<!--
+      
+        <li>
+          <a href="mailto:tuananhktmt@gmail.com">
+            <meta itemprop="email" content="tuananhktmt@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+-->
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Cài Ubuntu cho Deep Learning">
+    <meta itemprop="description" content="Cài Ubuntu, gcc, g++,… vân vân và mây mây">
+    <meta itemprop="datePublished" content="December 25, 2018">
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+             
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#run-on-server-from-local">Run on server from local</a></li>
+  <li><a href="#cài-ubuntu-xong-rồi--cài-các-thứ-liên-quan">Cài Ubuntu xong rồi =&gt; cài các thứ liên quan</a>
+    <ul>
+      <li><a href="#cài-driver">Cài driver</a></li>
+    </ul>
+  </li>
+</ul>
+
+            </nav>
+          </aside>
+
+        
+        <p>Tại đây trình bày theo thứ tự ngược: dùng trước, cài sau, vì cài chỉ 1 lần, dùng mãi</p>
+
+<h1 id="run-on-server-from-local">Run on server from local</h1>
+
+<ul>
+  <li>
+    <p>Anaconda Jupyter Notebook: Run Remote Notebook on server from local:</p>
+
+    <ol>
+      <li>connect Xshell/ ssh to server.</li>
+      <li>Run On server: (example: 1080ti server)</li>
+    </ol>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  conda info <span class="nt">--envs</span>
+  <span class="nb">source </span>activate tf
+  jupyter notebook <span class="nt">--no-browser</span> <span class="nt">--ip</span><span class="o">=</span><span class="k">*</span> <span class="nt">--port</span><span class="o">=</span>1234
+  jupyter notebook <span class="nt">--no-browser</span> <span class="nt">--ip</span><span class="o">=</span>0.0.0.0 <span class="nt">--port</span><span class="o">=</span>1234  
+</code></pre></div>    </div>
+
+    <p>(port can be change)  <br />
+  result:
+  <code class="highlighter-rouge">http://(ubu or 127.0.0.1):1234/?token=113fbcd684007d6a72f8839c94637951d613b136a39b040c</code></p>
+
+    <ol>
+      <li>Run on local:
+        <ul>
+          <li>copy that address, paste to local browser</li>
+          <li>change IP address to real IP:</li>
+        </ul>
+
+        <p><code class="highlighter-rouge">http://10.1.53.1:1234/?token=113fbcd684007d6a72f8839c94637951d613b136a39b040c</code></p>
+        <ul>
+          <li>Enjoy!</li>
+        </ul>
+      </li>
+      <li>Change jupyter notebook password: <code class="highlighter-rouge">jupyter notebook password</code>.</li>
+    </ol>
+  </li>
+</ul>
+
+<h1 id="cài-ubuntu-xong-rồi--cài-các-thứ-liên-quan">Cài Ubuntu xong rồi =&gt; cài các thứ liên quan</h1>
+
+<h2 id="cài-driver">Cài driver</h2>
+
+<p>Cài cài này phức tạp phết</p>
+
+<ul>
+  <li>
+    <p>Tại máy trạm có thể truy cập vào máy chủ theo cách: <code class="highlighter-rouge">ssh -Y u@10.1.53.1</code></p>
+  </li>
+  <li>
+    <p>Mở windows driver &amp; software lên: <code class="highlighter-rouge">sudo software-properties-gtk</code> cài trên này thì được driver ổn định, nhưng không phải là mới nhất.</p>
+  </li>
+  <li>
+    <p>Để cài mới nhất:</p>
+    <ul>
+      <li>Download file cài về</li>
+      <li>cài gcc, nếu không phải là ver &gt; 7.2.0:
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  u@ubu:~<span class="nv">$ </span>gcc-7 <span class="nt">-v</span>
+  Using built-in specs.
+  <span class="nv">COLLECT_GCC</span><span class="o">=</span>gcc-7
+  <span class="nv">COLLECT_LTO_WRAPPER</span><span class="o">=</span>/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
+  <span class="nv">OFFLOAD_TARGET_NAMES</span><span class="o">=</span>nvptx-none
+  <span class="nv">OFFLOAD_TARGET_DEFAULT</span><span class="o">=</span>1
+  Target: x86_64-linux-gnu
+  Configured with: ../src/configure <span class="nt">-v</span> <span class="nt">--with-pkgversion</span><span class="o">=</span><span class="s1">'Ubuntu 7.2.0-8ubuntu3.2'</span> <span class="nt">--with-bugurl</span><span class="o">=</span>file:///usr/share/doc/gcc-7/README.Bugs <span class="nt">--enable-languages</span><span class="o">=</span>c,ada,c++,go,brig,d,fortran,objc,obj-c++ <span class="nt">--prefix</span><span class="o">=</span>/usr <span class="nt">--with-gcc-major-version-only</span> <span class="nt">--program-suffix</span><span class="o">=</span><span class="nt">-7</span> <span class="nt">--program-prefix</span><span class="o">=</span>x86_64-linux-gnu- <span class="nt">--enable-shared</span> <span class="nt">--enable-linker-build-id</span> <span class="nt">--libexecdir</span><span class="o">=</span>/usr/lib <span class="nt">--without-included-gettext</span> <span class="nt">--enable-threads</span><span class="o">=</span>posix <span class="nt">--libdir</span><span class="o">=</span>/usr/lib <span class="nt">--enable-nls</span> <span class="nt">--with-sysroot</span><span class="o">=</span>/ <span class="nt">--enable-clocale</span><span class="o">=</span>gnu <span class="nt">--enable-libstdcxx-debug</span> <span class="nt">--enable-libstdcxx-time</span><span class="o">=</span>yes <span class="nt">--with-default-libstdcxx-abi</span><span class="o">=</span>new <span class="nt">--enable-gnu-unique-object</span> <span class="nt">--disable-vtable-verify</span> <span class="nt">--enable-libmpx</span> <span class="nt">--enable-plugin</span> <span class="nt">--enable-default-pie</span> <span class="nt">--with-system-zlib</span> <span class="nt">--with-target-system-zlib</span> <span class="nt">--enable-objc-gc</span><span class="o">=</span>auto <span class="nt">--enable-multiarch</span> <span class="nt">--disable-werror</span> <span class="nt">--with-arch-32</span><span class="o">=</span>i686 <span class="nt">--with-abi</span><span class="o">=</span>m64 <span class="nt">--with-multilib-list</span><span class="o">=</span>m32,m64,mx32 <span class="nt">--enable-multilib</span> <span class="nt">--with-tune</span><span class="o">=</span>generic <span class="nt">--enable-offload-targets</span><span class="o">=</span>nvptx-none <span class="nt">--without-cuda-driver</span> <span class="nt">--enable-checking</span><span class="o">=</span>release <span class="nt">--build</span><span class="o">=</span>x86_64-linux-gnu <span class="nt">--host</span><span class="o">=</span>x86_64-linux-gnu <span class="nt">--target</span><span class="o">=</span>x86_64-linux-gnu
+  Thread model: posix
+  gcc version 7.2.0 <span class="o">(</span>Ubuntu 7.2.0-8ubuntu3.2<span class="o">)</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+
+    <p>Cách cài:</p>
+
+    <p>Xem bản gốc <a href="https://askubuntu.com/questions/26498/how-to-choose-the-default-gcc-and-g-version">tại đây</a> và <a href="https://askubuntu.com/questions/949473/installing-gcc-7-2-via-apt">tại đây</a></p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  1. Remove:
+  ```bash
+  sudo update-alternatives --remove-all gcc
+  sudo update-alternatives --remove-all g++   
+  ```
+
+  2. Install:
+  ```bash
+  sudo env DEBIAN_FRONTEND=noninteractive                                    \
+       bash -c 'apt-get install -y python-software-properties lsb-release &amp;&amp; \
+              echo -e "Package: gcc-7\\nPin: release n=$(lsb_release -sc)\\nPin-Priority: 990" &gt; /etc/apt/preferences.d/gcc-7 \
+              apt-add-repository -yu ppa:ubuntu-toolchain-r/test &amp;&amp;              \
+              apt-get install -y gcc-7'
+  ```
+  3. Set Alternative:
+  ```bash
+  sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7.2 10
+  sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-7.2 10
+  sudo update-alternatives --config gcc
+  sudo update-alternatives --config g++        
+  ```
+</code></pre></div>    </div>
+
+    <ul>
+      <li>Cài  NVIDIA DRIVER 390.77:</li>
+    </ul>
+
+    <p>Tham khảo <a href="https://www.elinuxtutorials.com/2018/07/install-nvidia-driver-390-77-on-ubuntu-linuxmint/">tại đây</a></p>
+
+    <p>INSTALL VIA SOURCE FILE</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      1. Remove older version of NVIDIA <span class="k">if </span>your graphic is supported
+      <span class="nb">sudo </span>apt-get purge nvidia<span class="k">*</span>
+
+      2. Reboot the system
+
+      3. Download the Nvidia Driver 390.77
+      wget http://us.download.nvidia.com/XFree86/Linux-x86_64/390.77/NVIDIA-Linux-x86_64-390.77.run
+
+      or: https://www.nvidia.com/object/unix.html
+
+      4. Switch to <span class="nb">command </span>prompt and stop the running Graphics session
+      <span class="nb">sudo </span>service lightdm stop
+      <span class="nb">sudo </span>service gdm stop
+
+      5. Give execute permissions to the installer
+      <span class="nb">sudo </span>chmod 755 NVIDIA-Linux-x86_64-390.77.run
+
+      6.Install the Nvidia 390.77 driver
+      <span class="nb">sudo</span> ./NVIDIA-Linux-x86_64-390.77.run
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>.</p>
+
+
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#driver" class="page__taxonomy-item" rel="tag">Driver</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#gcc-g" class="page__taxonomy-item" rel="tag">gcc g++</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#ubuntu" class="page__taxonomy-item" rel="tag">Ubuntu</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#driver" class="page__taxonomy-item" rel="tag">Driver</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/categories/#run" class="page__taxonomy-item" rel="tag">Run</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/categories/#ubuntu" class="page__taxonomy-item" rel="tag">Ubuntu</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-12-25T00:00:00+08:00">December 25, 2018</time></p>
+        
+      </footer>
+      <div class="page__comments">
+  
+  
+      <h4 class="page__comments-title">Leave a comment</h4>
+      <section class="fb-comments" data-href="http://localhost:4000/ubuntu/driver/run/Install-Ubuntu-systems-package/" data-mobile="true" data-num-posts="10" data-width="100%" data-colorscheme="light"></section>
+    
+</div>
+
+      <!-- <section class="page__share">
+<h3> Bình luận chung cho cả trang web =>> thêm link vào bình luận nhé.</h3>
+<div class="fb-comments" data-href="https://holianh.github.io/" data-numposts="10"></div>
+</section>  -->
+
+<section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=tuananhktmt&text=C%C3%A0i+Ubuntu+cho+Deep+Learning%20http%3A%2F%2Flocalhost%3A4000%2Fubuntu%2Fdriver%2Frun%2FInstall-Ubuntu-systems-package%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fubuntu%2Fdriver%2Frun%2FInstall-Ubuntu-systems-package%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2Fubuntu%2Fdriver%2Frun%2FInstall-Ubuntu-systems-package%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fubuntu%2Fdriver%2Frun%2FInstall-Ubuntu-systems-package%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/web/FaceBook-comments-in-pages/" class="pagination--pager" title="Thêm Facebook comments vào trang web
+">Previous</a>
+    
+    
+      <a href="/asr/deep_learning/asr_Papers_measurements/" class="pagination--pager" title="Measurements in ASR
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    <!--  -->
+
+  </article>
+
+
+
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/DL1.jpg"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a class="no-underline" href="/wer/Keras/" rel="permalink">Keras with Python
+</a>
+      
+    </h3>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/my-personal-website-th.jpg"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a class="no-underline" href="/technology/markdown/github%20pages/how-i-created-this-website/" rel="permalink">How I Created this Awesome Website
+</a>
+      
+    </h3>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Using Jekyll &amp; Github Pages
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/default-th.jpg"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a class="no-underline" href="/deep-learning/rnn-lstm/RNN-LSTMs/" rel="permalink">Các ví dụ mẫu hay về RNN-LSTM
+</a>
+      
+    </h3>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Code mẫu
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/default-th.jpg"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a class="no-underline" href="/asr/deep_learning/asr_Papers_measurements/" rel="permalink">Measurements in ASR
+</a>
+      
+    </h3>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Các phương pháp đo lường trong ASR
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- <center>
+<div class="fb-comments" data-href="https://holianh.github.io/" data-numposts="10"></div>
+</center> -->
+
+<!-- end custom footer snippets -->
+
+        <!-- <center>
+<div class="fb-comments" data-href="https://holianh.github.io/" data-numposts="10"></div>
+</center> -->
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/tuananhktmt"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://facebook.com/anh211"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+        
+      
+        
+          <li><a href="https://github.com/holianh"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          <li><a href="https://youtube.com/tuananhktmt"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> youtube</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Tuấn Anh. Made with ❤</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+
+
+
+
+
+
+  
+      <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=2341188262621006";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    
+
+
+
+  </body>
+</html>

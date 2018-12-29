@@ -1,21 +1,50 @@
 ---
 title: "How I Created this Awesome Website"
 excerpt: "Using Jekyll & Github Pages"
+toc: true
 
 header:
   teaser: /assets/images/my-personal-website-th.jpg
 
 categories:
   - Technology
+  - Markdown
+  - Github Pages
 
 tags:
   - Jekyll
   - Github Pages
   - Tutorial
+  - Markdown
 ---
 
+# Kinh nghiệm cấu hình Github pages với Markdown
+
+Tùy chỉnh page của mình:
+- Trang layout chứa code trong blog là `single.html`.
+
+- Code trong Github pages hiển thị ScrollBar ([Tham khảo](https://stackoverflow.com/questions/11093233/how-to-support-scrolling-when-using-pygments-with-jekyll))
+
+    Trong file: `_sass\minimal-mistakes\_syntax.scss` tìm đến thẻ `highlight` dòng 55 và thêm 1 dòng:
+
+    ```css
+    .highlight pre {
+      width: 100%;
+    }
+    Thay thế thành: ------------------
+    .highlight pre {
+      width: 100%;
+      max-height: 600px;
+    }
+    ```
+Code sẽ có thể Scroll
+
+- Trong site, muốn có TOC thì chỉ cần trên đầu trang add thêm `toc:true` là được, kinh ngiệm cho thấy, muốn tìm gì, cứ tìm theo kiểu: `page.` trong toàn bộ project, thì nó sẽ ra, xong mò xem nó hiển thị cái gì.
+
+
+
 ## Prerequisites
-  
+
   1. Passion
   2. Time
   3. Focus

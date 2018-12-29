@@ -2,7 +2,8 @@
 image: https://www.fossmint.com/wp-content/uploads/2017/03/Best-Ubuntu-Desktop-Apps.png
 instantfeedback: true
 description: Khi cài hệ thống để chạy Deep Learning, chúng ta cần rất nhiều thứ lỉnh kỉnh
-#layout: post
+toc: true
+
 header:
   #teaser: /assets/images/my-personal-website-th.jpg
   overlay_image:  /assets/images/my-personal-website-th.jpg

@@ -2,6 +2,7 @@
 title: "Adding comments system in your jekyll and github pages"
 excerpt: "Adding comment system like facebook, disqus or staticman"
 
+toc: true
 header:
   teaser: /assets/images/blog/staticman-th.jpg
   overlay_image: /assets/images/blog/staticman.jpg
@@ -73,7 +74,7 @@ Create your app in facebook developer console. You will get app id for your acco
   ```yaml
   comments:
     facebook:
-      appid : 
+      appid :
       num_posts : 10
       colorscheme: "light"
       order_by : "reverse_time"

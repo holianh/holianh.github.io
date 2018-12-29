@@ -1,6 +1,7 @@
 ---
 title: "Good documents Deep learning"
 excerpt: "Using Jekyll & Github Pages"
+toc: true
 
 header:
   #teaser: /assets/images/my-personal-website-th.jpg

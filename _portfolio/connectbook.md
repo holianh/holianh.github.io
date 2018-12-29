@@ -1,7 +1,7 @@
 ---
 title: "ConnectBook Social Networking Website"
-excerpt: "A mini social networking site with all social networking functionalities. Used Java Design Patterns along with frameworks like spring and bootstrap.
-"
+excerpt: "A mini social networking site with all social networking functionalities. Used Java Design Patterns along with frameworks like spring and bootstrap."
+toc: true
 
 date: 01-07-2016
 

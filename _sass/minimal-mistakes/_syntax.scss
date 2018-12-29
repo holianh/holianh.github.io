@@ -54,6 +54,7 @@ figure.highlight {
 
 .highlight pre {
   width: 100%;
+  max-height: 600px;
 }
 
 .highlight .hll {
@@ -315,6 +316,7 @@ figure.highlight {
     /* Literal.Number.Integer.Long */
     color: $base09;
   }
+
 }
 
 .gist {

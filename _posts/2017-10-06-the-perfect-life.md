@@ -1,6 +1,7 @@
 ---
 title: The Perfect Life
 excerpt: What all software developers want, Toptal gives it to you.
+toc: true
 
 header:
   teaser: /assets/images/blog/toptal-th.jpg

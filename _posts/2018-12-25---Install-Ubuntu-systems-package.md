@@ -1,6 +1,7 @@
 ---
 title: "Cài Ubuntu cho Deep Learning"
 excerpt: "Cài Ubuntu, gcc, g++,... vân vân và mây mây"
+toc: true
 
 header:
   #teaser: /assets/images/my-personal-website-th.jpg

@@ -1,6 +1,7 @@
 ---
 title: "Measurements in ASR"
 excerpt: "Các phương pháp đo lường trong ASR"
+toc: true
 
 header:
   #teaser: /assets/images/my-personal-website-th.jpg
@@ -75,7 +76,7 @@ tags:
         two indices. The ROC is obtained by sweeping through confidence thresholds and averaging the curves vertically over all
         keywords in test.
 
-    
+
 
 
 

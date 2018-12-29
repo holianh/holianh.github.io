@@ -1,6 +1,7 @@
 ---
 title: "Thêm Facebook comments vào trang web"
 excerpt: "Cách thêm FB comments, nhiều chỗ chỉ cách quá, không nhớ nổi!"
+toc: true
 
 header:
   #teaser: /assets/images/blog/fb.jpeg
