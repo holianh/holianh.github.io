@@ -33,7 +33,7 @@ tags:
 
 Dạo này mình đang nghiên cứu nên các post sẽ được cập nhật theo chủ đề này và các thông tin liên quan nhé.
 
-## List các trang web vào tìm papers:
+# List các trang web vào tìm papers:
 Cái này rất quan trọng mà trước đây mình không biết, không để ý.
 
 1. [sciencedirect.com](https://www.sciencedirect.com) rất hay, tìm báo rất chuẩn
@@ -75,7 +75,7 @@ Cái này rất quan trọng mà trước đây mình không biết, không đ�
 
 
 
-#### Một số phương pháp khác:
+# Một số phương pháp khác:
 -  Sử dụng sci hub chat bot trên Telegram:
     - Trên điện thoại, cài app Telegram (cũng là một app nhắn tin gọi điện thoại free như viber, nghe nói bảo mật cao).
     - Trên máy tính cài phần mềm Telegram desktop.
@@ -83,13 +83,13 @@ Cái này rất quan trọng mà trước đây mình không biết, không đ�
 - Cài trình duyệt TOR, đây là địa chỉ của sci hub trên [TOR](https://scihub22266oqcxt.onion), trang này khá ổn định.
 - [Onion](https://osge7iuzcrtmcsny.onion)
 
-##### Các thông tin quan trọng để lấy một bài báo:
+## Các thông tin quan trọng để lấy một bài báo:
 - Muốn lấy một full-pdf paper nào đó, ta cần có (càng nhiều càng tốt) các thông tin sau: URL, DOI, PMID, PMC ID, Title, Citation.
 - Với Book, có các thông tin như: Title, author, ISBN, md5
 
-### Còn trang nào bạn Comments thêm vào nhé
+## Còn trang nào bạn Comments thêm vào nhé
 
-## References:
+# References:
  - [Finding and accessing scientific papers](https://www.sciencebuddies.org/science-fair-projects/competitions/finding-and-accessing-scientific-papers)
  - [Download Research Papers and Scientific Articles for free (Sci-Hub links updated on Dec 13, 2018)](https://citationsy.com/blog/download-research-papers-scientific-articles-free-scihub/)
 

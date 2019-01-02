@@ -43,14 +43,19 @@ til:
   {% endfor %}
   <table >
       <tr>
-          {% for post in site.posts offset:4 limit:5 %}
+          {% for post in site.posts offset:4 limit:4 %}
            <td> {% include archive-single.html type="columns" %}</td>
           {% endfor %}
       </tr>
- </table>
- <table  >
+ <!-- </table>
+ <table  > -->
      <tr>
-         {% for post in site.posts offset:9 limit:5 %}
+         {% for post in site.posts offset:8 limit:4 %}
+          <td> {% include archive-single.html type="columns" %}</td>
+         {% endfor %}
+     </tr>
+     <tr>
+         {% for post in site.posts offset:12 limit:4 %}
           <td> {% include archive-single.html type="columns" %}</td>
          {% endfor %}
      </tr>
@@ -58,7 +63,7 @@ til:
 
 </div>
 {% include feature_row id="all_posts" type="center" %}
-   
+
 
 
 
@@ -71,7 +76,17 @@ til:
   {% endfor %}
   <table >
       <tr>
-          {% for post in site.posts offset:4 limit:5 %}
+          {% for post in site.portfolio offset:4 limit:4 %}
+           <td> {% include archive-single.html type="columns" %}</td>
+          {% endfor %}
+      </tr>
+      <tr>
+          {% for post in site.portfolio offset:8 limit:4 %}
+           <td> {% include archive-single.html type="columns" %}</td>
+          {% endfor %}
+      </tr>
+      <tr>
+          {% for post in site.portfolio offset:12 limit:4 %}
            <td> {% include archive-single.html type="columns" %}</td>
           {% endfor %}
       </tr>
