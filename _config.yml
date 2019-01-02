@@ -126,14 +126,14 @@ author:
       url:
     - label: "Codepen"
       icon: "fab fa-fw fa-instagram"
-      url:
+      url: "/_posts/2018-12-29--Keras.md"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-instagram"
       url:
     - label: "StackOverflow"
       icon: "fab fa-fw fa-instagram"
       url:
-    - label: "youtube"
+    - label: "YouTube"
       icon: "fab fa-fw fa-instagram"
       url: "http://youtube.com/tuananhktmt"
 
@@ -218,7 +218,7 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
- 
+
 
 
 

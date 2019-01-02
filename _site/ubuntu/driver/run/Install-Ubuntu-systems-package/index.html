@@ -226,7 +226,7 @@
 
 
 
-  1 minute read
+  2 minute read
 </p>
       
       
@@ -408,10 +408,22 @@
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
               <ul class="toc__menu">
-  <li><a href="#run-on-server-from-local">Run on server from local</a></li>
+  <li><a href="#run-jupyter-notebook-on-server-from-local">Run jupyter notebook on server from local</a></li>
   <li><a href="#cài-ubuntu-xong-rồi--cài-các-thứ-liên-quan">Cài Ubuntu xong rồi =&gt; cài các thứ liên quan</a>
     <ul>
-      <li><a href="#cài-driver">Cài driver</a></li>
+      <li><a href="#cài-driver-kiểu-dễ-ăn">Cài driver kiểu dễ ăn</a>
+        <ul>
+          <li><a href="#cài-driver">Cài driver</a></li>
+          <li><a href="#cài-cuda">Cài CUDA</a></li>
+        </ul>
+      </li>
+      <li><a href="#để-cài-driver-mới-nhất">Để cài driver mới nhất:</a>
+        <ul>
+          <li><a href="#cài-dạng-manual">Cài dạng manual.</a></li>
+          <li><a href="#cách-cài">Cách cài:</a></li>
+          <li><a href="#install-via-source-file">INSTALL VIA SOURCE FILE</a></li>
+        </ul>
+      </li>
     </ul>
   </li>
 </ul>
@@ -422,7 +434,7 @@
         
         <p>Tại đây trình bày theo thứ tự ngược: dùng trước, cài sau, vì cài chỉ 1 lần, dùng mãi</p>
 
-<h1 id="run-on-server-from-local">Run on server from local</h1>
+<h1 id="run-jupyter-notebook-on-server-from-local">Run jupyter notebook on server from local</h1>
 
 <ul>
   <li>
@@ -462,93 +474,107 @@
 
 <h1 id="cài-ubuntu-xong-rồi--cài-các-thứ-liên-quan">Cài Ubuntu xong rồi =&gt; cài các thứ liên quan</h1>
 
-<h2 id="cài-driver">Cài driver</h2>
-
 <p>Cài cài này phức tạp phết</p>
 
+<h2 id="cài-driver-kiểu-dễ-ăn">Cài driver kiểu dễ ăn</h2>
+
+<h3 id="cài-driver">Cài driver</h3>
 <ul>
   <li>
     <p>Tại máy trạm có thể truy cập vào máy chủ theo cách: <code class="highlighter-rouge">ssh -Y u@10.1.53.1</code></p>
   </li>
-  <li>
-    <p>Mở windows driver &amp; software lên: <code class="highlighter-rouge">sudo software-properties-gtk</code> cài trên này thì được driver ổn định, nhưng không phải là mới nhất.</p>
-  </li>
-  <li>
-    <p>Để cài mới nhất:</p>
-    <ul>
-      <li>Download file cài về</li>
-      <li>cài gcc, nếu không phải là ver &gt; 7.2.0:
-        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  u@ubu:~<span class="nv">$ </span>gcc-7 <span class="nt">-v</span>
-  Using built-in specs.
-  <span class="nv">COLLECT_GCC</span><span class="o">=</span>gcc-7
-  <span class="nv">COLLECT_LTO_WRAPPER</span><span class="o">=</span>/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
-  <span class="nv">OFFLOAD_TARGET_NAMES</span><span class="o">=</span>nvptx-none
-  <span class="nv">OFFLOAD_TARGET_DEFAULT</span><span class="o">=</span>1
-  Target: x86_64-linux-gnu
-  Configured with: ../src/configure <span class="nt">-v</span> <span class="nt">--with-pkgversion</span><span class="o">=</span><span class="s1">'Ubuntu 7.2.0-8ubuntu3.2'</span> <span class="nt">--with-bugurl</span><span class="o">=</span>file:///usr/share/doc/gcc-7/README.Bugs <span class="nt">--enable-languages</span><span class="o">=</span>c,ada,c++,go,brig,d,fortran,objc,obj-c++ <span class="nt">--prefix</span><span class="o">=</span>/usr <span class="nt">--with-gcc-major-version-only</span> <span class="nt">--program-suffix</span><span class="o">=</span><span class="nt">-7</span> <span class="nt">--program-prefix</span><span class="o">=</span>x86_64-linux-gnu- <span class="nt">--enable-shared</span> <span class="nt">--enable-linker-build-id</span> <span class="nt">--libexecdir</span><span class="o">=</span>/usr/lib <span class="nt">--without-included-gettext</span> <span class="nt">--enable-threads</span><span class="o">=</span>posix <span class="nt">--libdir</span><span class="o">=</span>/usr/lib <span class="nt">--enable-nls</span> <span class="nt">--with-sysroot</span><span class="o">=</span>/ <span class="nt">--enable-clocale</span><span class="o">=</span>gnu <span class="nt">--enable-libstdcxx-debug</span> <span class="nt">--enable-libstdcxx-time</span><span class="o">=</span>yes <span class="nt">--with-default-libstdcxx-abi</span><span class="o">=</span>new <span class="nt">--enable-gnu-unique-object</span> <span class="nt">--disable-vtable-verify</span> <span class="nt">--enable-libmpx</span> <span class="nt">--enable-plugin</span> <span class="nt">--enable-default-pie</span> <span class="nt">--with-system-zlib</span> <span class="nt">--with-target-system-zlib</span> <span class="nt">--enable-objc-gc</span><span class="o">=</span>auto <span class="nt">--enable-multiarch</span> <span class="nt">--disable-werror</span> <span class="nt">--with-arch-32</span><span class="o">=</span>i686 <span class="nt">--with-abi</span><span class="o">=</span>m64 <span class="nt">--with-multilib-list</span><span class="o">=</span>m32,m64,mx32 <span class="nt">--enable-multilib</span> <span class="nt">--with-tune</span><span class="o">=</span>generic <span class="nt">--enable-offload-targets</span><span class="o">=</span>nvptx-none <span class="nt">--without-cuda-driver</span> <span class="nt">--enable-checking</span><span class="o">=</span>release <span class="nt">--build</span><span class="o">=</span>x86_64-linux-gnu <span class="nt">--host</span><span class="o">=</span>x86_64-linux-gnu <span class="nt">--target</span><span class="o">=</span>x86_64-linux-gnu
-  Thread model: posix
-  gcc version 7.2.0 <span class="o">(</span>Ubuntu 7.2.0-8ubuntu3.2<span class="o">)</span>
-</code></pre></div>        </div>
-      </li>
-    </ul>
-
-    <p>Cách cài:</p>
-
-    <p>Xem bản gốc <a href="https://askubuntu.com/questions/26498/how-to-choose-the-default-gcc-and-g-version">tại đây</a> và <a href="https://askubuntu.com/questions/949473/installing-gcc-7-2-via-apt">tại đây</a></p>
-
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  1. Remove:
-  ```bash
-  sudo update-alternatives --remove-all gcc
-  sudo update-alternatives --remove-all g++   
-  ```
-
-  2. Install:
-  ```bash
-  sudo env DEBIAN_FRONTEND=noninteractive                                    \
-       bash -c 'apt-get install -y python-software-properties lsb-release &amp;&amp; \
-              echo -e "Package: gcc-7\\nPin: release n=$(lsb_release -sc)\\nPin-Priority: 990" &gt; /etc/apt/preferences.d/gcc-7 \
-              apt-add-repository -yu ppa:ubuntu-toolchain-r/test &amp;&amp;              \
-              apt-get install -y gcc-7'
-  ```
-  3. Set Alternative:
-  ```bash
-  sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7.2 10
-  sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-7.2 10
-  sudo update-alternatives --config gcc
-  sudo update-alternatives --config g++        
-  ```
+  <li>Mở windows <code class="highlighter-rouge">software &amp; Update</code>  hay <code class="highlighter-rouge">driver &amp; software</code> lên:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>software-properties-gtk
 </code></pre></div>    </div>
+  </li>
+  <li>uninstall driver cũ nếu như đã cài rồi (trong cửa sổ trên không cho chọn cài cái khác):
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/bin/nvidia-uninstall
+</code></pre></div>    </div>
+    <p>Cài trên này thì được driver ổn định, nhưng không phải là mới nhất.</p>
+  </li>
+  <li>Reboot!</li>
+</ul>
 
-    <ul>
-      <li>Cài  NVIDIA DRIVER 390.77:</li>
-    </ul>
+<h3 id="cài-cuda">Cài CUDA</h3>
 
-    <p>Tham khảo <a href="https://www.elinuxtutorials.com/2018/07/install-nvidia-driver-390-77-on-ubuntu-linuxmint/">tại đây</a></p>
+<p>Cái này phải phù hợp với driver version</p>
 
-    <p>INSTALL VIA SOURCE FILE</p>
+<h2 id="để-cài-driver-mới-nhất">Để cài driver mới nhất:</h2>
 
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      1. Remove older version of NVIDIA <span class="k">if </span>your graphic is supported
-      <span class="nb">sudo </span>apt-get purge nvidia<span class="k">*</span>
+<h3 id="cài-dạng-manual">Cài dạng manual.</h3>
 
-      2. Reboot the system
-
-      3. Download the Nvidia Driver 390.77
-      wget http://us.download.nvidia.com/XFree86/Linux-x86_64/390.77/NVIDIA-Linux-x86_64-390.77.run
-
-      or: https://www.nvidia.com/object/unix.html
-
-      4. Switch to <span class="nb">command </span>prompt and stop the running Graphics session
-      <span class="nb">sudo </span>service lightdm stop
-      <span class="nb">sudo </span>service gdm stop
-
-      5. Give execute permissions to the installer
-      <span class="nb">sudo </span>chmod 755 NVIDIA-Linux-x86_64-390.77.run
-
-      6.Install the Nvidia 390.77 driver
-      <span class="nb">sudo</span> ./NVIDIA-Linux-x86_64-390.77.run
+<ul>
+  <li>Download file cài về</li>
+  <li>cài gcc, nếu không phải là ver &gt; 7.2.0:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>u@ubu:~<span class="nv">$ </span>gcc-7 <span class="nt">-v</span>
+Using built-in specs.
+<span class="nv">COLLECT_GCC</span><span class="o">=</span>gcc-7
+<span class="nv">COLLECT_LTO_WRAPPER</span><span class="o">=</span>/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
+<span class="nv">OFFLOAD_TARGET_NAMES</span><span class="o">=</span>nvptx-none
+<span class="nv">OFFLOAD_TARGET_DEFAULT</span><span class="o">=</span>1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure <span class="nt">-v</span> <span class="nt">--with-pkgversion</span><span class="o">=</span><span class="s1">'Ubuntu 7.2.0-8ubuntu3.2'</span> <span class="nt">--with-bugurl</span><span class="o">=</span>file:///usr/share/doc/gcc-7/README.Bugs <span class="nt">--enable-languages</span><span class="o">=</span>c,ada,c++,go,brig,d,fortran,objc,obj-c++ <span class="nt">--prefix</span><span class="o">=</span>/usr <span class="nt">--with-gcc-major-version-only</span> <span class="nt">--program-suffix</span><span class="o">=</span><span class="nt">-7</span> <span class="nt">--program-prefix</span><span class="o">=</span>x86_64-linux-gnu- <span class="nt">--enable-shared</span> <span class="nt">--enable-linker-build-id</span> <span class="nt">--libexecdir</span><span class="o">=</span>/usr/lib <span class="nt">--without-included-gettext</span> <span class="nt">--enable-threads</span><span class="o">=</span>posix <span class="nt">--libdir</span><span class="o">=</span>/usr/lib <span class="nt">--enable-nls</span> <span class="nt">--with-sysroot</span><span class="o">=</span>/ <span class="nt">--enable-clocale</span><span class="o">=</span>gnu <span class="nt">--enable-libstdcxx-debug</span> <span class="nt">--enable-libstdcxx-time</span><span class="o">=</span>yes <span class="nt">--with-default-libstdcxx-abi</span><span class="o">=</span>new <span class="nt">--enable-gnu-unique-object</span> <span class="nt">--disable-vtable-verify</span> <span class="nt">--enable-libmpx</span> <span class="nt">--enable-plugin</span> <span class="nt">--enable-default-pie</span> <span class="nt">--with-system-zlib</span> <span class="nt">--with-target-system-zlib</span> <span class="nt">--enable-objc-gc</span><span class="o">=</span>auto <span class="nt">--enable-multiarch</span> <span class="nt">--disable-werror</span> <span class="nt">--with-arch-32</span><span class="o">=</span>i686 <span class="nt">--with-abi</span><span class="o">=</span>m64 <span class="nt">--with-multilib-list</span><span class="o">=</span>m32,m64,mx32 <span class="nt">--enable-multilib</span> <span class="nt">--with-tune</span><span class="o">=</span>generic <span class="nt">--enable-offload-targets</span><span class="o">=</span>nvptx-none <span class="nt">--without-cuda-driver</span> <span class="nt">--enable-checking</span><span class="o">=</span>release <span class="nt">--build</span><span class="o">=</span>x86_64-linux-gnu <span class="nt">--host</span><span class="o">=</span>x86_64-linux-gnu <span class="nt">--target</span><span class="o">=</span>x86_64-linux-gnu
+Thread model: posix
+gcc version 7.2.0 <span class="o">(</span>Ubuntu 7.2.0-8ubuntu3.2<span class="o">)</span>
 </code></pre></div>    </div>
   </li>
 </ul>
+
+<h3 id="cách-cài">Cách cài:</h3>
+
+<p>Xem bản gốc <a href="https://askubuntu.com/questions/26498/how-to-choose-the-default-gcc-and-g-version">tại đây</a> và <a href="https://askubuntu.com/questions/949473/installing-gcc-7-2-via-apt">tại đây</a></p>
+<ol>
+  <li>
+    <p>Remove:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">sudo </span>update-alternatives <span class="nt">--remove-all</span> gcc
+ <span class="nb">sudo </span>update-alternatives <span class="nt">--remove-all</span> g++   
+</code></pre></div>    </div>
+  </li>
+  <li>Install:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">sudo </span>env <span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninteractive                                    <span class="se">\</span>
+      bash <span class="nt">-c</span> <span class="s1">'apt-get install -y python-software-properties lsb-release &amp;&amp; \
+             echo -e "Package: gcc-7\\nPin: release n=$(lsb_release -sc)\\nPin-Priority: 990" &gt; /etc/apt/preferences.d/gcc-7 \
+             apt-add-repository -yu ppa:ubuntu-toolchain-r/test &amp;&amp;              \
+             apt-get install -y gcc-7'</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Set Alternative:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">sudo </span>update-alternatives <span class="nt">--install</span> /usr/bin/gcc gcc /usr/bin/gcc-7.2 10
+ <span class="nb">sudo </span>update-alternatives <span class="nt">--install</span> /usr/bin/g++ g++ /usr/bin/g++-7.2 10
+ <span class="nb">sudo </span>update-alternatives <span class="nt">--config</span> gcc
+ <span class="nb">sudo </span>update-alternatives <span class="nt">--config</span> g++        
+</code></pre></div>    </div>
+    <ul>
+      <li>Cài  NVIDIA DRIVER 390.77:</li>
+    </ul>
+  </li>
+</ol>
+
+<p>Tham khảo <a href="https://www.elinuxtutorials.com/2018/07/install-nvidia-driver-390-77-on-ubuntu-linuxmint/">tại đây</a></p>
+
+<h3 id="install-via-source-file">INSTALL VIA SOURCE FILE</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    1. Remove older version of NVIDIA <span class="k">if </span>your graphic is supported
+    <span class="nb">sudo </span>apt-get purge nvidia<span class="k">*</span>
+
+    2. Reboot the system
+
+    3. Download the Nvidia Driver 390.77
+    wget http://us.download.nvidia.com/XFree86/Linux-x86_64/390.77/NVIDIA-Linux-x86_64-390.77.run
+
+    or: https://www.nvidia.com/object/unix.html
+
+    4. Switch to <span class="nb">command </span>prompt and stop the running Graphics session
+    <span class="nb">sudo </span>service lightdm stop
+    <span class="nb">sudo </span>service gdm stop
+
+    5. Give execute permissions to the installer
+    <span class="nb">sudo </span>chmod 755 NVIDIA-Linux-x86_64-390.77.run
+
+    6.Install the Nvidia 390.77 driver
+    <span class="nb">sudo</span> ./NVIDIA-Linux-x86_64-390.77.run
+</code></pre></div></div>
 
 <p>.</p>
 
@@ -579,6 +605,10 @@
       
       
       <a href="/tags/#gcc-g" class="page__taxonomy-item" rel="tag">gcc g++</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#nvidia" class="page__taxonomy-item" rel="tag">Nvidia</a><span class="sep">, </span>
     
       
       
@@ -677,43 +707,6 @@
     <div class="page__related">
       <h4 class="page__related-title">You may also enjoy</h4>
       <div class="grid__wrapper">
-        
-          
-
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src=
-          
-            "/assets/images/DL1.jpg"
-          
-          alt="">
-      </div>
-    
-    <h3 class="archive__item-title" itemprop="headline">
-      
-        <a class="no-underline" href="/wer/Keras/" rel="permalink">Keras with Python
-</a>
-      
-    </h3>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  1 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">
-</p>
-  </article>
-</div>
-
         
           
 
@@ -826,6 +819,43 @@
 </div>
 
         
+          
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/default-th.jpg"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a class="no-underline" href="/web/FaceBook-comments-in-pages/" rel="permalink">Thêm Facebook comments vào trang web
+</a>
+      
+    </h3>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Cách thêm FB comments, nhiều chỗ chỉ cách quá, không nhớ nổi!
+</p>
+  </article>
+</div>
+
+        
       </div>
     </div>
   
@@ -887,7 +917,7 @@
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2018 Tuấn Anh. Made with ❤</div>
+<div class="page__footer-copyright">&copy; 2019 Tuấn Anh. Made with ❤</div>
 
       </footer>
     </div>

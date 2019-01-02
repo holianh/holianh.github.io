@@ -69,6 +69,11 @@
   }
 }
 
+.archive__item-ta {
+  position: relative;
+  border-radius: $border-radius;
+  overflow: hidden;
+}
 .archive__item-caption {
   position: absolute;
   bottom: 0;

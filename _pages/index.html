@@ -38,11 +38,28 @@ til:
 <h1><center>Tin mới</center></h1>
 <br />
 <div class="grid_wrapper">
-  {% for post in site.posts limit:8 %}
+  {% for post in site.posts limit:4 %}
     {% include archive-single.html type="grid" %}
   {% endfor %}
+  <table >
+      <tr>
+          {% for post in site.posts offset:4 limit:5 %}
+           <td> {% include archive-single.html type="columns" %}</td>
+          {% endfor %}
+      </tr>
+ </table>
+ <table  >
+     <tr>
+         {% for post in site.posts offset:9 limit:5 %}
+          <td> {% include archive-single.html type="columns" %}</td>
+         {% endfor %}
+     </tr>
+</table>
+
 </div>
 {% include feature_row id="all_posts" type="center" %}
+   
+
 
 
 <h1><center>Vài bài viết tâm huyết</center></h1>
@@ -52,6 +69,13 @@ til:
   {% for post in items limit:4 %}
     {% include archive-single.html type="grid" %}
   {% endfor %}
+  <table >
+      <tr>
+          {% for post in site.posts offset:4 limit:5 %}
+           <td> {% include archive-single.html type="columns" %}</td>
+          {% endfor %}
+      </tr>
+ </table>
 </div>
 {% include feature_row id="all_projects" type="center" %}
 

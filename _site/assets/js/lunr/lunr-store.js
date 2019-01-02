@@ -115,8 +115,8 @@ var store = [{
         "url": "http://localhost:4000/web/FaceBook-comments-in-pages/",
         "teaser":"http://localhost:4000/assets/images/default-th.jpg"},{
         "title": "Cài Ubuntu cho Deep Learning",
-        "excerpt":"Tại đây trình bày theo thứ tự ngược: dùng trước, cài sau, vì cài chỉ 1 lần, dùng mãi Run on server from local Anaconda Jupyter Notebook: Run Remote Notebook on server from local: connect Xshell/ ssh to server. Run On server: (example: 1080ti server) conda info --envs source activate...","categories": ["Ubuntu","Driver","Run"],
-        "tags": ["Ubuntu","Driver","gcc g++"],
+        "excerpt":"Tại đây trình bày theo thứ tự ngược: dùng trước, cài sau, vì cài chỉ 1 lần, dùng mãi Run jupyter notebook on server from local Anaconda Jupyter Notebook: Run Remote Notebook on server from local: connect Xshell/ ssh to server. Run On server: (example: 1080ti server) conda info --envs...","categories": ["Ubuntu","Driver","Run"],
+        "tags": ["Ubuntu","Driver","gcc g++","Nvidia"],
         "url": "http://localhost:4000/ubuntu/driver/run/Install-Ubuntu-systems-package/",
         "teaser":"http://localhost:4000/assets/images/default-th.jpg"},{
         "title": "Measurements in ASR",
@@ -134,11 +134,6 @@ var store = [{
         "tags": ["Jekyll","Github Pages","Tutorial","Markdown"],
         "url": "http://localhost:4000/technology/markdown/github%20pages/how-i-created-this-website/",
         "teaser":"http://localhost:4000/assets/images/my-personal-website-th.jpg"},{
-        "title": "Keras with Python",
-        "excerpt":"Save - Load model Đã thử nghiệm thành công. Save model, load_model: model.save('zzz.h5')....................m1=load_model('zzz.h5',compile=False)m1.summary()m1.layers.pop() # Remove last layersm1.layers.pop()m1.layers.pop()m1.layers.pop()m1.summary()m1.load_weights('/home/u/path/to/chkPoint.pkl') Và đây là cách thứ 2: # Suppose we have a modelfrom keras.applications import resnet50model = resnet50.ResNet50(include_top=True, weights='imagenet')model.load_weights('resnet50_weights_tf_dim_ordering_tf_kernels.h5')model.compile(optimizer='rmsprop', loss='categorical_crossentropy') # Import dependenciesimport jsonfrom keras.models import model_from_json, load_model # Option 1: Save Weights +...","categories": ["WER"],
-        "tags": ["Deep-Learning","Keras","Save/Load"],
-        "url": "http://localhost:4000/wer/Keras/",
-        "teaser":"http://localhost:4000/assets/images/DL1.jpg"},{
         "title": "Câu nói hay...",
         "excerpt":"“99 little bugs in the code. 99 little bugs. Take one down, patch it around,…127 little bugs in the code.”—Anonymous22 Sep, 2017 “I have the power to do and to be whatever I wish to do and be.”—The Power of Concentration16 Sep, 2017 “Always code as if the guy who...","categories": [],
         "tags": [],
