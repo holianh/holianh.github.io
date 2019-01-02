@@ -124,9 +124,9 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url:
-    - label: "Codepen"
+    - label: "Keras"
       icon: "fab fa-fw fa-instagram"
-      url: "/_posts/2018-12-29--Keras.md"
+      url: "/keras/Keras/"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-instagram"
       url:
