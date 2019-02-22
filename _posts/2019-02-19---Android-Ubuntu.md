@@ -46,12 +46,16 @@ public: false
 # Ubuntu:
 
 ## Remove write protected folders
+
+remove folder name: anaconda3
+
 ```
 sudo find anaconda3/ -perm /0222 -delete
 ```
 
 ## Copy folders/files 2 users
 
+Đứng từ user `u`, copy anaconda3 sang user `am`
 copy then transfer owner:
 
     -r: copy all folders
