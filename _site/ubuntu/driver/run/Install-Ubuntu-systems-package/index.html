@@ -226,7 +226,7 @@
 
 
 
-  2 minute read
+  9 minute read
 </p>
       
       
@@ -309,13 +309,15 @@
           
         
           
-        
+            <li><a href="/keras/Keras/"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Keras</a></li>
           
         
           
         
           
-            <li><a href="http://youtube.com/tuananhktmt"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> youtube</a></li>
+        
+          
+            <li><a href="http://youtube.com/tuananhktmt"><i class="fab fa-fw fa-youtube" aria-hidden="true"></i> YouTube</a></li>
           
         
       
@@ -411,6 +413,8 @@
   <li><a href="#run-jupyter-notebook-on-server-from-local">Run jupyter notebook on server from local</a></li>
   <li><a href="#cài-ubuntu-xong-rồi--cài-các-thứ-liên-quan">Cài Ubuntu xong rồi =&gt; cài các thứ liên quan</a>
     <ul>
+      <li><a href="#install-anaconda">Install Anaconda</a></li>
+      <li><a href="#tham-khảo-các-hướng-dẫn-bên-ngoài">Tham khảo các hướng dẫn bên ngoài</a></li>
       <li><a href="#cài-driver-kiểu-dễ-ăn">Cài driver kiểu dễ ăn</a>
         <ul>
           <li><a href="#cài-driver">Cài driver</a></li>
@@ -424,6 +428,17 @@
           <li><a href="#install-via-source-file">INSTALL VIA SOURCE FILE</a></li>
         </ul>
       </li>
+    </ul>
+  </li>
+  <li><a href="#remove-cuda-toolkit">Remove Cuda toolkit</a></li>
+  <li><a href="#install-cuda-90-and-cudnn-70-for-tensorflowpytorch-gpu-on-ubuntu-1604-here">Install CUDA 9.0 and cuDNN 7.0 for TensorFlow/PyTorch (GPU) on Ubuntu 16.04: here</a></li>
+  <li><a href="#install-cuda-92-and-cudnn-71-for-pytorch-gpu-on-ubuntu-1604-here">Install CUDA 9.2 and cuDNN 7.1 for PyTorch (GPU) on Ubuntu 16.04: here</a>
+    <ul>
+      <li><a href="#1-install-nvidia-driver-version-396-via-apt-get">1. Install NVIDIA Driver Version 396 via apt-get</a></li>
+      <li><a href="#2-install-cuda-92-via-runfile">2. Install CUDA 9.2 via Runfile</a></li>
+      <li><a href="#3-install-cudnn-71">3. Install cuDNN 7.1</a></li>
+      <li><a href="#do-not-install-cuda-command-line-tools">Do NOT Install cuda-command-line-tools</a></li>
+      <li><a href="#configure-the-cuda-and-cudnn-library-paths">Configure the CUDA and cuDNN library paths</a></li>
     </ul>
   </li>
 </ul>
@@ -474,7 +489,146 @@
 
 <h1 id="cài-ubuntu-xong-rồi--cài-các-thứ-liên-quan">Cài Ubuntu xong rồi =&gt; cài các thứ liên quan</h1>
 
+<ul>
+  <li>Vô cùng quan trọng:</li>
+</ul>
+
+<blockquote>
+  <p>Yeah, currently when you install Keras using pip or pip3 it blows off existing TF and installs the default, non-GPU version. It’d be great if there was a flag to not touch existing TF.</p>
+</blockquote>
+
+<blockquote>
+  <p>The workaround is to uninstall TF after installing Keras, and then installing the GPU version using pip or pip3 depending on your preferred python version. Not very elegant, but you gotta do what you gotta do.</p>
+</blockquote>
+
+<p>Khi cài Keras, nó sẽ cài <code class="highlighter-rouge">tensorflow</code> for <code class="highlighter-rouge">CPU</code>, nên quy trình cài đúng là:
+Nhục quá, vì cái này mà mất đứt cả tuần!
+Chi tiết, <a href="https://github.com/keras-team/keras/issues/5776#issuecomment-452602358">xem tại đây</a></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>After: install tensorflow -&gt; install keras -&gt; uninstall tensorflow -&gt; install tensorflow
+and it works! Thanks a lot!
+
+conda create <span class="nt">-n</span> ta  anaconda python
+<span class="nb">source </span>activate ta
+conda install tensorflow-gpu<span class="o">==</span>1.11 <span class="nv">cudatoolkit</span><span class="o">==</span>9.0 <span class="nv">cudnn</span><span class="o">==</span>7.1.2 h5py
+pip install pillow h5py keras
+pip uninstall tensorflow
+pip install tensorflow-gpu
+
+python
+import keras.backend as K<span class="p">;</span><span class="o">[</span>x.name <span class="k">for </span>x <span class="k">in </span>K.get_session<span class="o">()</span>.list_devices<span class="o">()]</span>
+<span class="nb">exit</span><span class="o">()</span>
+
+git clone https://github.com/fchollet/keras.git
+<span class="nb">cd </span>keras/examples
+python mnist_cnn.py
+</code></pre></div></div>
+
+<ul>
+  <li>Code check GPU đã cài OK chưa, chạy python với lệnh sau:</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">keras.backend</span> <span class="k">as</span> <span class="n">K</span><span class="p">;[</span><span class="n">x</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">K</span><span class="o">.</span><span class="n">get_session</span><span class="p">()</span><span class="o">.</span><span class="n">list_devices</span><span class="p">()]</span>
+
+<span class="kn">from</span> <span class="nn">tensorflow.python.client</span> <span class="kn">import</span> <span class="n">device_lib</span><span class="p">;</span><span class="n">device_lib</span><span class="o">.</span><span class="n">list_local_devices</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>nếu nhìn thấy <code class="highlighter-rouge">gpu</code> là OK rồi.</p>
+
+<blockquote>
+  <p>ấy vậy, mà mình cài mãi nó chẳng hiện lên GPU mới cay chứ. Cài server mình cài có khi đến hơn năm liên tục rồi chứ chả ít. thế mà vụ này lại dính. nguyên nhân là do hôm nọ đang training, nhìn thấy nó cập nhật version mới, ngứa tay không chịu dc, thế là update. Mất cả tuần rồi cứ tranh thủ train rồi lại cài lại. Cài lại cả driver/cuda/cudnn rồi mà vẫn không được. Chưa phát hiện nguyên nhân do cái gì. Bực cái là mạng của cái cty này nó giới hạn tốc độ mới nhục chứ. Cài 1 lần cả GB mà mạng chỉ có 400KB/s thì đến mùa quýt nào mới xong?</p>
+</blockquote>
+
 <p>Cài cài này phức tạp phết</p>
+
+<h2 id="install-anaconda">Install Anaconda</h2>
+<ul>
+  <li>Install DRIVER</li>
+  <li>Install cuda: <code class="highlighter-rouge">sudo apt-get install cuda-toolkit...</code></li>
+  <li>
+    <p>bash Anaconda-xxx…</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda create <span class="nt">-n</span> tt  anaconda python
+<span class="nb">source </span>activate tt
+conda install tensorflow-gpu<span class="o">==</span>1.11 <span class="nv">cudatoolkit</span><span class="o">==</span>9.0 <span class="nv">cudnn</span><span class="o">==</span>7.1.2 h5py
+pip install pillow h5py keras
+pip uninstall tensorflow
+pip install tensorflow-gpu
+git clone https://github.com/fchollet/keras.git
+<span class="nb">cd </span>keras/examples
+python mnist_cnn.py
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>Cài cuda: Nên download về máy, thay tên bằng tên đã down và bỏ wget:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+
+<span class="c"># install CUDA Toolkit v9.0</span>
+<span class="c"># instructions from https://developer.nvidia.com/cuda-downloads (linux -&gt; x86_64 -&gt; Ubuntu -&gt; 16.04 -&gt; deb)</span>
+<span class="nv">CUDA_REPO_PKG</span><span class="o">=</span><span class="s2">"cuda-repo-ubuntu1604-9-0-local_9.0.176-1_amd64-deb"</span>
+wget https://developer.nvidia.com/compute/cuda/9.0/Prod/local_installers/<span class="k">${</span><span class="nv">CUDA_REPO_PKG</span><span class="k">}</span>
+<span class="nb">sudo </span>dpkg <span class="nt">-i</span> <span class="k">${</span><span class="nv">CUDA_REPO_PKG</span><span class="k">}</span>
+<span class="nb">sudo </span>apt-key adv <span class="nt">--fetch-keys</span> http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/7fa2af80.pub
+<span class="nb">sudo </span>apt-get update
+<span class="nb">sudo </span>apt-get <span class="nt">-y</span> install cuda-9-0
+
+<span class="nv">CUDA_PATCH1</span><span class="o">=</span><span class="s2">"cuda-repo-ubuntu1604-9-0-local-cublas-performance-update_1.0-1_amd64-deb"</span>
+wget https://developer.nvidia.com/compute/cuda/9.0/Prod/patches/1/<span class="k">${</span><span class="nv">CUDA_PATCH1</span><span class="k">}</span>
+<span class="nb">sudo </span>dpkg <span class="nt">-i</span> <span class="k">${</span><span class="nv">CUDA_PATCH1</span><span class="k">}</span>
+<span class="nb">sudo </span>apt-get update
+
+<span class="c"># install cuDNN v7.0</span>
+<span class="nv">CUDNN_PKG</span><span class="o">=</span><span class="s2">"libcudnn7_7.0.5.15-1+cuda9.0_amd64.deb"</span>
+wget https://github.com/ashokpant/cudnn_archive/raw/master/v7.0/<span class="k">${</span><span class="nv">CUDNN_PKG</span><span class="k">}</span>
+<span class="nb">sudo </span>dpkg <span class="nt">-i</span> <span class="k">${</span><span class="nv">CUDNN_PKG</span><span class="k">}</span>
+<span class="nb">sudo </span>apt-get update
+
+<span class="c"># install NVIDIA CUDA Profile Tools Interface ( libcupti-dev v9.0)</span>
+<span class="nb">sudo </span>apt-get install cuda-command-line-tools-9-0
+
+<span class="c"># set environment variables</span>
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="k">${</span><span class="nv">PATH</span><span class="k">}</span>:/usr/local/cuda-9.0/bin
+<span class="nb">export </span><span class="nv">CUDA_HOME</span><span class="o">=</span><span class="k">${</span><span class="nv">CUDA_HOME</span><span class="k">}</span>:/usr/local/cuda:/usr/local/cuda-9.0
+<span class="nb">export </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="k">${</span><span class="nv">LD_LIBRARY_PATH</span><span class="k">}</span>:/usr/local/cuda-9.0/lib64
+<span class="nb">export </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$LD_LIBRARY_PATH</span>:/usr/local/cuda/extras/CUPTI/lib64
+</code></pre></div></div>
+
+<h2 id="tham-khảo-các-hướng-dẫn-bên-ngoài">Tham khảo các hướng dẫn bên ngoài</h2>
+<ul>
+  <li>Link chính thức <a href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html">hướng dẫn cài driver &amp; cuda</a></li>
+  <li>Tham khảo bản này: cho Ubuntu: <a href="https://medium.com/codezillas/step-by-step-guide-to-install-tensorflow-gpu-on-ubuntu-18-04-lts-6feceb0df5c0">tại đây</a></li>
+  <li>
+    <p><a href="https://stackoverflow.com/questions/31326015/how-to-verify-cudnn-installation/36978616#36978616">How to verify CuDNN installation?</a></p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  The installation of CuDNN is just copying some files. Hence to check if CuDNN is installed (and which version you have), you only need to check those files.
+
+  Install CuDNN
+  Step 1: Register an nvidia developer account and [download](https://developer.nvidia.com/cudnn) cudnn here (about 80 MB). You might need `nvcc --version` to get your cuda version.
+
+  Step 2: Check where your cuda installation is. For most people, it will be `/usr/local/cuda/`. You can check it with `which nvcc`.
+
+  Step 3: Copy the files:
+
+  $ cd folder/extracted/contents
+  $ sudo cp include/cudnn.h /usr/local/cuda/include
+  $ sudo cp lib64/libcudnn* /usr/local/cuda/lib64
+  $ sudo chmod a+r /usr/local/cuda/lib64/libcudnn*
+
+  Check version
+  You might have to adjust the path. See step 2 of the installation.
+
+  $ cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2
+  Notes
+  When you get an error like
+
+  F tensorflow/stream_executor/cuda/cuda_dnn.cc:427] could not set cudnn filter descriptor: CUDNN_STATUS_BAD_PARAM
+  with TensorFlow, you might consider using CuDNN v4 instead of v5.
+
+  Ubuntu users who installed it via apt: [here](https://askubuntu.com/a/767270/10425)
+</code></pre></div>    </div>
+  </li>
+</ul>
 
 <h2 id="cài-driver-kiểu-dễ-ăn">Cài driver kiểu dễ ăn</h2>
 
@@ -555,8 +709,8 @@ gcc version 7.2.0 <span class="o">(</span>Ubuntu 7.2.0-8ubuntu3.2<span class="o"
 
 <h3 id="install-via-source-file">INSTALL VIA SOURCE FILE</h3>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    1. Remove older version of NVIDIA <span class="k">if </span>your graphic is supported
-    <span class="nb">sudo </span>apt-get purge nvidia<span class="k">*</span>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    1. Remove older version of NVIDIA if your graphic is supported
+    sudo apt-get purge nvidia*
 
     2. Reboot the system
 
@@ -565,16 +719,153 @@ gcc version 7.2.0 <span class="o">(</span>Ubuntu 7.2.0-8ubuntu3.2<span class="o"
 
     or: https://www.nvidia.com/object/unix.html
 
-    4. Switch to <span class="nb">command </span>prompt and stop the running Graphics session
-    <span class="nb">sudo </span>service lightdm stop
-    <span class="nb">sudo </span>service gdm stop
+    4. Switch to command prompt and stop the running Graphics session
+    sudo service lightdm stop
+    sudo service gdm stop
 
     5. Give execute permissions to the installer
-    <span class="nb">sudo </span>chmod 755 NVIDIA-Linux-x86_64-390.77.run
+    sudo chmod 755 NVIDIA-Linux-x86_64-390.77.run
 
     6.Install the Nvidia 390.77 driver
-    <span class="nb">sudo</span> ./NVIDIA-Linux-x86_64-390.77.run
+    sudo ./NVIDIA-Linux-x86_64-390.77.run
 </code></pre></div></div>
+
+<h1 id="remove-cuda-toolkit">Remove Cuda toolkit</h1>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /usr/local/cuda-9.0/bin
+<span class="nb">sudo</span> ./uninstall_cuda_9.0.pl
+
+<span class="nb">sudo </span>rm <span class="nt">-rd</span> /usr/local/cuda-9.0
+
+<span class="nb">sudo </span>apt-get remove nvidia-cuda-toolkit
+
+</code></pre></div></div>
+
+<p>Purging config/data</p>
+
+<p><code class="highlighter-rouge">sudo apt-get purge nvidia-cuda-toolkit</code> or</p>
+
+<p><code class="highlighter-rouge">sudo apt-get purge --auto-remove nvidia-cuda-toolkit</code></p>
+
+<p>Additionally, delete the <code class="highlighter-rouge">/opt/cuda</code> and <code class="highlighter-rouge">~/NVIDIA_GPU_Computing_SDK</code> folders if they are present. and remove the export <code class="highlighter-rouge">PATH=$PATH:/opt/cuda/bin</code> and <code class="highlighter-rouge">export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/cuda/lib:/opt/cuda/lib64</code> lines of the <code class="highlighter-rouge">~/.bash_profile</code> file <a href="https://askubuntu.com/questions/530043/removing-nvidia-cuda-toolkit-and-installing-new-one" title="Removing nvidia cuda toolkit and installing new one">1</a></p>
+
+<h1 id="install-cuda-90-and-cudnn-70-for-tensorflowpytorch-gpu-on-ubuntu-1604-here">Install CUDA 9.0 and cuDNN 7.0 for TensorFlow/PyTorch (GPU) on Ubuntu 16.04: <a href="https://medium.com/@zhanwenchen/install-cuda-and-cudnn-for-tensorflow-gpu-on-ubuntu-79306e4ac04e">here</a></h1>
+
+<h1 id="install-cuda-92-and-cudnn-71-for-pytorch-gpu-on-ubuntu-1604-here">Install CUDA 9.2 and cuDNN 7.1 for PyTorch (GPU) on Ubuntu 16.04: <a href="https://medium.com/@zhanwenchen/install-cuda-9-2-and-cudnn-7-1-for-tensorflow-pytorch-gpu-on-ubuntu-16-04-1822ab4b2421">here</a></h1>
+
+<h2 id="1-install-nvidia-driver-version-396-via-apt-get">1. Install NVIDIA Driver Version 396 via apt-get</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>add-apt-repository ppa:graphics-drivers/ppa
+<span class="nb">sudo </span>apt-get update
+<span class="nb">sudo </span>apt-get install nvidia-396 nvidia-modprobe
+</code></pre></div></div>
+<p>You may be prompted to disable Secure Boot. If so, select <strong>Disable</strong>. Then reboot your machine but <strong>enter BIOS to disable Secure Boot</strong>. Typically you can enter BIOS by hitting F12 rapidly as soon as the system restarts.</p>
+
+<p>To verify installation, restart your machine with reboot and type <code class="highlighter-rouge">nvidia-smi</code>.</p>
+
+<h2 id="2-install-cuda-92-via-runfile">2. Install CUDA 9.2 via Runfile</h2>
+
+<p>The CUDA runfile installer can be downloaded from <a href="https://developer.nvidia.com/cuda-downloads">NVIDIA’s website</a>. Choose the runfile option.</p>
+
+<p>What you download is a package the following three components:</p>
+
+<ul>
+  <li>an NVIDIA driver installer, but usually of stale version;</li>
+  <li>the actual CUDA installer;</li>
+  <li>the CUDA samples installer;</li>
+</ul>
+
+<p>I suggest extracting the above three components and executing 2 and 3 separately (remember we installed the driver ourselves already). To extract them, execute the runfile installer with <code class="highlighter-rouge">--extract</code> option:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chmod +x cuda_9.2.148_396.37_linux-run
+./cuda_9.2.148_396.37_linux-run <span class="nt">--extract</span><span class="o">=</span><span class="nv">$HOME</span>
+</code></pre></div></div>
+
+<p>You should have unpacked three components: <code class="highlighter-rouge">NVIDIA-Linux-x86_64-396.37.run</code> (1. NVIDIA driver that we ignore), <code class="highlighter-rouge">cuda-linux.9.2.148-24330188.run</code> (2. CUDA 9.2 installer), and <code class="highlighter-rouge">cuda-samples.9.2.148-24330188-linux.run</code> (3. CUDA 9.2 Samples).</p>
+
+<p>Execute the second one to install the CUDA Toolkit 9.2:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo</span> ./cuda-linux.9.2.148-24330188.run
+</code></pre></div></div>
+<p>You now have to accept the license by scrolling down to the bottom (hold the “d” key or <code class="highlighter-rouge">Ctr_C</code> on your keyboard) and enter <code class="highlighter-rouge">“accept”</code>. Next accept the defaults.</p>
+
+<p>To verify our CUDA installation, install the sample tests by</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo</span> ./cuda-samples.9.2.148-24330188-linux.run
+</code></pre></div></div>
+
+<p>After the installation finishes, you must configure the runtime library.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>bash <span class="nt">-c</span> <span class="s2">"echo /usr/local/cuda/lib64/ &gt; /etc/ld.so.conf.d/cuda.conf"</span>
+<span class="nb">sudo </span>ldconfig
+</code></pre></div></div>
+
+<p>It is also recommended for Ubuntu users to append string <code class="highlighter-rouge">/usr/local/cuda/bin</code> to system file <code class="highlighter-rouge">/etc/environment</code> so that <code class="highlighter-rouge">nvcc</code> will be included in <code class="highlighter-rouge">$PATH</code>. This will take effect after reboot. To do that, you just have to</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>vim /etc/environment
+
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/usr/local/cuda/bin
+<span class="nb">export </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>/usr/local/cuda/lib64/
+</code></pre></div></div>
+
+<p>After a reboot, let’s test our installation by making and invoking our tests:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd</span> /usr/local/cuda-9.2/samples
+<span class="nv">$ </span><span class="nb">sudo </span>make
+</code></pre></div></div>
+<p>It’s a long process with many irrelevant warnings about deprecated architectures (<code class="highlighter-rouge">sm_20</code> and such ancient GPUs). After it completes, run <code class="highlighter-rouge">deviceQuery</code> and <code class="highlighter-rouge">p2pBandwidthLatencyTest</code>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd</span> /usr/local/cuda-9.2/samples/bin/x86_64/linux/release
+<span class="nv">$ </span>./deviceQuery
+
+./deviceQuery Starting...
+CUDA Device Query <span class="o">(</span>Runtime API<span class="o">)</span> version <span class="o">(</span>CUDART static linking<span class="o">)</span>
+Detected 1 CUDA Capable device<span class="o">(</span>s<span class="o">)</span>
+....
+deviceQuery, CUDA Driver <span class="o">=</span> CUDART, CUDA Driver Version <span class="o">=</span> 9.2, CUDA Runtime Version <span class="o">=</span> 9.2, NumDevs <span class="o">=</span> 1
+Result <span class="o">=</span> PASS
+</code></pre></div></div>
+<p>Cleanup: if <code class="highlighter-rouge">./deviceQuery</code> works, remember to <code class="highlighter-rouge">rm</code> the 4 files (1 downloaded and 3 extracted).</p>
+
+<h2 id="3-install-cudnn-71">3. Install cuDNN 7.1</h2>
+<p>The recommended way to install cuDNN 7.1 is to download all 3 .deb files. The .tgz installation approach doesn’t allow verification by running code samples (no way to install the code samples .deb after .tgz installation).</p>
+
+<p>The following steps are pretty much the same as the installation guide using .deb files (strange that the cuDNN guide is better than the CUDA one).</p>
+
+<ul>
+  <li>Go to the cuDNN download page (need registration) and select the latest cuDNN 7.1 version made for CUDA 9.2.</li>
+  <li>Download all 3 .deb files: the runtime library, the developer library, and the code samples library for Ubuntu 16.04.</li>
+  <li>
+    <p>In your download folder, install them in the same order:</p>
+
+    <p><code class="highlighter-rouge">sudo dpkg -i libcudnn7_7.1.4.18–1+cuda9.2_amd64.deb</code> (the runtime library),</p>
+
+    <p><code class="highlighter-rouge">sudo dpkg -i libcudnn7-dev_7.1.4.18–1+cuda9.2_amd64.deb</code> (the developer library), and</p>
+
+    <p><code class="highlighter-rouge">sudo dpkg -i libcudnn7-doc_7.1.4.18–1+cuda9.2_amd64.deb</code> (the code samples).</p>
+  </li>
+</ul>
+
+<p>Now we can verify the cuDNN installation (below is just the official guide, which surprisingly works out of the box):</p>
+
+<ul>
+  <li>Copy the code samples somewhere you have write access: <code class="highlighter-rouge">cp -r /usr/src/cudnn_samples_v7/ ~</code>.</li>
+  <li>Go to the MNIST example code: <code class="highlighter-rouge">cd ~/cudnn_samples_v7/mnistCUDNN</code>.</li>
+  <li>Compile the MNIST example: <code class="highlighter-rouge">make clean &amp;&amp; make</code>.</li>
+  <li>Run the MNIST example: <code class="highlighter-rouge">./mnistCUDNN</code>. If your installation is successful, you should see <code class="highlighter-rouge">Test passed!</code> at the end of the output.</li>
+</ul>
+
+<h2 id="do-not-install-cuda-command-line-tools">Do NOT Install cuda-command-line-tools</h2>
+<p>Contrary to the official TensorFlow installation docs, you don’t need to install <code class="highlighter-rouge">cuda-command-line-tools</code> because it’s already installed in this version of CUDA and cuDNN. If you<code class="highlighter-rouge"> apt-get</code> it, you won’t find it.</p>
+
+<h2 id="configure-the-cuda-and-cudnn-library-paths">Configure the CUDA and cuDNN library paths</h2>
+<p>What you do need to do, however, is exporting environment variables <code class="highlighter-rouge">LD_LIBRARY_PATH</code> in your <code class="highlighter-rouge">.bashrc</code> file:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># put the following line in the end or your .bashrc file</span>
+<span class="nb">export </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$LD_LIBRARY_PATH</span>:/usr/local/cuda/extras/CUPTI/lib64
+</code></pre></div></div>
+
+<p>And source it by <code class="highlighter-rouge">source ~/.bashrc</code>.</p>
 
 <p>.</p>
 
@@ -719,14 +1010,14 @@ gcc version 7.2.0 <span class="o">(</span>Ubuntu 7.2.0-8ubuntu3.2<span class="o"
       <div class="archive__item-teaser">
         <img src=
           
-            "https://miro.medium.com/max/1304/1*uokXCDa_O7jzfbUC9qS6cg.png"
+            "/assets/images/postimg/freeDBs.png"
           
           alt="">
       </div>
     
     <h3 class="archive__item-title" itemprop="headline">
       
-        <a class="no-underline" href="/keras/Keras/" rel="permalink">Keras with Python
+        <a class="no-underline" href="/database/source%20code/Database-Resources/" rel="permalink">Free Code-Database Resources
 </a>
       
     </h3>
@@ -736,7 +1027,44 @@ gcc version 7.2.0 <span class="o">(</span>Ubuntu 7.2.0-8ubuntu3.2<span class="o"
 
 
 
-  1 minute read
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Links download CODE và Database miễn phí
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "https://miro.medium.com/max/1304/1*uokXCDa_O7jzfbUC9qS6cg.png"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a class="no-underline" href="/keras/Keras-Code-Ngon/" rel="permalink">Link code ngon
+</a>
+      
+    </h3>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">
@@ -756,14 +1084,14 @@ gcc version 7.2.0 <span class="o">(</span>Ubuntu 7.2.0-8ubuntu3.2<span class="o"
       <div class="archive__item-teaser">
         <img src=
           
-            "/assets/images/my-personal-website-th.jpg"
+            "https://miro.medium.com/max/1304/1*uokXCDa_O7jzfbUC9qS6cg.png"
           
           alt="">
       </div>
     
     <h3 class="archive__item-title" itemprop="headline">
       
-        <a class="no-underline" href="/technology/markdown/github%20pages/how-i-created-this-website/" rel="permalink">How I Created this Awesome Website
+        <a class="no-underline" href="/keras/Keras-Modules/" rel="permalink">Keras with Python
 </a>
       
     </h3>
@@ -773,10 +1101,10 @@ gcc version 7.2.0 <span class="o">(</span>Ubuntu 7.2.0-8ubuntu3.2<span class="o"
 
 
 
-  2 minute read
+  3 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">Using Jekyll &amp; Github Pages
+    <p class="archive__item-excerpt" itemprop="description">
 </p>
   </article>
 </div>
@@ -793,14 +1121,14 @@ gcc version 7.2.0 <span class="o">(</span>Ubuntu 7.2.0-8ubuntu3.2<span class="o"
       <div class="archive__item-teaser">
         <img src=
           
-            "/assets/images/default-th.jpg"
+            "https://miro.medium.com/max/1304/1*uokXCDa_O7jzfbUC9qS6cg.png"
           
           alt="">
       </div>
     
     <h3 class="archive__item-title" itemprop="headline">
       
-        <a class="no-underline" href="/deep-learning/rnn-lstm/RNN-LSTMs/" rel="permalink">Các ví dụ mẫu hay về RNN-LSTM
+        <a class="no-underline" href="/keras/Keras/" rel="permalink">Keras with Python
 </a>
       
     </h3>
@@ -810,47 +1138,10 @@ gcc version 7.2.0 <span class="o">(</span>Ubuntu 7.2.0-8ubuntu3.2<span class="o"
 
 
 
-  less than 1 minute read
+  6 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">Code mẫu
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src=
-          
-            "/assets/images/default-th.jpg"
-          
-          alt="">
-      </div>
-    
-    <h3 class="archive__item-title" itemprop="headline">
-      
-        <a class="no-underline" href="/asr/deep_learning/asr_Papers_measurements/" rel="permalink">Measurements in ASR
-</a>
-      
-    </h3>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  2 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">Các phương pháp đo lường trong ASR
+    <p class="archive__item-excerpt" itemprop="description">
 </p>
   </article>
 </div>

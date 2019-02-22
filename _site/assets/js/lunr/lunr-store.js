@@ -108,7 +108,7 @@ var store = [{
         "excerpt":"Các bài liên quan đến WER Lưu lại các link hay và các mục quan trọng ở đây để sau này tiện tìm lại. Why Word Error Rate Is Not A Good Metric for Speech Recognizer Training for the Speech Translation Task? Word Error Rate Calculation Python Code. The Word...","categories": ["ASR"],
         "tags": ["Deep-Learning","ASR","WER"],
         "url": "http://localhost:4000/asr/WER/",
-        "teaser":"http://localhost:4000/assets/images/default-th.jpg"},{
+        "teaser":"http://localhost:4000/assets/images/my-personal-website-th.jpg"},{
         "title": "Thêm Facebook comments vào trang web",
         "excerpt":"Thêm Facebook comments vào trang web Hãy bắt đầu từ đây, và từ đây Thêm comments vào pages, % include comments.html % thay vào chỗ \\_layouts\\\\single.html, như sau:{ % if jekyll.environment == 'production' and site.comments.provider and page.comments % } { % include comments.html % }{ % endif % }đổi thành:{...","categories": ["WEB"],
         "tags": ["jekyll","github pages","facebook"],
@@ -135,10 +135,25 @@ var store = [{
         "url": "http://localhost:4000/technology/markdown/github%20pages/how-i-created-this-website/",
         "teaser":"http://localhost:4000/assets/images/my-personal-website-th.jpg"},{
         "title": "Keras with Python",
-        "excerpt":"Save - Load model Đã thử nghiệm thành công. Save model, load_model model.save('zzz.h5')....................m1=load_model('zzz.h5',compile=False)m1.summary()m1.layers.pop() # Remove last layersm1.layers.pop()m1.layers.pop()m1.layers.pop()m1.summary()m1.load_weights('/home/u/path/to/chkPoint.pkl')Save/load models 2 # Suppose we have a modelfrom keras.applications import resnet50model = resnet50.ResNet50(include_top=True, weights='imagenet')model.load_weights('resnet50_weights_tf_dim_ordering_tf_kernels.h5')model.compile(optimizer='rmsprop', loss='categorical_crossentropy') # Import dependenciesimport jsonfrom keras.models import model_from_json, load_model # Option 1: Save Weights + Architecturemodel.save_weights('model_weights.h5')with open('model_arch.json', 'w') as...","categories": ["Keras"],
+        "excerpt":"1. Import Libraries: import library Đoạn code sau đây có thể cho phép GPU dùng đến đâu thì chiếm đụng dến đấy. Rất tuyệt nếu trainning nhiều model nhỏ nhỏ. import osfrom keras.layers import Bidirectional,GRU,LSTM,Conv1D,Lambda,BatchNormalization,Activation,Dropout,multiply,addfrom keras.models import Input,Model,K#*from keras.optimizers import adam#*from keras.callbacks import ReduceLROnPlateau,ModelCheckpoint,EarlyStopping,TensorBoard #*from datetime import datetime as dtfrom...","categories": ["Keras"],
         "tags": ["Deep-Learning","Keras","Save/Load"],
         "url": "http://localhost:4000/keras/Keras/",
         "teaser":"https://miro.medium.com/max/1304/1*uokXCDa_O7jzfbUC9qS6cg.png"},{
+        "title": "Keras with Python",
+        "excerpt":"1. ParallelModel: Since origin “ParallelModel” does not work for keras 2.2.4 due to KM.model’s change.So I decide to rewrite the ParallelModel to adapt the latest keras version. However simple adaption is boring, so I combined the “multi_gpu_model” from keras official code and the Matterports code to create this version. Since...","categories": ["Keras"],
+        "tags": ["Deep-Learning","Keras","Save/Load"],
+        "url": "http://localhost:4000/keras/Keras-Modules/",
+        "teaser":"https://miro.medium.com/max/1304/1*uokXCDa_O7jzfbUC9qS6cg.png"},{
+        "title": "Link code ngon",
+        "excerpt":"1. Speech - Voices:   Project: Speech Recognition with Neural Networks","categories": ["Keras"],
+        "tags": ["Deep-Learning","Keras","Save/Load"],
+        "url": "http://localhost:4000/keras/Keras-Code-Ngon/",
+        "teaser":"https://miro.medium.com/max/1304/1*uokXCDa_O7jzfbUC9qS6cg.png"},{
+        "title": "Free Code-Database Resources",
+        "excerpt":"Các kho database miễn phí. - CVTE Mandarin Model CVTE Mandarin Model. A Mandarin TDNN chain model model trained on commercial data, links: tại đây Free Code hữu ích cho Speech - Tacotron: speech synthesis An implementation of Tacotron speech synthesis in TensorFlow. Tên các thư viện và mục đích...","categories": ["Database","Source Code"],
+        "tags": ["Deep-Learning","Keras","database","DBs"],
+        "url": "http://localhost:4000/database/source%20code/Database-Resources/",
+        "teaser":"http://localhost:4000/assets/images/postimg/freeDBs.png"},{
         "title": "Câu nói hay...",
         "excerpt":"“99 little bugs in the code. 99 little bugs. Take one down, patch it around,…127 little bugs in the code.”—Anonymous22 Sep, 2017 “I have the power to do and to be whatever I wish to do and be.”—The Power of Concentration16 Sep, 2017 “Always code as if the guy who...","categories": [],
         "tags": [],
@@ -150,7 +165,7 @@ var store = [{
         "url": "http://localhost:4000/til/2017_til/",
         "teaser":"http://localhost:4000/assets/images/default-th.jpg"},{
         "title": "Hôm nay tôi đã đọc...",
-        "excerpt":"Cần đọc… Danh sách các bài viết hay cần phải đọc hiểu: INSTALL NVIDIA DRIVER 390.77 ON UBUNTU / LINUXMINT Xây dựng hệ thống tìm kiếm nhạc bằng âm thanh với Python và Approximate Nearest NeighborsChỉ cần ngân nga, là bạn có thể tìm được âm nhạc rồi, mà còn...","categories": [],
+        "excerpt":"Cần đọc… Danh sách các bài viết hay cần phải đọc hiểu: Get a unique ID for worker in python multiprocessing pool Chạy Multiple thread rồi hiển thị trạng thái của 1 CPUXem bài gốc import multiprocessingfrom time import sleep#-----------------------------------------------def f(x): global idx if idx==0: print('CPU 0-----')# sleep(1) print (idx,...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/til/2018_til/",
         "teaser":"http://localhost:4000/assets/images/default-th.jpg"}]

@@ -43,7 +43,7 @@
 
 
 
-  <meta property="article:published_time" content="2015-09-01T00:00:00+08:00">
+  <meta property="article:published_time" content="2018-01-11T00:00:00+08:00">
 
 
 
@@ -239,25 +239,121 @@
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     <meta itemprop="headline" content="Hôm nay tôi đã đọc…">
     <meta itemprop="description" content="“Life is like riding a bicycle. To keep your balance you must keep moving.”—Albert Einstein">
-    <meta itemprop="datePublished" content="September 01, 2015">
+    <meta itemprop="datePublished" content="January 11, 2018">
     
 
     <div class="page__inner-wrap">
       
 
       <section class="page__content" itemprop="text">
+             
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#cần-đọc">Cần đọc…</a></li>
+  <li><a href="#get-a-unique-id-for-worker-in-python-multiprocessing-pool">Get a unique ID for worker in python multiprocessing pool</a></li>
+  <li><a href="#keras-release-memory-after-finish-training-process">Keras: release memory after finish training process</a></li>
+  <li><a href="#keras-release-memory-after-finish-training-process-1">Keras: release memory after finish training process</a></li>
+  <li><a href="#install-nvidia-driver-39077-on-ubuntu--linuxmint">INSTALL NVIDIA DRIVER 390.77 ON UBUNTU / LINUXMINT</a></li>
+  <li><a href="#xây-dựng-hệ-thống-tìm-kiếm-nhạc-bằng-âm-thanh-với-python-và-approximate-nearest-neighbors">Xây dựng hệ thống tìm kiếm nhạc bằng âm thanh với Python và Approximate Nearest Neighbors</a></li>
+</ul>
+
+            </nav>
+          </aside>
+
         
         <h1 id="cần-đọc">Cần đọc…</h1>
 
 <p>Danh sách các bài viết hay cần phải đọc hiểu:</p>
 
-<p><a href="https://www.elinuxtutorials.com/2018/07/install-nvidia-driver-390-77-on-ubuntu-linuxmint/">INSTALL NVIDIA DRIVER 390.77 ON UBUNTU / LINUXMINT</a></p>
+<h1 id="get-a-unique-id-for-worker-in-python-multiprocessing-pool">Get a unique ID for worker in python multiprocessing pool</h1>
 
-<p><a href="https://viblo.asia/p/xay-dung-he-thong-tim-kiem-nhac-bang-am-thanh-voi-python-va-approximate-nearest-neighbors-924lJbXWlPM?fbclid=IwAR34stRTf8iB-x-_asmUljiiVkQzHEjhbVV94V6xBae-HIRGF7UgPH8MjH8">Xây dựng hệ thống tìm kiếm nhạc bằng âm thanh với Python và Approximate Nearest Neighbors</a><br />
+<p>Chạy Multiple thread rồi hiển thị trạng thái của 1 CPU
+<a href="https://stackoverflow.com/questions/10190981/get-a-unique-id-for-worker-in-python-multiprocessing-pool">Xem bài gốc</a></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">multiprocessing</span>
+<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
+<span class="c">#-----------------------------------------------</span>
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">idx</span>  
+    <span class="k">if</span> <span class="n">idx</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'CPU 0-----'</span><span class="p">)</span>
+<span class="c">#     sleep(1)</span>
+    <span class="k">print</span> <span class="p">(</span><span class="n">idx</span><span class="p">,</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">idx</span><span class="p">,</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
+<span class="c">#-----------------------------------------------</span>
+<span class="k">def</span> <span class="nf">args_list</span><span class="p">():</span>
+    <span class="n">args</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">args</span>
+<span class="c">#-----------------------------------------------</span>
+<span class="k">class</span> <span class="nc">ParallelPrint</span><span class="p">():</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">nCPUs</span><span class="o">=</span><span class="mi">15</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nCPUs</span><span class="o">=</span><span class="mi">15</span>
+    <span class="k">def</span> <span class="nf">Running</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">nCPUs</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">nCPUs</span>
+        <span class="k">def</span> <span class="nf">init</span><span class="p">(</span><span class="n">queue</span><span class="p">):</span>
+            <span class="k">global</span> <span class="n">idx</span>
+            <span class="n">idx</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+        <span class="n">ids</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">nCPUs</span><span class="p">)</span>
+        <span class="n">manager</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">Manager</span><span class="p">()</span>
+        <span class="n">idQueue</span> <span class="o">=</span> <span class="n">manager</span><span class="o">.</span><span class="n">Queue</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">ids</span><span class="p">:</span> <span class="n">idQueue</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">Pool</span><span class="p">(</span><span class="n">nCPUs</span><span class="p">,</span> <span class="n">init</span><span class="p">,</span> <span class="p">(</span><span class="n">idQueue</span><span class="p">,))</span>
+        <span class="n">DAT</span><span class="o">=</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="nb">map</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">args_list</span><span class="p">()</span> <span class="p">))</span>
+        <span class="k">return</span> <span class="n">DAT</span>
+<span class="n">para</span><span class="o">=</span><span class="n">ParallelPrint</span><span class="p">()</span>
+<span class="n">P</span><span class="o">=</span><span class="n">para</span><span class="o">.</span><span class="n">Running</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">P</span><span class="p">)</span>
+</code></pre></div></div>
+<p><strong>—<cite> Keras</cite></strong><br />
+<small>2019-01-11<small></small></small></p>
+<hr />
+
+<h1 id="keras-release-memory-after-finish-training-process">Keras: release memory after finish training process</h1>
+
+<p><a href="https://stackoverflow.com/questions/51005147/keras-release-memory-after-finish-training-process">Xem</a></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">keras</span> <span class="kn">import</span> <span class="n">backend</span> <span class="k">as</span> <span class="n">K</span>
+<span class="n">K</span><span class="o">.</span><span class="n">clear_session</span><span class="p">()</span>
+<span class="c"># --- or ------</span>
+<span class="kn">from</span> <span class="nn">numba</span> <span class="kn">import</span> <span class="n">cuda</span>
+<span class="n">cuda</span><span class="o">.</span><span class="n">select_device</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">cuda</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><strong>—<cite> Machine Learning</cite></strong><br />
+<small>2019-01-11<small></small></small></p>
+<hr />
+
+<h1 id="keras-release-memory-after-finish-training-process-1">Keras: release memory after finish training process</h1>
+
+<p><a href="https://stackoverflow.com/questions/51005147/keras-release-memory-after-finish-training-process">Xem</a></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">keras</span> <span class="kn">import</span> <span class="n">backend</span> <span class="k">as</span> <span class="n">K</span>
+<span class="n">K</span><span class="o">.</span><span class="n">clear_session</span><span class="p">()</span>
+
+<span class="kn">from</span> <span class="nn">numba</span> <span class="kn">import</span> <span class="n">cuda</span>
+<span class="n">cuda</span><span class="o">.</span><span class="n">select_device</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">cuda</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><strong>—<cite> Machine Learning</cite></strong><br />
+<small>2019-01-11<small></small></small></p>
+<hr />
+
+<h1 id="install-nvidia-driver-39077-on-ubuntu--linuxmint">INSTALL NVIDIA DRIVER 390.77 ON UBUNTU / LINUXMINT</h1>
+
+<p><a href="https://www.elinuxtutorials.com/2018/07/install-nvidia-driver-390-77-on-ubuntu-linuxmint/">Xem</a></p>
+<hr />
+
+<h1 id="xây-dựng-hệ-thống-tìm-kiếm-nhạc-bằng-âm-thanh-với-python-và-approximate-nearest-neighbors">Xây dựng hệ thống tìm kiếm nhạc bằng âm thanh với Python và Approximate Nearest Neighbors</h1>
+
+<p><a href="https://viblo.asia/p/xay-dung-he-thong-tim-kiem-nhac-bang-am-thanh-voi-python-va-approximate-nearest-neighbors-924lJbXWlPM?fbclid=IwAR34stRTf8iB-x-_asmUljiiVkQzHEjhbVV94V6xBae-HIRGF7UgPH8MjH8">Xem</a><br />
 Chỉ cần ngân nga, là bạn có thể tìm được âm nhạc rồi, mà còn có thể tìm riêng trong máy mình nữa. Ngon không?<br /></p>
 
 <p class="notice--info text-center"><strong>—<cite> Machine Learning</cite></strong><br />
 <small>2018-12-24<small></small></small></p>
+<hr />
+
 
 
 
@@ -272,7 +368,7 @@ Chỉ cần ngân nga, là bạn có thể tìm được âm nhạc rồi, mà c
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2015-09-01T00:00:00+08:00">September 01, 2015</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-01-11T00:00:00+08:00">January 11, 2018</time></p>
         
       </footer>
       <div class="page__comments">

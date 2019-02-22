@@ -226,7 +226,7 @@
 
 
 
-  1 minute read
+  6 minute read
 </p>
       
       
@@ -306,13 +306,15 @@
           
         
           
-        
+            <li><a href="/keras/Keras/"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Keras</a></li>
           
         
           
         
           
-            <li><a href="http://youtube.com/tuananhktmt"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> youtube</a></li>
+        
+          
+            <li><a href="http://youtube.com/tuananhktmt"><i class="fab fa-fw fa-youtube" aria-hidden="true"></i> YouTube</a></li>
           
         
       
@@ -424,13 +426,38 @@
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
               <ul class="toc__menu">
-  <li><a href="#save---load-model">Save - Load model</a>
+  <li><a href="#1-import-libraries">1. Import Libraries:</a>
     <ul>
-      <li><a href="#save-model-load_model">Save model, load_model</a></li>
-      <li><a href="#saveload-models-2">Save/load models 2</a></li>
+      <li><a href="#import-library">import library</a></li>
     </ul>
   </li>
-  <li><a href="#matplotlib---plot">Matplotlib - plot</a>
+  <li><a href="#2-load-data">2. Load data</a></li>
+  <li><a href="#3--setup-model">3  Setup Model</a>
+    <ul>
+      <li><a href="#load-model-from-module">Load model from module</a></li>
+      <li><a href="#load-check-point-weight">load check point-weight:</a></li>
+    </ul>
+  </li>
+  <li><a href="#4-save---load-model">4. Save - Load model</a>
+    <ul>
+      <li><a href="#đã-thử-nghiệm-thành-công">Đã thử nghiệm thành công.</a>
+        <ul>
+          <li><a href="#save-model-load_model">Save model, load_model</a></li>
+          <li><a href="#saveload-models-2">Save/load models 2</a></li>
+        </ul>
+      </li>
+      <li><a href="#sl-model">S/L model</a></li>
+      <li><a href="#load-model-json">load model json</a></li>
+      <li><a href="#check-saveload-results">Check Save/Load results:</a></li>
+    </ul>
+  </li>
+  <li><a href="#5-trainning">5. Trainning</a>
+    <ul>
+      <li><a href="#custom-callback">Custom callback:</a></li>
+    </ul>
+  </li>
+  <li><a href="#6-ctc-decode">6. CTC Decode:</a></li>
+  <li><a href="#7-matplotlib---plot">7. Matplotlib - plot</a>
     <ul>
       <li><a href="#random-color">random color</a></li>
     </ul>
@@ -441,10 +468,141 @@
           </aside>
 
         
-        <h1 id="save---load-model">Save - Load model</h1>
-<p>Đã thử nghiệm thành công.</p>
+        <h1 id="1-import-libraries">1. Import Libraries:</h1>
 
-<h2 id="save-model-load_model">Save model, load_model</h2>
+<h2 id="import-library">import library</h2>
+<p>Đoạn code sau đây có thể cho phép GPU dùng đến đâu thì chiếm đụng dến đấy. Rất tuyệt nếu trainning nhiều model nhỏ nhỏ.</p>
+<pre><code class="language-Python">import os
+from keras.layers import Bidirectional,GRU,LSTM,Conv1D,Lambda,BatchNormalization,Activation,Dropout,multiply,add
+from keras.models import Input,Model,K#*
+from keras.optimizers import adam#*
+from keras.callbacks import ReduceLROnPlateau,ModelCheckpoint,EarlyStopping,TensorBoard #*
+from datetime import datetime as dt
+from os.path import exists,join
+import numpy as np
+import keras as kr
+import matplotlib.pyplot as plt
+from keras.layers import multiply,add
+
+########## Using allow_growth on keras with tensorflow ######################################
+import tensorflow as tf
+from keras.backend.tensorflow_backend import set_session
+config = tf.ConfigProto()
+config.gpu_options.allow_growth = True  # dynamically grow the memory used on the GPU
+config.log_device_placement = True  # to log device placement (on which device the operation ran)
+                                    # (nothing gets printed in Jupyter, only if you run it standalone)
+sess = tf.Session(config=config)
+set_session(sess)  # set this TensorFlow session as the default session for Keras
+############################################################################################
+
+</code></pre>
+
+<p>##</p>
+<ul>
+  <li>import from module:</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">imp</span><span class="p">,</span><span class="n">sys</span><span class="p">,</span><span class="n">time</span>
+<span class="k">print</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">asctime</span><span class="p">())</span>
+<span class="c">#-------------------------------------------------------------------------------------</span>
+<span class="n">sModules</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span> <span class="o">+</span><span class="s">'/Modules'</span>
+<span class="k">if</span> <span class="ow">not</span><span class="p">(</span><span class="n">sModules</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">):</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sModules</span><span class="p">)</span>
+
+<span class="n">f</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">desc</span> <span class="o">=</span> <span class="n">imp</span><span class="o">.</span><span class="n">find_module</span><span class="p">(</span><span class="s">'aiLibs'</span><span class="p">,</span> <span class="p">[</span><span class="n">sModules</span><span class="p">])</span> <span class="c">#import file commons.py in folder Modules</span>
+<span class="n">Paths</span> <span class="o">=</span> <span class="n">imp</span><span class="o">.</span><span class="n">load_module</span><span class="p">(</span><span class="s">'aiLibs'</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">desc</span><span class="p">)</span>
+<span class="c"># access variable examples:</span>
+<span class="n">pdev__375x20</span><span class="o">=</span><span class="n">Paths</span><span class="o">.</span><span class="n">pdev__375x20</span>
+<span class="n">ptest_375x20</span><span class="o">=</span><span class="n">Paths</span><span class="o">.</span><span class="n">ptest_375x20</span>
+<span class="n">ptrain375x20</span><span class="o">=</span><span class="n">Paths</span><span class="o">.</span><span class="n">ptrain375x20</span>
+
+<span class="c">### CHANGE #####################################################</span>
+<span class="n">ModelName</span><span class="o">=</span><span class="s">'LSTM1Layer'</span>
+<span class="c">################################################################</span>
+<span class="n">KWS</span><span class="o">=</span><span class="n">Paths</span><span class="o">.</span><span class="n">KWS</span>
+<span class="n">pPrjModel</span><span class="o">=</span><span class="n">Paths</span><span class="o">.</span><span class="n">pPrjModel</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ModelName</span><span class="o">=</span><span class="n">ModelName</span><span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">exists</span><span class="p">(</span><span class="n">pPrjModel</span><span class="p">):</span><span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">pPrjModel</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'pPrjModel='</span><span class="p">,</span><span class="n">pPrjModel</span><span class="p">)</span>
+<span class="n">sCpy</span><span class="o">=</span><span class="s">"cp  {}.ipynb  {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ModelName</span><span class="p">,</span> <span class="n">pPrjModel</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sCpy</span><span class="p">)</span>
+<span class="k">print</span><span class="p">()</span>
+
+<span class="n">pHis</span>        <span class="o">=</span> <span class="n">Paths</span><span class="o">.</span><span class="n">pHis</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ModelName</span><span class="o">=</span><span class="n">ModelName</span><span class="p">)</span>
+<span class="n">pchkPoint</span>   <span class="o">=</span> <span class="n">Paths</span><span class="o">.</span><span class="n">pchkPoint</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ModelName</span><span class="o">=</span><span class="n">ModelName</span><span class="p">)</span>
+<span class="n">plog_dir</span>    <span class="o">=</span> <span class="n">Paths</span><span class="o">.</span><span class="n">plog_dir</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ModelName</span><span class="o">=</span><span class="n">ModelName</span><span class="p">)</span>
+<span class="n">pModel</span>      <span class="o">=</span> <span class="n">Paths</span><span class="o">.</span><span class="n">pModel</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ModelName</span><span class="o">=</span><span class="n">ModelName</span><span class="p">)</span>
+<span class="n">pbase_model</span> <span class="o">=</span> <span class="n">Paths</span><span class="o">.</span><span class="n">pbase_model</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ModelName</span><span class="o">=</span><span class="n">ModelName</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =</li>
+  <li>= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+    <h1 id="2-load-data">2. Load data</h1>
+    <p>Load data from saved files:</p>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">DBs</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">pdev__375x20</span><span class="p">)</span>
+<span class="n">DE_MFCCs_Pad</span>    <span class="o">=</span><span class="n">DBs</span><span class="p">[</span><span class="s">'MFCCs_Pad'</span><span class="p">]</span>
+<span class="n">DE_LBLs</span>         <span class="o">=</span><span class="n">DBs</span><span class="p">[</span><span class="s">'LBLs'</span><span class="p">]</span>
+<span class="n">DE_LEN_CHARs</span>    <span class="o">=</span><span class="n">DBs</span><span class="p">[</span><span class="s">'LEN_CHARs'</span><span class="p">]</span>
+<span class="n">DE_CHAR_VECs_Pad</span><span class="o">=</span><span class="n">DBs</span><span class="p">[</span><span class="s">'CHAR_VECs_Pad'</span><span class="p">]</span>
+<span class="n">DE_LABEL_KWSs</span>   <span class="o">=</span><span class="n">DBs</span><span class="p">[</span><span class="s">'LABEL_KWSs'</span><span class="p">]</span>
+<span class="n">All_maxlen_MFCC</span> <span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">DBs</span><span class="p">[</span><span class="s">'All_maxlen_MFCC'</span><span class="p">])</span>
+<span class="n">All_max_charvec</span> <span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">DBs</span><span class="p">[</span><span class="s">'All_max_charvec'</span><span class="p">])</span>
+</code></pre></div></div>
+
+<ul>
+  <li>= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =</li>
+  <li>= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+    <h1 id="3--setup-model">3  Setup Model</h1>
+    <h2 id="load-model-from-module">Load model from module</h2>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">model</span><span class="p">,</span><span class="n">base_model</span><span class="o">=</span><span class="n">Paths</span><span class="o">.</span><span class="n">build_model</span><span class="p">()</span>
+<span class="n">model</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">pModel</span><span class="p">)</span>
+<span class="n">base_model</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">pbase_model</span><span class="p">)</span>
+<span class="c"># -------------------------------------------------------------------</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'"{}":{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ModelName</span><span class="p">,</span><span class="s">'{'</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'    "pchkPoint"  :"{}",'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pchkPoint</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'    "pModel"     :"{}",'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pModel</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'    "pbase_model":"{}"{},</span><span class="se">\n</span><span class="s">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pbase_model</span><span class="p">,</span><span class="s">'}'</span><span class="p">))</span>
+</code></pre></div></div>
+<h2 id="load-check-point-weight">load check point-weight:</h2>
+<ul>
+  <li>load weight from check point
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">initial_epoch</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="n">pchkPoint</span><span class="p">):</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">'loading check point:'</span><span class="p">,</span><span class="n">pchkPoint</span><span class="p">)</span>
+  <span class="n">model</span><span class="o">.</span><span class="n">load_weights</span><span class="p">(</span><span class="n">pchkPoint</span><span class="p">)</span>
+<span class="c">#     with open(pchkPoint+'.txt','r')as ff: line=ff.read() #ff.write('\nEpoch {}:{}, saving model to {}'.format(epoch + 1,current, filepath))</span>
+<span class="c">#     line=line.splitlines()[-1].split(':')[0][6:]</span>
+<span class="c">#     print('Last trained epoch=',line)</span>
+<span class="c">#     initial_epoch=int(line)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Load model + weight
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">keras.models</span> <span class="kn">import</span> <span class="n">load_model</span>
+<span class="n">bm</span><span class="o">=</span><span class="n">load_model</span><span class="p">(</span><span class="n">pbase_model</span><span class="p">)</span>
+<span class="n">bm</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+<span class="n">bm</span><span class="o">.</span><span class="n">set_weights</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">get_weights</span><span class="p">())</span>
+<span class="c"># check:</span>
+<span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">layers</span><span class="p">:</span>
+  <span class="n">g</span><span class="o">=</span><span class="n">layer</span><span class="o">.</span><span class="n">get_config</span><span class="p">()</span>
+  <span class="n">h</span><span class="o">=</span><span class="n">layer</span><span class="o">.</span><span class="n">get_weights</span><span class="p">()</span>
+  <span class="k">print</span> <span class="p">(</span><span class="n">g</span><span class="p">)</span>
+  <span class="k">print</span> <span class="p">(</span><span class="n">h</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =</li>
+  <li>= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+    <h1 id="4-save---load-model">4. Save - Load model</h1>
+  </li>
+</ul>
+
+<h2 id="đã-thử-nghiệm-thành-công">Đã thử nghiệm thành công.</h2>
+
+<h3 id="save-model-load_model">Save model, load_model</h3>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">model</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s">'zzz.h5'</span><span class="p">)</span>
 <span class="o">....................</span>
@@ -458,7 +616,7 @@
 <span class="n">m1</span><span class="o">.</span><span class="n">load_weights</span><span class="p">(</span><span class="s">'/home/u/path/to/chkPoint.pkl'</span><span class="p">)</span>
 </code></pre></div></div>
 
-<h2 id="saveload-models-2">Save/load models 2</h2>
+<h3 id="saveload-models-2">Save/load models 2</h3>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c"># Suppose we have a model</span>
 <span class="kn">from</span> <span class="nn">keras.applications</span> <span class="kn">import</span> <span class="n">resnet50</span>
@@ -482,7 +640,88 @@
 <span class="n">new_model_2</span> <span class="o">=</span> <span class="n">load_model</span><span class="p">(</span><span class="s">'my_model.h5'</span><span class="p">)</span>
 </code></pre></div></div>
 
-<h1 id="matplotlib---plot">Matplotlib - plot</h1>
+<h2 id="sl-model">S/L model</h2>
+<p>xem chi tiết <a href="https://stackoverflow.com/questions/42763094/how-to-save-final-model-using-keras">tại đây</a></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">keras.models</span> <span class="kn">import</span> <span class="n">load_model</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s">'my_model.h5'</span><span class="p">)</span>  <span class="c"># creates a HDF5 file 'my_model.h5'</span>
+<span class="k">del</span> <span class="n">model</span>  <span class="c"># deletes the existing model</span>
+
+<span class="c"># returns a compiled model</span>
+<span class="c"># identical to the previous one</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">load_model</span><span class="p">(</span><span class="s">'my_model.h5'</span><span class="p">)</span>
+</code></pre></div></div>
+<h2 id="load-model-json">load model json</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># load json and create model</span>
+<span class="n">json_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'model_num.json'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span>
+
+<span class="n">loaded_model_json</span> <span class="o">=</span> <span class="n">json_file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">json_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">loaded_model</span> <span class="o">=</span> <span class="n">model_from_json</span><span class="p">(</span><span class="n">loaded_model_json</span><span class="p">)</span>
+
+<span class="c"># load weights into new model</span>
+<span class="n">loaded_model</span><span class="o">.</span><span class="n">load_weights</span><span class="p">(</span><span class="s">"model_num.h5"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Loaded model from disk"</span><span class="p">)</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s">'model_num.hdf5'</span><span class="p">)</span>
+<span class="n">loaded_model</span><span class="o">=</span><span class="n">load_model</span><span class="p">(</span><span class="s">'model_num.hdf5'</span><span class="p">)</span>
+
+<span class="c">#To predict for different data you can use this</span>
+
+<span class="n">loaded_model</span><span class="o">.</span><span class="n">predict_classes</span><span class="p">(</span><span class="s">"your_test_data here"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="check-saveload-results">Check Save/Load results:</h2>
+
+<p>View <a href="https://github.com/keras-team/keras/issues/4875">here</a></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">tensorflow.contrib.keras</span> <span class="k">as</span> <span class="n">keras</span>
+<span class="kn">from</span> <span class="nn">tensorflow.contrib.keras</span> <span class="kn">import</span> <span class="n">backend</span> <span class="k">as</span> <span class="n">K</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">train_keras_cnn_model</span><span class="p">()</span> <span class="c"># Fill in the gaps with your model</span>
+<span class="n">model_fn</span> <span class="o">=</span> <span class="s">"test-keras-model-serialization.hdf5"</span>
+<span class="n">m_weights</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">get_weights</span><span class="p">()</span>
+<span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">save_model</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">model_fn</span><span class="p">)</span>
+<span class="n">K</span><span class="o">.</span><span class="n">clear_session</span><span class="p">()</span>
+<span class="n">m_load</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="n">model_fn</span><span class="p">)</span>
+<span class="n">m_load_weights</span> <span class="o">=</span> <span class="n">m_load</span><span class="o">.</span><span class="n">get_weights</span><span class="p">()</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">m_load_weights</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">m_weights</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">m_weights</span><span class="p">)):</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">array_equal</span><span class="p">(</span><span class="n">m_load_weights</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">m_weights</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Model weight serialization test passed"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =</li>
+  <li>= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =</li>
+</ul>
+
+<h1 id="5-trainning">5. Trainning</h1>
+
+<h2 id="custom-callback">Custom callback:</h2>
+<p>Cách khai báo hàm callback và tương tác với model, có thể tham khảo thêm <a href="https://keras.io/callbacks/#create-a-callback">tại đây</a>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">AccuracyHistory</span><span class="p">(</span><span class="n">keras</span><span class="o">.</span><span class="n">callbacks</span><span class="o">.</span><span class="n">Callback</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">on_train_begin</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">logs</span><span class="o">=</span><span class="p">{}):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">acc</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">on_epoch_end</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">batch</span><span class="p">,</span> <span class="n">logs</span><span class="o">=</span><span class="p">{}):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">acc</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">logs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'val_acc'</span><span class="p">))</span>
+
+<span class="n">history</span> <span class="o">=</span> <span class="n">AccuracyHistory</span><span class="p">()</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span>
+          <span class="o">...</span>
+          <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">history</span><span class="p">])</span>
+</code></pre></div></div>
+
+<h1 id="6-ctc-decode">6. CTC Decode:</h1>
+
+<ul>
+  <li>Tại đây, <a href="https://github.com/holianh/CTCDecoder">rất nhanh</a>, tham khảo thêm cái này:<a href="https://towardsdatascience.com/3797e43a86c">https://towardsdatascience.com/3797e43a86c</a></li>
+</ul>
+
+<h1 id="7-matplotlib---plot">7. Matplotlib - plot</h1>
 
 <h2 id="random-color">random color</h2>
 <p>Thay giá trị chỗ <code class="highlighter-rouge">(i*8)%30</code> để thấy sự khác biệt</p>
@@ -655,7 +894,8 @@
 ">Previous</a>
     
     
-      <a href="#" class="pagination--pager disabled">Next</a>
+      <a href="/keras/Keras-Modules/" class="pagination--pager" title="Keras with Python
+">Next</a>
     
   </nav>
 
@@ -673,6 +913,117 @@
     <div class="page__related">
       <h4 class="page__related-title">You may also enjoy</h4>
       <div class="grid__wrapper">
+        
+          
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/postimg/freeDBs.png"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a class="no-underline" href="/database/source%20code/Database-Resources/" rel="permalink">Free Code-Database Resources
+</a>
+      
+    </h3>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Links download CODE và Database miễn phí
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "https://miro.medium.com/max/1304/1*uokXCDa_O7jzfbUC9qS6cg.png"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a class="no-underline" href="/keras/Keras-Code-Ngon/" rel="permalink">Link code ngon
+</a>
+      
+    </h3>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "https://miro.medium.com/max/1304/1*uokXCDa_O7jzfbUC9qS6cg.png"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a class="no-underline" href="/keras/Keras-Modules/" rel="permalink">Keras with Python
+</a>
+      
+    </h3>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
         
           
 
@@ -706,117 +1057,6 @@
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">Using Jekyll &amp; Github Pages
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src=
-          
-            "/assets/images/default-th.jpg"
-          
-          alt="">
-      </div>
-    
-    <h3 class="archive__item-title" itemprop="headline">
-      
-        <a class="no-underline" href="/deep-learning/rnn-lstm/RNN-LSTMs/" rel="permalink">Các ví dụ mẫu hay về RNN-LSTM
-</a>
-      
-    </h3>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  less than 1 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">Code mẫu
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src=
-          
-            "/assets/images/default-th.jpg"
-          
-          alt="">
-      </div>
-    
-    <h3 class="archive__item-title" itemprop="headline">
-      
-        <a class="no-underline" href="/asr/deep_learning/asr_Papers_measurements/" rel="permalink">Measurements in ASR
-</a>
-      
-    </h3>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  2 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">Các phương pháp đo lường trong ASR
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src=
-          
-            "/assets/images/default-th.jpg"
-          
-          alt="">
-      </div>
-    
-    <h3 class="archive__item-title" itemprop="headline">
-      
-        <a class="no-underline" href="/ubuntu/driver/run/Install-Ubuntu-systems-package/" rel="permalink">Cài Ubuntu cho Deep Learning
-</a>
-      
-    </h3>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  2 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">Cài Ubuntu, gcc, g++,… vân vân và mây mây
 </p>
   </article>
 </div>
