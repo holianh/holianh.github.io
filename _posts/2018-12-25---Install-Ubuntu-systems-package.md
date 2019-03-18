@@ -62,26 +62,26 @@ Khi cài Keras, nó sẽ cài `tensorflow` for `CPU`, nên quy trình cài đún
 Nhục quá, vì cái này mà mất đứt cả tuần!
 Chi tiết, [xem tại đây](https://github.com/keras-team/keras/issues/5776#issuecomment-452602358)
 
-```bash
+
 After: install tensorflow -> install keras -> uninstall tensorflow -> install tensorflow
 and it works! Thanks a lot!
-
+```bash
 conda create -n ta  anaconda python
 source activate ta
 conda install tensorflow-gpu==1.11 cudatoolkit==9.0 cudnn==7.1.2 h5py
 pip install pillow h5py keras
 pip uninstall tensorflow
 pip install tensorflow-gpu
-
+```
+```python
 python
 import keras.backend as K;[x.name for x in K.get_session().list_devices()]
 exit()
-
+#
 git clone https://github.com/fchollet/keras.git
-cd keras/examples
+cd "keras/examples"
 python mnist_cnn.py
 ```
-
 
 - Code check GPU đã cài OK chưa, chạy python với lệnh sau:
 
@@ -116,7 +116,7 @@ python mnist_cnn.py
 
 Cài cuda: Nên download về máy, thay tên bằng tên đã down và bỏ wget:
 ```bash
-#!/bin/bash
+# !/bin/bash
 
 # install CUDA Toolkit v9.0
 # instructions from https://developer.nvidia.com/cuda-downloads (linux -> x86_64 -> Ubuntu -> 16.04 -> deb)
@@ -147,6 +147,7 @@ export CUDA_HOME=${CUDA_HOME}:/usr/local/cuda:/usr/local/cuda-9.0
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/cuda-9.0/lib64
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/extras/CUPTI/lib64
 ```
+
 
 
 ## Tham khảo các hướng dẫn bên ngoài
@@ -247,6 +248,44 @@ Xem bản gốc [tại đây](https://askubuntu.com/questions/26498/how-to-choos
     sudo update-alternatives --config gcc
     sudo update-alternatives --config g++        
     ```
+
+
+## Install gcc 4.8:
+cái này dùng để biên dịch Yolo3
+
+```bash
+sudo apt-get install gcc-4.8
+sudo apt-get install g++-4.8
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 50
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 50
+```    
+
+#Virtual Environment
+cái này nhanh hơn anaconda:
+
+```bash
+# Install virtual environment
+sudo pip3 install virtualenv virtualenvwrapper
+echo "# Virtual Environment Wrapper"  >> ~/.bashrc
+echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
+source ~/.bashrc
+
+############ For Python 3 ############
+# create virtual environment
+mkvirtualenv P3 -p python3
+workon P3
+
+# now install python libraries within this virtual environment
+pip install numpy scipy matplotlib scikit-image scikit-learn ipython
+
+# quit virtual environment
+deactivate
+######################################
+```
+
+
+
+
 - Cài  NVIDIA DRIVER 390.77:
 
 Tham khảo [tại đây](https://www.elinuxtutorials.com/2018/07/install-nvidia-driver-390-77-on-ubuntu-linuxmint/)
